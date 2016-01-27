@@ -3,5 +3,5 @@ reports/*
 test_servers/*
 .DS_Store
 screenshot*.png
-../android/
-../ios/
+android-output/
+ios-output/
