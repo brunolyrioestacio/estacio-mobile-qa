@@ -5,12 +5,12 @@ end
 ######### QUANDO #########
 
 ###########E############
-E(/^devo percorrer o tutorial/) do
+Quando(/^devo percorrer o tutorial$/) do
 end
 
 ######### ENTãO #########
-Então(/^devo aceitar a permissão de push/) do
+Então(/^devo aceitar a permissão de push$/) do
 end
 
-Então(/^ devo negar a permissão de push/) do
+Então(/^devo negar a permissão de push$/) do
 end
