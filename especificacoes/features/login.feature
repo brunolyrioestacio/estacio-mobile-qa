@@ -40,19 +40,19 @@ Através dessa funcionalidade é possível realizar o processo de autentificaç�
     Quando tocar no botão de login
     Então devo ver uma mensagem de aviso de aplicativo exclusivo para alunos
 
-    Cenário: Tratamento de exceção de não ter gerado uma senha
-      Dado que estou na tela de Login
-      E preenchi o campo de matrícula
-      E preenchi o campo de senha sem ter criado uma senha
-      Quando tocar no botão de login
-      Então devo ver uma mensagem de senha não gerada
+  Cenário: Tratamento de exceção de não ter gerado uma senha
+    Dado que estou na tela de Login
+    E preenchi o campo de matrícula
+    E preenchi o campo de senha sem ter criado uma senha
+    Quando tocar no botão de login
+    Então devo ver uma mensagem de senha não gerada
 
-    Cenário: Tratamento de exceção de usuário não autorizado
-      Dado que estou na tela de Login
-      E preenchi o campo de matrícula com um usuário não autorizado
-      E preenchi o campo de senha
-      Quando tocar no botão de login
-      Então devo ver uma mensagem de usuário não autorizado
+  Cenário: Tratamento de exceção de usuário não autorizado
+    Dado que estou na tela de Login
+    E preenchi o campo de matrícula com um usuário não autorizado
+    E preenchi o campo de senha
+    Quando tocar no botão de login
+    Então devo ver uma mensagem de usuário não autorizado
 
   Cenário: Login
     Dado que estou na tela de Login
