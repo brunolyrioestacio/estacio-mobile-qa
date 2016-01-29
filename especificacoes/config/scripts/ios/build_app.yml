@@ -1,6 +1,13 @@
-dev:
+devNatan:
+  xcworkspace: "/Users/natan.ximenes/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
+  scheme: Estacio-cal
+  configuration: Debug
+  destination: "platform=iOS Simulator,name=iPhone 6"
+  export_path: "/Users/natan.ximenes/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
+
+devIngrid:
   xcworkspace: "Path_to_the_xcworkspace_folder"
-  scheme: TargetName
+  scheme: Est
   configuration: Debug
   export_path: "Path_to_export_app_folder"
 
