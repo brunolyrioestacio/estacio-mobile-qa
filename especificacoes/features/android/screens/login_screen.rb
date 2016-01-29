@@ -5,9 +5,9 @@ class LoginScreen < AndroidScreenBase
 
   # Declare todos os elementos da tela
   element(:layout_name)         { 'login_activity' }
-  element(:button)              { '' }
-  element(:campo_matricula)           {''}
-  element(:campo_senha)               {''}
+  element(:button)              { 'login_btn' }
+  element(:campo_matricula)     { 'input_registration' }
+  element(:campo_senha)         { 'input_password' }
 
   # Declare todas as acoes da tela
 
