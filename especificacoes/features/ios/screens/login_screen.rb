@@ -3,10 +3,10 @@ class LoginScreen < IOSScreenBase
    trait(:trait)                 { "* marked:'#{layout_name}'" }
 
   # Declare todos os elementos da tela
-   element(:layout_name)         { '' }
-   element(:button)              { '' }
-   element(:campo_matricula)     {''}
-   element(:campo_senha)         {''}
+   element(:layout_name)         { 'loginView' }
+   element(:button)              { 'loginButton' }
+   element(:campo_matricula)     { 'registrationTextField' }
+   element(:campo_senha)         { 'passwordTextField' }
 
   # Declare todas as acoes da tela
    action(:tocar_botao_login) {
