@@ -12,11 +12,11 @@ class LoginScreen < IOSScreenBase
    action(:tocar_botao_login) {
      touch("* marked:'#{button}'")
    }
-  def matricula(matricula)
+  def enter_matricula(matricula)
     enter matricula, campo_matricula
   end
 
-  def senha(senha)
+  def enter_senha(senha)
     enter senha, campo_senha
   end
 
