@@ -1,11 +1,13 @@
 ######### DADO #########
 
 Dado(/^que estou na tela de Login$/) do
+  @pageLogin = page(LoginScreen).await(timeout: 10)
 end
 
 ######### QUANDO #########
 
 Quando(/^tocar no botão de login$/) do
+  @pageLogin.tocar_botao_login
 end
 ########  E  ##########
 Quando(/^não preenchi o campo de matrícula$/) do
@@ -15,55 +17,53 @@ Quando(/^não preenchi o campo de senha$/) do
 end
 
 Quando(/^preenchi o campo de senha$/) do
+  senha="1234as"
+  @pageLogin.enter_senha senha
 end
 
 Quando(/^preenchi o campo de matrícula$/) do
+  matricula="201402389388"
+  @pageLogin.enter_matricula matricula
 end
 
-Quando /^preenchi o campo de matrícula incorretamente$/) do
+Quando (/^preenchi o campo de matrícula incorretamente$/) do
+  matricula="24763726178"
+  @pageLogin.enter_matricula matricula
 end
 
 Quando(/^preenchi o campo de senha incorretamente$/) do
-end
-
-Quando(/^tentei entrar com uma senha expirada$/) do
-
+  senha="meowmeow"
+  @pageLogin.enter_senha  senha
 end
 
 Quando(/^tentei usar uma matrícula de um usuário que não é aluno$/) do
-
-end
-
-Quando(/^preenchi o campo de senha sem ter criado uma senha$/) do
-
+  matricula=""
+  @pageLogin.enter_matricula matricula
 end
 
 Quando(/^preenchi o campo de matrícula com um usuário não autorizado$/) do
-
+  matricula=""
+  @pageLogin.enter_matricula matricula
 end
 
 ######### ENTãO #########
-Então(/^devo ver uma mensagem de aviso sobre a expiração da senha$/) do
 
+Então(/^devo ver uma mensagem de aviso de aplicativo exclusivo para alunos$/) do
+    @pageLogin.is_on_page? "Aplicativo exclusivo para alunos"
 end
 
-Então(/devo ver uma mensagem de aviso de aplicativo exclusivo para alunos$/) do
-
-end
-
-Então(/devo ver uma mensagem de senha não gerada$/) do
-
-end
-
-Então(/devo ver uma mensagem de usuário não autorizado$/) do
-  
+Então(/^devo ver uma mensagem de usuário não autorizado$/) do
+    @pageLogin.is_on_page? "Usuário não autorizado"
 end
 
 Então(/^devo ver uma mensagem de erro$/) do
+    @pageLogin.is_on_page? "Matrícula ou senha incorretas"
 end
 
 Então(/^devo ver a tela inicial$/) do
+    @pageHome = page(HomeScreen).await(timeout:10)
 end
 
 Então(/^o botão de login deve estar desabilitado$/) do
+  @pageLogin.btn_disabled?
 end
