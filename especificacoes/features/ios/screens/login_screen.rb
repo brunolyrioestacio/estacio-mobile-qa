@@ -4,13 +4,13 @@ class LoginScreen < IOSScreenBase
 
   # Declare todos os elementos da tela
    element(:layout_name)         { 'loginView' }
-   element(:button)              { 'loginButton' }
+   element(:button_login)              { 'loginButton' }
    element(:campo_matricula)     { 'registrationTextField' }
    element(:campo_senha)         { 'passwordTextField' }
 
   # Declare todas as acoes da tela
    action(:tocar_botao_login) {
-     touch("* marked:'#{button}'")
+     touch("* marked:'#{button_login}'")
    }
   def enter_matricula(matricula)
     enter matricula, campo_matricula
@@ -18,6 +18,10 @@ class LoginScreen < IOSScreenBase
 
   def enter_senha(senha)
     enter senha, campo_senha
+  end
+
+  def btn_disabled?
+    query("* id:'#{button_login}'", :isEnabled)[0].equal? 0
   end
 
 end
