@@ -6,10 +6,11 @@ devNatan:
   export_path: "/Users/natan.ximenes/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
 
 devIngrid:
-  xcworkspace: "Path_to_the_xcworkspace_folder"
-  scheme: Est
+  xcworkspace: "/Users/ingrid.andrade/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
+  scheme: Estacio-cal
   configuration: Debug
-  export_path: "Path_to_export_app_folder"
+  destination: "platform=iOS Simulator,name=iPhone 6"
+  export_path: "/Users/natan.ximenes/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
 
 jenkins:
   xcworkspace: <%= ENV['WORKSPACE']%>/Project.xcworkspace
