@@ -46,6 +46,11 @@ Quando(/^preenchi o campo de matrícula com um usuário não autorizado$/) do
   @pageLogin.enter_matricula matricula
 end
 
+  Quando(/^preenchi o campo de matrícula com um usuário que não aceitou os termos$/) do
+    matricula="200202352679"
+    @pageLogin.enter_matricula matricula
+  end
+
 ######### ENTãO #########
 
 Então(/^devo ver uma mensagem de aviso de aplicativo exclusivo para alunos$/) do
@@ -58,6 +63,10 @@ end
 
 Então(/^devo ver uma mensagem de erro$/) do
     @pageLogin.is_on_page? "Matrícula ou senha incorretas"
+end
+
+Então(/^devo ver uma mensagem de aviso de termos não aceitos$/) do
+    @pageLogin.is_on_page? "Para realizar o login é necessário aceitar o termo de acesso."
 end
 
 Então(/^devo ver a tela inicial$/) do
