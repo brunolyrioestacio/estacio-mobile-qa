@@ -31,6 +31,14 @@ Através dessa funcionalidade é possível realizar o processo de autentificaç�
     Quando tocar no botão de login
     Então devo ver uma mensagem de erro
 
+    @error
+  Cenário: Tratamento de exceção de não aceitação do termo de acesso
+    Dado que estou na tela de Login
+    E preenchi o campo de matrícula com um usuário que não aceitou os termos
+    E preenchi o campo de senha
+    Quando tocar no botão de login
+    Então devo ver uma mensagem de aviso de termos não aceitos
+
     @pendente
   Cenário: Tratamento de exceção de login por um usuário não aluno
     Dado que estou na tela de Login
