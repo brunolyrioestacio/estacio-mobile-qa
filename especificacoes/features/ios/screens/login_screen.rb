@@ -4,7 +4,7 @@ class LoginScreen < IOSScreenBase
 
   # Declare todos os elementos da tela
    element(:layout_name)         { 'loginView' }
-   element(:button_login)              { 'loginButton' }
+   element(:button_login)        { 'loginButton' }
    element(:campo_matricula)     { 'registrationTextField' }
    element(:campo_senha)         { 'passwordTextField' }
 
