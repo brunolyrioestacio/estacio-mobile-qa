@@ -13,6 +13,7 @@ class LoginScreen < IOSScreenBase
      touch("* marked:'#{button_login}'")
    }
   def enter_matricula(matricula)
+    clear_text("* marked:'registrationTextField'")
     enter matricula, campo_matricula
   end
 
