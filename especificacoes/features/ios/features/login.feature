@@ -11,3 +11,9 @@ Através dessa funcionalidade é possível realizar o processo de autentificaç�
     Quando tocar no botão de login
     E interagir com o OnBoarding
     Então devo estar na tela inicial
+
+  Cenário: Logout
+  Dado que estou na tela inicial
+  E toquei no botão Outras Funções
+  E toquei no botão Sair
+  Então devo estar na tela de Login
