@@ -3,6 +3,6 @@ class HomeScreen < IOSScreenBase
    trait(:trait)                 { "* marked:'#{layout_name}'" }
 
   # Declare todos os elementos da tela
-   element(:layout_name)         { 'home-view' }
+   element(:layout_name)         { 'homeView' }
 
 end
