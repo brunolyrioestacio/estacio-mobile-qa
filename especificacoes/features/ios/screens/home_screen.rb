@@ -21,13 +21,17 @@ class HomeScreen < IOSScreenBase
      touch("* marked:'#{sair_button}'")
    }
    action(:tocar_banner) {
-     touch("* marked:'#{bannerDetailView}'")
+     touch("* marked:'#{banner}'")
    }
    action(:tocar_detalhe_banner) {
-     touch("* marked:'#{sair_button}'")
+     touch("* marked:'#{banner_view}'")
    }
    def alerta_logout_is_visible?
      is_on_page? "Deseja mesmo sair?"
+   end
+
+   def estou_no_detalhe_do_banner
+    query("* marked:'#{banner_view}'").nil?
    end
 
 end
