@@ -54,7 +54,7 @@ end
 ######### ENTãO #########
 
 Então(/^devo ver uma mensagem de aviso de aplicativo exclusivo para alunos$/) do
-    @pageLogin.is_on_page? "Aplicativo exclusivo para alunos"
+    @pageLogin.is_on_page? "Este aplicativo é exclusivo para alunos"
 end
 
 Então(/^devo ver uma mensagem de usuário não autorizado$/) do
