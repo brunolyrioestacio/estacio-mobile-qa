@@ -37,7 +37,7 @@ Quando(/^preenchi o campo de senha incorretamente$/) do
 end
 
 Quando(/^tentei usar uma matrícula de um usuário que não é aluno$/) do
-  matricula="104470"
+  matricula="1052405"
   @pageLogin.enter_matricula matricula
 end
 
