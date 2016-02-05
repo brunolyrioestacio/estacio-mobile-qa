@@ -4,9 +4,6 @@ Dado(/^que estou na tela de tutorial$/) do
   @pageTutorial = page(TutorialScreen).await(timeout:5)
 end
 
-Dado(/^que estou na tela inicial$/) do
-  @pageHome = page(HomeScreen).await(timeout:5)
-end
 ######### QUANDO #########
 
 
