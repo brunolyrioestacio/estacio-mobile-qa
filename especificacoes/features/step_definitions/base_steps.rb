@@ -7,6 +7,9 @@ Given(/^I am on a page that contains '(.*?)'$/) do |page_text|
   @page.is_on_page? page_text
 end
 
+Dado(/^que estou na tela inicial$/) do
+  @pageHome = page(HomeScreen).await(timeout:5)
+end
 ######### WHEN #########
 
 When(/^I drag the screen (left|right|down|up) (\d+) times$/) do |direction, times|
@@ -36,4 +39,3 @@ end
 Then(/^I should see a page that contains '(.*?)'$/) do |page_text|
   @page.is_on_page? page_text
 end
-
