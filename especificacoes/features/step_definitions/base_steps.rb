@@ -29,6 +29,11 @@ Quando (/^toquei no botão Sair$/) do
 end
 
 
+Quando(/^toquei no banner$/) do
+  @pageHome.tocar_banner
+end
+
+
 ######### THEN #########
 
 Then(/^I (?:wait|waited) for the progress bar to vanish$/) do
@@ -43,4 +48,8 @@ end
 
 Then(/^I should see a page that contains '(.*?)'$/) do |page_text|
   @page.is_on_page? page_text
+end
+
+Então(/^devo ver um alerta de redirecionamento para uma página externa$/) do
+  @pageHome.is_on_page? "Você será direcionado para um site externo. Deseja continuar?"
 end
