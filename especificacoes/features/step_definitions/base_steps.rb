@@ -24,6 +24,11 @@ When(/^I drag the screen (down|up|left|right)$/) do |direction|
   @page.drag_to direction.to_sym
 end
 
+Quando (/^toquei no botão Sair$/) do
+  @pageHome.tocar_botao_sair
+end
+
+
 ######### THEN #########
 
 Then(/^I (?:wait|waited) for the progress bar to vanish$/) do
