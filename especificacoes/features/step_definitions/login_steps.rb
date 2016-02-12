@@ -51,28 +51,37 @@ end
     @pageLogin.enter_matricula matricula
   end
 
+  Quando(/^toquei no botão esqueci minha senha$/) do
+    @pageLogin.tocar_botao_esqueci_senha
+  end
+
 ######### ENTãO #########
 
-Então(/^devo ver uma mensagem de aviso de aplicativo exclusivo para alunos$/) do
+  Então(/^devo ver uma mensagem de aviso de aplicativo exclusivo para alunos$/) do
     @pageLogin.is_on_page? "Este aplicativo é exclusivo para alunos"
-end
+  end
 
-Então(/^devo ver uma mensagem de usuário não autorizado$/) do
+  Então(/^devo ver uma mensagem de usuário não autorizado$/) do
     @pageLogin.is_on_page? "Usuário não autorizado"
-end
+  end
 
-Então(/^devo ver uma mensagem de erro$/) do
+  Então(/^devo ver uma mensagem de erro$/) do
     @pageLogin.is_on_page? "Matrícula ou senha incorretas"
-end
+  end
 
-Então(/^devo ver uma mensagem de aviso de termos não aceitos$/) do
+  Então(/^devo ver uma mensagem de aviso de termos não aceitos$/) do
     @pageLogin.is_on_page? "Para realizar o login é necessário aceitar o termo de acesso."
-end
+  end
 
-Então(/^devo ver a tela inicial$/) do
+
+  Então(/^devo ver a tela inicial$/) do
     @pageHome = page(HomeScreen).await(timeout:10)
-end
+  end
 
-Então(/^o botão de login deve estar desabilitado$/) do
-  @pageLogin.btn_disabled?
-end
+  Então(/^o botão de login deve estar desabilitado$/) do
+    @pageLogin.btn_disabled?
+  end
+
+  Então(/^devo ver um alerta com os passos para redefinir senha$/) do
+    @pageLogin.is_on_page? "Para criar uma nova senha:"
+  end
