@@ -10,6 +10,11 @@ end
 Dado(/^que estou na tela inicial$/) do
   @pageHome = page(HomeScreen).await(timeout:5)
 end
+
+Dado(/^que estou na tela de Login$/) do
+  @pageLogin = page(LoginScreen).await(timeout: 10)
+end
+
 ######### WHEN #########
 
 When(/^I drag the screen (left|right|down|up) (\d+) times$/) do |direction, times|

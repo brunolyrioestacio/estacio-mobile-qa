@@ -1,8 +1,5 @@
 ######### DADO #########
 
-Dado(/^que estou na tela de Login$/) do
-  @pageLogin = page(LoginScreen).await(timeout: 10)
-end
 
 ######### QUANDO #########
 
