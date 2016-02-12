@@ -7,11 +7,17 @@ class LoginScreen < IOSScreenBase
    element(:button_login)        { 'loginButton' }
    element(:campo_matricula)     { 'registrationTextField' }
    element(:campo_senha)         { 'passwordTextField' }
+   element(:button_esqueci_senha){ 'forgotPasswordButton' }
 
   # Declare todas as acoes da tela
    action(:tocar_botao_login) {
      touch("* marked:'#{button_login}'")
    }
+
+   action(:tocar_botao_esqueci_senha) {
+     touch("* marked:'#{button_esqueci_senha}'")
+   }
+
   def enter_matricula(matricula)
     clear_text("* marked:'registrationTextField'")
     enter matricula, campo_matricula

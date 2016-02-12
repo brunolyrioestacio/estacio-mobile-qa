@@ -5,15 +5,21 @@ class LoginScreen < AndroidScreenBase
 
   # Declare todos os elementos da tela
   element(:layout_name)         { 'login_activity' }
-  element(:login_button)              { 'login_btn' }
+  element(:login_button)        { 'login_btn' }
   element(:campo_matricula)     { 'input_registration' }
   element(:campo_senha)         { 'input_password' }
+  element(:esqueci_senha_button){ 'forgot_password' }
 
   # Declare todas as acoes da tela
 
    action(:tocar_botao_login) {
      touch("* id:'#{login_button}'")
    }
+
+   action(:tocar_botao_esqueci_senha) {
+     touch("* id:'#{esqueci_senha_button}'")
+   }
+
   def enter_matricula(matricula)
     enter matricula, campo_matricula
   end
