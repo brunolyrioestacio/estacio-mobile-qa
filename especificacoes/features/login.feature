@@ -1,6 +1,7 @@
 # language: pt
 Funcionalidade: Login
 Através dessa funcionalidade é possível realizar o processo de autentificação do aluno no sistema SIA Aluno
+Nesta funcionalidade é possível resgatar matrícula e senha
 
   @nobutton
   Cenário: Tratamento de exceção do não preenchimento dos campos de matrícula e senha
@@ -39,14 +40,20 @@ Através dessa funcionalidade é possível realizar o processo de autentificaç�
     Quando tocar no botão de login
     Então devo ver uma mensagem de aviso de termos não aceitos
 
-    @newerror
+    @error
   Cenário: Tratamento de exceção de usuário não aluno
     Dado que estou na tela de Login
     E tentei usar uma matrícula de um usuário que não é aluno
-    E preenchi o campo de senha
+    E preenchi o campo de senhafo
     Quando tocar no botão de login
     Então devo ver uma mensagem de aviso de aplicativo exclusivo para alunos
 
+
+    @forgot
+  Cenário: Esqueci minha senha
+    Dado que estou na tela de Login
+    E toquei no botão esqueci minha senha
+    Então devo ver um alerta com os passos para redefinir senha
 
     @entra
   Cenário: Login
