@@ -2,7 +2,7 @@
 Funcionalidade: Home
 Através dessa funcionalidade é possível validar os banners da tela
 
-@entra
+@banner
 Cenário: Login
   Dado que estou na tela de Login
   E preenchi o campo de matrícula
@@ -10,6 +10,7 @@ Cenário: Login
   Quando tocar no botão de login
   Então devo ver a tela inicial
 
+@banner
 Cenário: Validação dos banners
   Dado que estou na tela inicial
   E toquei no banner
