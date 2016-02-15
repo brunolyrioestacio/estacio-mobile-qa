@@ -9,6 +9,7 @@ class HomeScreen < IOSScreenBase
    element(:sair_button)           {'Sair'}
    element(:banner)                {'bannerView'}
    element(:banner_view)           {'bannerDetailView'}
+   element(:matricula_container)  {'userRegistrationView'}
 
    action(:tocar_botao_entendi) {
      touch("* marked:'#{entendi_button}'")[1]
@@ -25,6 +26,9 @@ class HomeScreen < IOSScreenBase
    }
    action(:tocar_detalhe_banner) {
      touch("* marked:'#{banner_view}'")
+   }
+   action(:tocar_matricula){
+     touch("* marked:'#{matricula_container}'")
    }
    def alerta_logout_is_visible?
      is_on_page? "Deseja mesmo sair?"

@@ -8,7 +8,7 @@ class HomeScreen < AndroidScreenBase
   element(:sair_button)           {'log_out'}
   element(:confirmar_sair_button) {'custom_alert_second_btn'}
   element(:banner)                {'carousel_view_pager'}
-
+  element(:matricula_container)   {''}
 
   # Declare todas as acoes da tela
   action(:tocar_botao_sair) {
@@ -22,7 +22,9 @@ class HomeScreen < AndroidScreenBase
   action(:tocar_banner) {
     touch("* marked:'#{banner}'")
   }
-
+  action(:tocar_matricula){
+    touch("* id:'#{matricula_container}'")
+  }
   def alerta_logout_is_visible?
     is_on_page? "Deseja mesmo sair?"
   end
