@@ -1,15 +1,15 @@
 ######### DADO #########
-Dado (/^que estou na tela de esqueci minha matricula$/) do
+Dado(/^que estou na tela de esqueci minha matricula$/) do
   @pageMatricula = page(MatriculaScreen).await(timeout: 5)
 end
 
-Dado (/ˆque estou na tela com as matrículas do usuário$/) do
-
+Dado(/^que estou na tela com as matrículas do usuário$/) do
+  @pageSelecionarMatricula = page(SelecionarMatriculaScreen).await(timeout: 5)
 end
 ######### QUANDO #########
 
-Quando (/^tocar no botão de continuar$/) do
-  @pageMatricula.is_on_page? "Enviar"
+Quando(/^tocar no botão de continuar$/) do
+  @pageMatricula.tocar_botao_continuar
 end
 
 ########  E  ##########
@@ -27,16 +27,16 @@ Quando(/^não preenchi o campo de data de nascimento$/) do
 end
 
 Quando(/^preenchi o campo de data de nascimento$/) do
-  nascimento=""
+  nascimento="10/11/1983"
   @pageMatricula.enter_nascimento nascimento
 end
 
 Quando(/^preenchi o campo de identidade$/) do
-  identidade=""
+  identidade="0205882327"
   @pageMatricula.enter_identidade identidade
 end
 
-Quando (/^preenchi o campo de identidade incorretamente$/) do
+Quando(/^preenchi o campo de identidade incorretamente$/) do
   identidade="61283401324"
   @pageMatricula.enter_identidade identidade
 end
@@ -46,17 +46,21 @@ Quando(/^preenchi o campo de data de nascimento incorretamente$/) do
   @pageMatricula.enter_nascimento nascimento
 end
 
-Quando (/^tocar no botão de escolher matrícula$/) do
-
+Quando(/^tocar no botão de escolher matrícula$/) do
+  @pageSelecionarMatricula.tocar_selecionar_button
 end
 
-Quando (/^o campo de matrícula deve estar preenchido$) do
+Quando(/^o campo de matrícula deve estar preenchido$/) do
+  @pageLogin.campo_matricula matricula
+end
 
+Quando(/^o campo de matrícula deve estar preenchido com a matricula selecionada$/) do
+  @pageLogin.is_on_page? "200927004308"
 end
 
 ######### ENTãO #########
 
-Então (/^devo estar na tela de esqueci minha matricula$/) do
+Então(/^devo estar na tela de esqueci minha matricula$/) do
   @pageMatricula = page(MatriculaScreen).await(timeout: 5)
 end
 
@@ -64,14 +68,14 @@ Então(/^o botão de continuar deve estar desabilitado$/) do
   @pageMatricula.btn_disabled?
 end
 
-Então (/^devo ver um alerta com uma mensagem de erro$/) do
+Então(/^devo ver um alerta com uma mensagem de erro$/) do
   @pageMatricula.is_on_page? "Identidade ou data de nascimento inválida."
 end
 
-Então (/^devo estar na tela com as matrículas do usuário$/) do
-
+Então(/^devo estar na tela com as matrículas do usuário$/) do
+    @pageSelecionarMatricula = page(SelecionarMatriculaScreen).await(timeout: 5)
 end
 
-Então (/^devo estar na tela de login$/) do
+Então(/^devo estar na tela de login$/) do
   @pageLogin = page(LoginScreen).await(timeout: 5)
 end

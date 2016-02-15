@@ -44,7 +44,7 @@ Nesta funcionalidade é possível resgatar a matrícula
     Então devo ver um alerta com uma mensagem de erro
 
     @foi
-  Cenário: Matrícula resgatada
+  Cenário: Resgate de matrícula
     Dado que estou na tela de Login
     E toquei no botão de esqueci minha matricula
     Então devo estar na tela de esqueci minha matricula
@@ -56,4 +56,4 @@ Nesta funcionalidade é possível resgatar a matrícula
     Dado que estou na tela com as matrículas do usuário
     E tocar no botão de escolher matrícula
     Então devo estar na tela de login
-    E o campo de matrícula deve estar preenchido
+    E o campo de matrícula deve estar preenchido com a matricula selecionada
