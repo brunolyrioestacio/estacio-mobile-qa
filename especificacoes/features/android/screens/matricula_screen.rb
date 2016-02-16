@@ -3,8 +3,9 @@ class MatriculaScreen < AndroidScreenBase
 
   trait(:trait)                 { "* id:'#{layout_name}'" }
   # Declare todos os elementos da tela
-  element(:campo_identidade)                { ''}
-  element(:campo_nascimento)                { ''}
+  element(:layout_name)                     { 'forgot_registration_activity' }
+  element(:campo_identidade)                { 'number_id'}
+  element(:campo_nascimento)                { 'date_of_birth'}
   element(:enviar_button)                   { 'Continuar'}
 
   # Declare todas as acoes da tela
