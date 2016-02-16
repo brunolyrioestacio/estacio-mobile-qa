@@ -2,13 +2,8 @@
 Funcionalidade: Home
 Através dessa funcionalidade é possível validar os banners da tela
 
-@banner
-Cenário: Login
-  Dado que estou na tela de Login
-  E preenchi o campo de matrícula
-  E preenchi o campo de senha
-  Quando tocar no botão de login
-  Então devo ver a tela inicial
+Contexto: Login
+  Dado que estou logado
 
 @banner
 Cenário: Validação dos banners

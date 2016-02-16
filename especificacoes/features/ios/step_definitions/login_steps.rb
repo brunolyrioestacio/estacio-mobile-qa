@@ -8,7 +8,7 @@ end
 
 
 ###########E############
-Quando(/^o pulei$/) do
+Quando(/^o pular$/) do
   @pageTutorial.tocar_botao_pular
 end
 

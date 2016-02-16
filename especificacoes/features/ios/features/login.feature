@@ -1,18 +1,16 @@
 # language: pt
-Funcionalidade: Login
+Funcionalidade: Login(Somente iOS)
 Através dessa funcionalidade é possível realizar o processo de autentificação do aluno no sistema SIA Aluno
+
   @tuto
-  Cenário: Vizualização de OnBoarding
+  Cenário: Vizualização de Tutorial
     Dado que estou na tela de tutorial
-    E o pulei
-    Dado que estou na tela de Login
-    E preenchi o campo de matrícula
-    E preenchi o campo de senha
-    Quando tocar no botão de login
-    Dado que estou na tela inicial
-    Então devo interagir com o OnBoarding
+    Quando o pular
+    Então devo estar na tela de Login
+
   @tuto
   Cenário: Logout
+    Dado que estou logado
     Dado que estou na tela inicial
     E toquei no botão Outras Funções
     E toquei no botão Sair

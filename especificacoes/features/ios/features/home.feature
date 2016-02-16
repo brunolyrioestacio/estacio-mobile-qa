@@ -1,14 +1,13 @@
 # language: pt
-Funcionalidade: Home
+Funcionalidade: Home(Somente iOS)
 Com essa funcionalidade é possível validar os banners da tela principal
 
-@entra
-Cenário: Login
-  Dado que estou na tela de Login
-  E preenchi o campo de matrícula
-  E preenchi o campo de senha
-  Quando tocar no botão de login
-  Então devo ver a tela inicial
+Contexto: Login
+  Dado que estou logado
+
+Cenário: Vizualização de OnBoarding
+  Dado que estou na tela inicial
+  Então devo interagir com o OnBoarding
 
 @banner
 Cenário: Validação do banner
