@@ -17,10 +17,6 @@ Quando(/^toquei no botão Outras Funções$/) do
   @pageHome.tocar_botao_outras_funcoes
 end
 
-Quando (/^toquei no botão Sair$/) do
-  @pageHome.tocar_botao_sair
-end
-
 Quando (/^vi um alerta com a mensagem de aviso sobre logout$/) do
   @pageHome.alerta_logout_is_visible?
 end
