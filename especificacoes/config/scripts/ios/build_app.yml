@@ -1,29 +1,29 @@
-devNatan:
+devNatanSimulator:
   xcworkspace: "/Users/natan.ximenes/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
   scheme: Estacio-cal
-  configuration: Debug
+  configuration: Development
   destination: "platform=iOS Simulator,name=iPhone 6"
   export_path: "/Users/natan.ximenes/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
 
-devNatanSpecial:
+devNatanDevice:
   xcworkspace: "/Users/natan.ximenes/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
   scheme: Estacio-cal
-  configuration: Special
-  destination: "platform=iOS Simulator,name=iPhone 6"
+  configuration: Development
+  destination: ""
   export_path: "/Users/natan.ximenes/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
 
-devIngrid:
+devIngridSimulator:
   xcworkspace: "/Users/ingrid.andrade/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
   scheme: Estacio-cal
-  configuration: Debug
+  configuration: Development
   destination: "platform=iOS Simulator,name=iPhone 6"
   export_path: "/Users/ingrid.andrade/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
 
-devIngridSpecial:
+devIngridDevice:
   xcworkspace: "/Users/ingrid.andrade/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
   scheme: Estacio-cal
-  configuration: Special
-  destination: "platform=iOS Simulator,name=iPhone 6"
+  configuration: Development
+  destination: ""
   export_path: "/Users/ingrid.andrade/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
 
 jenkins:
