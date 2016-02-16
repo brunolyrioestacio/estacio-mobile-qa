@@ -9,6 +9,7 @@ class LoginScreen < AndroidScreenBase
   element(:campo_matricula)     { 'input_registration' }
   element(:campo_senha)         { 'input_password' }
   element(:esqueci_senha_button){ 'forgot_password' }
+  element(:esqueci_matricula_button) {'forgot_registration'}
 
   # Declare todas as acoes da tela
 
@@ -18,6 +19,10 @@ class LoginScreen < AndroidScreenBase
 
    action(:tocar_botao_esqueci_senha) {
      touch("* id:'#{esqueci_senha_button}'")
+   }
+
+   action(:tocar_botao_esqueci_matricula){
+     touch("* id:'#{esqueci_matricula_button}'")
    }
 
   def enter_matricula(matricula)
