@@ -19,6 +19,13 @@ devIngrid:
   destination: "platform=iOS Simulator,name=iPhone 6"
   export_path: "/Users/ingrid.andrade/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
 
+devIngridSpecial:
+  xcworkspace: "/Users/ingrid.andrade/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
+  scheme: Estacio-cal
+  configuration: Special
+  destination: "platform=iOS Simulator,name=iPhone 6"
+  export_path: "/Users/ingrid.andrade/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
+
 jenkins:
   xcworkspace: <%= ENV['WORKSPACE']%>/Project.xcworkspace
   scheme: TargetName
