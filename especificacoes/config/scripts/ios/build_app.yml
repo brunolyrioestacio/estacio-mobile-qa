@@ -23,7 +23,7 @@ devIngridDevice:
   xcworkspace: "/Users/ingrid.andrade/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
   scheme: Estacio-cal
   configuration: Development
-  destination: ""
+  destination: "platform=iOS,id=633e76844b17e01589511106b680483da519ac55"
   export_path: "/Users/ingrid.andrade/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
 
 jenkins:
