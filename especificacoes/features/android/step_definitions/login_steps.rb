@@ -12,7 +12,9 @@ Dado(/^que estou logado$/) do
     }
   end
 end
-
+Dado(/^que pulei o tutorial$/) do
+  @pageLogin = page(LoginScreen).await(timeout: 5)
+end
 ######### QUANDO #########
 
 
