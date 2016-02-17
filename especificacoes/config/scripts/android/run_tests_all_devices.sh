@@ -21,9 +21,13 @@ echo Inicio da execução: $(date)
 reports_path="$WORKSPACE/reports-cal"
 mkdir $reports_path
 
+#resign the apk before run
+cd $WORKSPACE/especificacoes
+calabash-android resign $1
+
 for device in $(adb devices | grep "device$" | cut -f 1)
 do
-  cd $WORKSPACE
+  cd $WORKSPACE/especificacoes
   # Creates the reports folder
   mkdir "$reports_path"/"$device"
 
