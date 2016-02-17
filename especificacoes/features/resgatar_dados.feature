@@ -1,6 +1,16 @@
 # language: pt
-Funcionalidade: Matricula
+Funcionalidade: Resgatar Dados
 Nesta funcionalidade é possível resgatar a matrícula
+
+  Contexto: Pular Tutorial
+    Dado que pulei o tutorial
+
+  @login
+  @forgot
+  Cenário: Esqueci minha senha
+    Dado que estou na tela de Login
+    E toquei no botão esqueci minha senha
+    Então devo ver um alerta com os passos para redefinir senha
 
   @nobuttonm
   Cenário: Tratamento de exceção do não preenchimento dos campos de identidade e data de nascimento
