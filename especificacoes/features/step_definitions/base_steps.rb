@@ -7,6 +7,14 @@ Given(/^I am on a page that contains '(.*?)'$/) do |page_text|
   @page.is_on_page? page_text
 end
 
+Dado(/^que estou na tela inicial$/) do
+  @pageHome = page(HomeScreen).await(timeout:5)
+end
+
+Dado(/^que estou na tela de Login$/) do
+  @pageLogin = page(LoginScreen).await(timeout: 10)
+end
+
 ######### WHEN #########
 
 When(/^I drag the screen (left|right|down|up) (\d+) times$/) do |direction, times|
@@ -20,6 +28,17 @@ end
 When(/^I drag the screen (down|up|left|right)$/) do |direction|
   @page.drag_to direction.to_sym
 end
+
+Quando (/^toquei no botão Sair$/) do
+  @pageHome.tocar_botao_sair
+end
+
+
+Quando(/^toquei no banner$/) do
+  sleep 2
+  @pageHome.tocar_banner
+end
+
 
 ######### THEN #########
 
@@ -37,3 +56,6 @@ Then(/^I should see a page that contains '(.*?)'$/) do |page_text|
   @page.is_on_page? page_text
 end
 
+Então(/^devo ver um alerta de redirecionamento para uma página externa$/) do
+  @pageHome.is_on_page? "Você será direcionado para um site externo. Deseja continuar?"
+end

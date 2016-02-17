@@ -54,7 +54,7 @@ puts 'Building project'
 
 system <<eos
   xcodebuild -workspace "#{config['xcworkspace']}" \
-  -scheme "#{config['scheme']}" -sdk "#{sdk}" \
+  -scheme "#{config['scheme']}" -sdk "#{sdk}" -destination "#{config['destination']}" \
   -configuration "#{config['configuration']}" clean build \
   CONFIGURATION_BUILD_DIR="#{export_path}"
 eos
