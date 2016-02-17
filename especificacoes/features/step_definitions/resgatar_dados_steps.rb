@@ -42,7 +42,7 @@ Quando(/^preenchi o campo de identidade incorretamente$/) do
 end
 
 Quando(/^preenchi o campo de data de nascimento incorretamente$/) do
-  nascimento="04081990"
+  nascimento="04/08/1190"
   @pageMatricula.enter_nascimento nascimento
 end
 
