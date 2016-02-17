@@ -35,6 +35,7 @@ end
 
 
 Quando(/^toquei no banner$/) do
+  sleep 2
   @pageHome.tocar_banner
 end
 
