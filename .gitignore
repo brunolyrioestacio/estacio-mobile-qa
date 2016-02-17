@@ -1,5 +1,8 @@
 .irb-history
 reports/*
-test_servers/*
+especificacoes/test_servers/*
 .DS_Store
 screenshot*.png
+android-output/
+ios-output/
+*.lock
