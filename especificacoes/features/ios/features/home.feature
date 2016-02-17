@@ -1,9 +1,9 @@
 # language: pt
 Funcionalidade: Home(Somente iOS)
-Com essa funcionalidade é possível validar os banners da tela principal
+Através dessa funcionalidade é possível ter acesso aos banners e aos atalhos para outras funcionalidades do aplicativo
 
 Contexto: Login
-  Dado que estou logado
+  Dado que pulei o tutorial e estou logado
 
 Cenário: Vizualização de OnBoarding
   Dado que estou na tela inicial

@@ -8,7 +8,8 @@ Através dessa funcionalidade é possível realizar o processo de autentificaç�
     Quando o pular
     Então devo estar na tela de Login
 
-  @tuto
+  @logout
+  @reinstall
   Cenário: Logout
     Dado que estou logado
     Dado que estou na tela inicial

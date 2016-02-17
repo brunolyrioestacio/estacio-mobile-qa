@@ -3,6 +3,9 @@ Funcionalidade: Login
 Através dessa funcionalidade é possível realizar o processo de autentificação do aluno no sistema SIA Aluno
 Nesta funcionalidade é possível resgatar matrícula e senha
 
+  Contexto: Pular Tutorial
+    Dado que pulei o tutorial
+
   @login
   @nobutton
   Cenário: Tratamento de exceção do não preenchimento dos campos de matrícula e senha

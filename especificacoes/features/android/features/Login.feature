@@ -1,5 +1,5 @@
 # language: pt
-Funcionalidade: Login
+Funcionalidade: Login(Somente Android)
 Através dessa funcionalidade é possível realizar o processo de autentificação do aluno no sistema SIA Aluno e sair do aplicativo
 
 @login

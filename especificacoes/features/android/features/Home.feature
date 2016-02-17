@@ -1,6 +1,6 @@
 # language: pt
-Funcionalidade: Home
-Através dessa funcionalidade é possível validar os banners da tela
+Funcionalidade: Home(Somente Android)
+Através dessa funcionalidade é possível ter acesso aos banners e aos atalhos para outras funcionalidades do aplicativo
 
 Contexto: Login
   Dado que estou logado
