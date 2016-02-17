@@ -8,7 +8,7 @@ class HomeScreen < AndroidScreenBase
   element(:sair_button)           {'log_out'}
   element(:confirmar_sair_button) {'custom_alert_second_btn'}
   element(:banner)                {'carousel_view_pager'}
-  element(:matricula_container)   {''}
+  element(:matricula_container)   {'home_student_card_info'}
 
   # Declare todas as acoes da tela
   action(:tocar_botao_sair) {
