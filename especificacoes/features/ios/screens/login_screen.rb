@@ -9,10 +9,13 @@ class LoginScreen < IOSScreenBase
    element(:campo_senha)         { 'passwordTextField' }
    element(:button_esqueci_senha)         { 'forgotPasswordButton' }
    element(:esqueci_matricula_button)     { 'forgotRegistrationButton' }
+   element(:logo_diamante)                {'logo'}
 
 
   # Declare todas as acoes da tela
    action(:tocar_botao_login) {
+     touch("* marked:'#{logo_diamante}'")
+     sleep 1
      touch("* marked:'#{button_login}'")
    }
 
