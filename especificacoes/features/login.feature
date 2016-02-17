@@ -58,13 +58,6 @@ Nesta funcionalidade é possível resgatar matrícula e senha
     Então devo ver uma mensagem de aviso de aplicativo exclusivo para alunos
 
   @login
-  @forgot
-  Cenário: Esqueci minha senha
-    Dado que estou na tela de Login
-    E toquei no botão esqueci minha senha
-    Então devo ver um alerta com os passos para redefinir senha
-
-  @login
   @entra
   Cenário: Login
     Dado que estou na tela de Login
