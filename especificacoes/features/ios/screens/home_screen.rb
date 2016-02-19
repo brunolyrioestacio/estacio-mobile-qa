@@ -10,6 +10,8 @@ class HomeScreen < IOSScreenBase
    element(:banner)                {'bannerView'}
    element(:banner_view)           {'bannerDetailView'}
    element(:matricula_container)  {'userRegistrationView'}
+   element(:atalho_button)        {'Adicionar um atalho'}
+   element(:manual_button)         {'Manual do Aluno'}
 
    action(:tocar_botao_entendi) {
      touch("* marked:'#{entendi_button}'")[1]
@@ -29,6 +31,14 @@ class HomeScreen < IOSScreenBase
    }
    action(:tocar_matricula){
      touch("* marked:'#{matricula_container}'")
+   }
+
+   action(:tocar_adicionar_atalho) {
+     touch("* marked:'#{atalho_button}'")
+   }
+
+   action(:tocar_botao_manual_aluno){
+     touch("* marked:'#{manual_button}'")
    }
    def alerta_logout_is_visible?
      is_on_page? "Deseja mesmo sair?"
