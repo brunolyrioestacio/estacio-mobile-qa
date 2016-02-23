@@ -10,6 +10,15 @@ class HomeScreen < IOSScreenBase
    element(:banner)                {'bannerView'}
    element(:banner_view)           {'bannerDetailView'}
    element(:matricula_container)  {'userRegistrationView'}
+   element(:atalho_button)        {'Adicionar um atalho'}
+   element(:manual_button)         {'Manual do Aluno'}
+   element(:notas_button)         {'Notas'}
+   element(:quadro_button)         {'Quadro de Horários'}
+   element(:faltas_button)         {'Faltas'}
+   element(:atendimento_button)         {'Atendimento Agendado'}
+   element(:requerimento_button)         {'Requerimento/Reclamação'}
+
+
 
    action(:tocar_botao_entendi) {
      touch("* marked:'#{entendi_button}'")[1]
@@ -30,6 +39,35 @@ class HomeScreen < IOSScreenBase
    action(:tocar_matricula){
      touch("* marked:'#{matricula_container}'")
    }
+
+   action(:tocar_adicionar_atalho) {
+     touch("* marked:'#{atalho_button}'")
+   }
+
+   action(:tocar_botao_manual_aluno){
+     touch("* marked:'#{manual_button}'")
+   }
+
+   action(:tocar_botao_notas_aluno){
+     touch("* marked:'#{notas_button}'")
+   }
+
+   action(:tocar_botao_quadro){
+     touch("* marked:'#{quadro_button}'")
+   }
+
+   action(:tocar_botao_faltas_aluno){
+     touch("* marked:'#{faltas_button}'")
+   }
+
+   action(:tocar_botao_requerimento){
+     touch("* marked:'#{requerimento_button}'")
+   }
+
+   action(:tocar_botao_atendimento){
+     touch("* marked:'#{atendimento_button}'")
+   }
+
    def alerta_logout_is_visible?
      is_on_page? "Deseja mesmo sair?"
    end

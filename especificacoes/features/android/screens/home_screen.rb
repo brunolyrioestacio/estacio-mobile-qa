@@ -8,7 +8,8 @@ class HomeScreen < AndroidScreenBase
   element(:sair_button)           {'log_out'}
   element(:confirmar_sair_button) {'custom_alert_second_btn'}
   element(:banner)                {'carousel_view_pager'}
-  element(:matricula_container)   {'home_student_card_info'}
+  element(:matricula_button)   {'open_student_card'}
+  element(:manual_button)         {'guide_of_student_item'}
 
   # Declare todas as acoes da tela
   action(:tocar_botao_sair) {
@@ -23,8 +24,12 @@ class HomeScreen < AndroidScreenBase
     touch("* marked:'#{banner}'")
   }
   action(:tocar_matricula){
-    touch("* id:'#{matricula_container}'")
+    touch("* id:'#{matricula_button}'")
   }
+  action(:tocar_botao_manual_aluno){
+    touch("* id:'#{manual_button}'")
+  }
+
   def alerta_logout_is_visible?
     is_on_page? "Deseja mesmo sair?"
   end
