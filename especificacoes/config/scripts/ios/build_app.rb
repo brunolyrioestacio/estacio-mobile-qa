@@ -46,18 +46,23 @@ FileUtils.mkdir_p export_path
 sdk = ''
 if ARGV[1] == 'device'
   sdk = 'iphoneos'
+  puts 'Building project'
+system <<eos
+  xcodebuild -workspace "#{config['xcworkspace']}" \
+  -scheme "#{config['scheme']}" -sdk "#{sdk}"\
+  -configuration "#{config['configuration']}" clean build \
+  CONFIGURATION_BUILD_DIR="#{export_path}"
+eos
 else
   sdk = 'iphonesimulator'
-end
-
-puts 'Building project'
-
-system <<eos
+  puts 'Building project'
+system <<eoS
   xcodebuild -workspace "#{config['xcworkspace']}" \
   -scheme "#{config['scheme']}" -sdk "#{sdk}" -destination "#{config['destination']}" \
   -configuration "#{config['configuration']}" clean build \
   CONFIGURATION_BUILD_DIR="#{export_path}"
-eos
+eoS
+end
 
 puts "APP_BUNDLE_PATH=#{File.join(export_path, config['scheme'])}.app"
 
