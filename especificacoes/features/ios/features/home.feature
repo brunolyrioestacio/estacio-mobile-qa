@@ -29,7 +29,7 @@ Cenário: Preenchimento do Tile com Manual do Aluno
 Cenário: Vizualização do Manual do Aluno
   Dado que estou na tela inicial
   E toquei no botão Outras Funções
-  E toquei no botão de manual do aluno
+  Quando tocar no botão de manual do aluno
   Então devo vizualizar o manual do aluno
 
 @preencher @nota
