@@ -8,7 +8,7 @@ class MatriculaScreen < IOSScreenBase
    element(:campo_identidade)                { 'idNumberTextField'}
    element(:campo_nascimento)                { 'birthdayTextField'}
    element(:datepicker_nascimento)           { 'birthdayDatePicker'}
-   element(:enviar_button)                   { 'Enviar'}
+   element(:enviar_button)                   { 'submitButton'}
 
 
 
