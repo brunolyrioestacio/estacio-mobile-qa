@@ -5,12 +5,12 @@ class HomeScreen < IOSScreenBase
   # Declare todos os elementos da tela
    element(:layout_name)           { 'homeView' }
    element(:entendi_button)        {'OK, entendi'}
-   element(:outras_funcoes_button) {'Outras Funções'}
+   element(:outras_funcoes_button) {"Outras\nFunções"}
    element(:sair_button)           {'Sair'}
    element(:banner)                {'bannerView'}
    element(:banner_view)           {'bannerDetailView'}
    element(:matricula_container)  {'userRegistrationView'}
-   element(:atalho_button)        {'Adicionar um atalho'}
+   element(:atalho_button)        {"Adicionar\num atalho"}
    element(:manual_button)         {'Manual do Aluno'}
    element(:notas_button)         {'Notas'}
    element(:quadro_button)         {'Quadro de Horários'}
@@ -25,7 +25,7 @@ class HomeScreen < IOSScreenBase
    }
 
    action(:tocar_botao_outras_funcoes) {
-     touch("* marked:'#{outras_funcoes_button}'")
+     touch("* text:'#{outras_funcoes_button}'")
    }
    action(:tocar_botao_sair) {
      touch("* marked:'#{sair_button}'")
@@ -41,7 +41,7 @@ class HomeScreen < IOSScreenBase
    }
 
    action(:tocar_adicionar_atalho) {
-     touch("* marked:'#{atalho_button}'")
+     touch("* text:'#{atalho_button}'")
    }
 
    action(:tocar_botao_manual_aluno){
