@@ -1,4 +1,4 @@
 # <DEVICE_TARGET (UUID)> | <DEVICE_ENDPOINT (IP)> | <DEVICE_NAME> | <DEVICE_TYPE> (Simulator or Device)
-000...000 | http://localhost:37265 | Device0 | Simulator
-111...111 | http://1.1.1.1:37265 | Device1 | Device
+cd0e602f1dc1290aaec8f2bc6802a5d328059963 | http://10.10.2.96:37265 | QA_6 | Device
+b02e21967875ac4a86bdc5edf78fbf473966cf61 | http://10.10.2.97:37265 | QA_5C | Device
 # EOF - Never erase this comment or the script will have problems to read this file
