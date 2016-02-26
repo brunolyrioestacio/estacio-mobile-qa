@@ -16,4 +16,5 @@ jenkins:
   xcworkspace: $IOS_WORKSPACE/Estacio.xcworkspace"
   scheme: Estacio-cal
   configuration: Debug
+  destination: "platform=iOS Simulator,name=iPhone 6"
   export_path: $WORKSPACE/releases/normal
