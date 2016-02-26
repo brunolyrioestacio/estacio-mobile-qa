@@ -1,33 +1,20 @@
-devNatanSimulator:
+devNatan:
   xcworkspace: "/Users/natan.ximenes/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
   scheme: Estacio-cal
   configuration: Development
   destination: "platform=iOS Simulator,name=iPhone 6"
   export_path: "/Users/natan.ximenes/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
 
-devNatanDevice:
-  xcworkspace: "/Users/natan.ximenes/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
-  scheme: Estacio-cal
-  configuration: Development
-  destination: ""
-  export_path: "/Users/natan.ximenes/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
-
-devIngridSimulator:
+devIngrid:
   xcworkspace: "/Users/ingrid.andrade/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
   scheme: Estacio-cal
   configuration: Development
   destination: "platform=iOS Simulator,name=iPhone 6"
-  export_path: "/Users/ingrid.andrade/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
-
-devIngridDevice:
-  xcworkspace: "/Users/ingrid.andrade/Documents/Workspace/iOS-Workspace/estacio-mobile-ios/Estacio.xcworkspace"
-  scheme: Estacio-cal
-  configuration: Development
-  destination: "platform=iOS,id=633e76844b17e01589511106b680483da519ac55"
   export_path: "/Users/ingrid.andrade/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
 
 jenkins:
-  xcworkspace: <%= ENV['WORKSPACE']%>/Project.xcworkspace
-  scheme: TargetName
+  xcworkspace: $IOS_WORKSPACE/Estacio.xcworkspace"
+  scheme: Estacio-cal
   configuration: Debug
-  export_path: <%= ENV['WORKSPACE']%>/releases/normal
+  destination: "platform=iOS Simulator,name=iPhone 6"
+  export_path: $WORKSPACE/releases/normal

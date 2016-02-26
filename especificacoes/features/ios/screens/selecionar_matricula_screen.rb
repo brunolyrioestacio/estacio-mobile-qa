@@ -5,7 +5,7 @@ class SelecionarMatriculaScreen < IOSScreenBase
 
   # Declare todos os elementos da tela
    element(:layout_name)                     { 'selectRegistrationView' }
-   element(:selecionar_button)                   { 'Selecionar'}
+   element(:selecionar_button)                   { 'selectRegistrationButton'}
 
    def tocar_selecionar_button
      touch("* marked:'#{selecionar_button}'")

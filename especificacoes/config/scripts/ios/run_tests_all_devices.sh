@@ -27,13 +27,13 @@ cd "$original_path"
 cd "$2"
 DEVICE_APP_PATH="$(pwd)"
 
-cd $WORKSPACE # All tests should run from the root folder of the tests project
+cd $WORKSPACE/especificacoes # All tests should run from the root folder of the tests project
 
 cat config/scripts/ios/devices.txt |  ## Reading the devices.txt file
 grep -v "#" | ## Removing the command lines
 tr -d " " | ## Trimming all the spaces
 while IFS='|' read UUID IP NAME TYPE ## Defining pipe as the separator char and reading the three variable fields
-do 
+do
     # Creating the report folder for this device or simulator
     mkdir "$reports_path"/"$NAME"
 
@@ -43,7 +43,7 @@ do
     else
 	APP_PATH=$DEVICE_APP_PATH
     fi
-    
+
     # Executing calabash for the device or simulator
     APP_BUNDLE_PATH="$APP_PATH" DEVICE_TARGET="$UUID" DEVICE_ENDPOINT="$IP" SCREENSHOT_PATH="$reports_path"/"$NAME"/ cucumber -p ios -f 'Calabash::Formatters::Html' -o "$reports_path"/"$NAME/reports.html" -f junit -o "$reports_path"/"$NAME"
 
