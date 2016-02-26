@@ -13,8 +13,8 @@ devIngrid:
   export_path: "/Users/ingrid.andrade/Documents/Workspace/QA-Workspace/estacio-mobile-qa/ios-output"
 
 jenkins:
-  xcworkspace: $IOS_WORKSPACE/Estacio.xcworkspace"
+  xcworkspace: IOS_WORKSPACE/Estacio.xcworkspace
   scheme: Estacio-cal
-  configuration: Debug
+  configuration: Development
   destination: "platform=iOS Simulator,name=iPhone 6"
   export_path: $WORKSPACE/releases/normal
