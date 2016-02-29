@@ -15,6 +15,7 @@ Contexto: Login
     Dado que estou na tela de Notas
     Então devo vizualizar as notas da disciplina de Estrutura de Dados
 
+  @reinstall
   Cenário: Visualização de Notas - Aluno sem notas
     Dado que preenchi o campo de matrícula com uma matricula que não possui notas lançadas
     E preenchi o campo de senha
@@ -25,6 +26,7 @@ Contexto: Login
     Dado que estou na tela de Notas
     Então devo ver uma mensagem de aviso sobre a falta de notas lançadas
 
+  @reinstall
   Cenário: Visualização de Notas - Aluno não matriculado
     Dado que preenchi o campo de matrícula com uma matricula não relacionada ao período vigente
     E preenchi o campo de senha
