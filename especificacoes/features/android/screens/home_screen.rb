@@ -8,12 +8,17 @@ class HomeScreen < AndroidScreenBase
   element(:sair_button)           {'log_out'}
   element(:confirmar_sair_button) {'custom_alert_second_btn'}
   element(:banner)                {'carousel_view_pager'}
-  element(:matricula_button)   {'open_student_card'}
+  element(:matricula_button)      {'open_student_card'}
   element(:manual_button)         {'guide_of_student_item'}
+  element(:notas_button)          {'Notas'}
 
   # Declare todas as acoes da tela
   action(:tocar_botao_sair) {
     touch("* marked:'#{sair_button}'")
+  }
+
+  action(:tocar_botao_notas_aluno){
+    touch("* marked:'#{notas_button}'")
   }
 
   action(:tocar_botao_confirmar_sair){
