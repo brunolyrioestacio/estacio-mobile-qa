@@ -15,6 +15,6 @@ class QuadroDeHorariosScreen < AndroidScreenBase
   end
 
   def validate_no_class_registration
-    is_on_page? "Você não está matriculado em nenhuma disciplina do Período Acadêmico vigente!"
+    is_on_page? "Você não está matriculado em nenhuma disciplina no Período Acadêmico vigente!"
   end
 end
