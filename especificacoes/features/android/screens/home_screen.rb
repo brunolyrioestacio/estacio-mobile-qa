@@ -11,6 +11,7 @@ class HomeScreen < AndroidScreenBase
   element(:matricula_button)      {'open_student_card'}
   element(:manual_button)         {'guide_of_student_item'}
   element(:notas_button)          {'Notas'}
+  element(:horarios_button)       {"Quadro de\n horários"}
 
   # Declare todas as acoes da tela
   action(:tocar_botao_sair) {
@@ -19,6 +20,10 @@ class HomeScreen < AndroidScreenBase
 
   action(:tocar_botao_notas_aluno){
     touch("* marked:'#{notas_button}'")
+  }
+
+  action(:tocar_botao_quadro_de_horarios){
+    touch("* marked:'#{horarios_button}'")
   }
 
   action(:tocar_botao_confirmar_sair){
