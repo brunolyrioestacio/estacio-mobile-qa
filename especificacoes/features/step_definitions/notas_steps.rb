@@ -27,5 +27,5 @@ Então (/^devo ver uma mensagem de aviso sobre a falta de notas lançadas$/) do
 end
 
 Então (/^devo ver uma mensagem de aviso sobre a falta de notas lançadas devido ao aluno não estar matriculado$/) do
-  @pageNotas.validate_no_class_registration
+  @pageNotas.validate_no_registration
 end

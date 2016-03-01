@@ -13,10 +13,10 @@ class NotasScreen < IOSScreenBase
   end
 
   def validate_no_grades
-    is_on_page? "Aluno não está matriculado em nenhum Período Acadêmico vigente."
+    is_on_page? "Não existem lançamentos de notas para você no Período Acadêmico vigente!"
   end
 
-  def validate_no_class_registration
-    is_on_page? "Não existem lançamentos de notas para você no Período Acadêmico vigente!"
+  def validate_no_registration
+    is_on_page? "Aluno não está matriculado em nenhum Período Acadêmico vigente."
   end
 end
