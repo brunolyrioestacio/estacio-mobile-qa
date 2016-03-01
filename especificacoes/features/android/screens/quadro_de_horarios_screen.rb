@@ -1,13 +1,20 @@
 class QuadroDeHorariosScreen < AndroidScreenBase
   # Identificador da tela
-  # trait(:trait)                 { "* id:'#{layout_name}'" }
+  trait(:trait)                 { "* id:'#{layout_name}'" }
 
   # Declare todos os elementos da tela
-  # element(:layout_name)         { 'insert_layout_identificator' }
-  # element(:button)              { 'insert_button_identificator' }
+  element(:layout_name)         { 'timesheet_activity' }
 
-  # Declare todas as acoes da tela
-  # action(:touch_button) {
-  #   touch("* id:'#{button}'")
-  # }
+  def schedule_is_on_page?
+    is_on_page? "MODELAGEM DE SISTEMAS"
+  end
+
+  def validate_no_schedule_available
+  # is_on_page? "O seu quadro de horário ainda não está disponível para consulta."
+    pending
+  end
+
+  def validate_no_class_registration
+    is_on_page? "Você não está matriculado em nenhuma disciplina do Período Acadêmico vigente!"
+  end
 end
