@@ -3,7 +3,7 @@ class NotasScreen < IOSScreenBase
   trait(:trait)                 { "* marked:'#{layout_name}'" }
 
   # Declare todos os elementos da tela
-  element(:layout_name)         { '' }
+  element(:layout_name)         { 'gradesView' }
 
   def grades_is_on_page
     is_on_page? "Estrutura de dados"
