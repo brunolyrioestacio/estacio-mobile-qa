@@ -4,7 +4,9 @@
 Quando(/^tocar no botão de Notas$/) do
   @pageHome.tocar_botao_notas_aluno
 end
-
+Quando(/^tocar no botão de quadro de horarios$/) do
+  @pageHome.tocar_botao_quadro_de_horarios
+end
 ###########E############
 
 
