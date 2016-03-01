@@ -1,4 +1,10 @@
 ######### DADO #########
+Dado(/^estou na tela de Login$/) do
+  step "que estou na tela de Login"
+end
+Dado(/^interagi com o OnBoarding$/) do
+  step "devo interagir com o OnBoarding"
+end
 Dado(/^que estou logado$/) do
   begin
     @pageTutorial = page(TutorialScreen).await(timeout:5)
