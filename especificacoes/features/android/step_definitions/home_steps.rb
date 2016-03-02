@@ -7,6 +7,9 @@ end
 Quando(/^tocar no botão de quadro de horarios$/) do
   @pageHome.tocar_botao_quadro_de_horarios
 end
+Quando(/^tocar no botão de faltas$/) do
+  @pageHome.tocar_botao_faltas
+end
 ###########E############
 
 
