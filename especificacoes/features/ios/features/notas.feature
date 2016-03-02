@@ -10,6 +10,7 @@ Contexto: Login
     E preenchi o campo de senha
     Quando tocar no botão de login
     Dado que estou na tela inicial
+    E interagi com o OnBoarding
     E toquei no botão Outras Funções
     Quando tocar no botão de Notas
     Dado que estou na tela de Notas
@@ -21,6 +22,7 @@ Contexto: Login
     E preenchi o campo de senha
     Quando tocar no botão de login
     Dado que estou na tela inicial
+    E interagi com o OnBoarding
     E toquei no botão Outras Funções
     Quando tocar no botão de Notas
     Dado que estou na tela de Notas
@@ -32,6 +34,7 @@ Contexto: Login
     E preenchi o campo de senha
     Quando tocar no botão de login
     Dado que estou na tela inicial
+    E interagi com o OnBoarding
     E toquei no botão Outras Funções
     Quando tocar no botão de Notas
     Dado que estou na tela de Notas
