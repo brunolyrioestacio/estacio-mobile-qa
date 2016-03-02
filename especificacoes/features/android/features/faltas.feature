@@ -1,6 +1,6 @@
 # language: pt
 Funcionalidade: Faltas
-
+  
   Contexto:
     Dado que estou na tela de Login
 
@@ -21,3 +21,21 @@ Funcionalidade: Faltas
     Quando tocar no botão de faltas
     Dado que estou na tela de faltas
     Então não devo visualizar informações de porcentagem de faltas
+
+  Cenário: Visualização das faltas de um aluno não ativo
+    Dado que preenchi o campo de matrícula com uma matricula não ativa
+    E preenchi o campo de senha
+    Quando tocar no botão de login
+    Dado que estou na tela inicial
+    Quando tocar no botão de faltas
+    Dado que estou na tela de faltas
+    Então devo ver uma mensagem de aviso sobre a falta de frequencias para o aluno
+
+  Cenário: Visualização das faltas de um aluno não matriculado em disciplinas
+    Dado que preenchi o campo de matrícula com uma matricula que não possui disciplinas escolhidas
+    E preenchi o campo de senha
+    Quando tocar no botão de login
+    Dado que estou na tela inicial
+    Quando tocar no botão de faltas
+    Dado que estou na tela de faltas
+    Então devo ver uma mensagem de aviso sobre a falta de frequencias para o aluno
