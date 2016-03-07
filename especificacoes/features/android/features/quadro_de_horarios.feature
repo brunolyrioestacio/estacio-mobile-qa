@@ -12,7 +12,7 @@ Cenário: Visualização de Quadro de Horario - Aluno exclusivamente presencial
   Quando tocar no botão de quadro de horarios
   Dado que estou na tela de quadro de horarios
   E que apenas disciplinas presenciais estão sendo listadas
-  Então devo visualizar o horario da disciplina de Tópicos Especiais
+  Então devo visualizar o horario da disciplina de "Tópicos Especiais"
 
 #201401359558#
 Cenário: Visualização de Quadro de Horario - Aluno Flex
@@ -23,9 +23,9 @@ Cenário: Visualização de Quadro de Horario - Aluno Flex
   Quando tocar no botão de quadro de horarios
   Dado que estou na tela de quadro de horarios
   E que estou visualizando a disciplina de Modelagem de Sistemas
-  Quando clicar no combo box de escolha de tipo de quadro de horarios
-  E clicar na opção de Disciplinas Online
-  Então devo visualizar o horario da disciplina de Arquitetura de Sistemas Distribuídos
+  Quando tocar no combo box de escolha de tipo de quadro de horarios
+  E tocar na opção de Disciplinas Online
+  Então devo visualizar o horario da disciplina de "Arquitetura de Sistemas Distribuídos"
 
 #201407212771#
 Cenário: Visualização de Quadro de Horario - Aluno exclusivamente EAD
@@ -36,7 +36,7 @@ Cenário: Visualização de Quadro de Horario - Aluno exclusivamente EAD
   Quando tocar no botão de quadro de horarios
   Dado que estou na tela de quadro de horarios
   E que apenas disciplinas online estão sendo listadas
-  Então devo visualizar o horario da disciplina de Gerenciamento de Aquisições
+  Então devo visualizar o horario da disciplina de "Gerenciamento de Aquisições"
 
 @reinstall
 Cenário: Visualização de Quadro de Horários - Aluno sem disciplinas
