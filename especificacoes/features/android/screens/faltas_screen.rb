@@ -7,7 +7,7 @@ class FaltasScreen < AndroidScreenBase
   # element(:button)              { 'insert_button_identificator' }
 
   def attendance_is_on_page?
-    is_on_page? "ARQUITETURA DE SISTEMAS DISTRIBUIDOS"
+    is_on_page? "ARQUITETURA DE SISTEMAS DISTRIBUÍDOS"
     is_on_page? "Total de faltas"
     is_on_page? "Limite de faltas permitidas"
   end
