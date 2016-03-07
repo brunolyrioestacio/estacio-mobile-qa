@@ -16,7 +16,7 @@ end
 
 ######### ENTÃO #########
 Então(/^devo visualizar informações de porcentagem de faltas das disciplinas$/) do
-  @pageNotas.attendance_is_on_page?
+  @pageFaltas.attendance_is_on_page?
 end
 
 
