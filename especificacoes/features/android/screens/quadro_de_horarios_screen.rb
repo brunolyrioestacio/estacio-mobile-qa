@@ -4,14 +4,14 @@ class QuadroDeHorariosScreen < AndroidScreenBase
 
   # Declare todos os elementos da tela
   element(:layout_name)           { 'timesheet_activity' }
-  element(:combo_time_table_type) {''}
+  element(:spinner_time_table_type) {''}
   element(:label_online_courses)  {'Disciplinas Online'}
 
   def validate_course_is_on_page(course)
     is_on_page? course
   end
 
-  def touch_combo_time_table_type)
+  def touch_spinner_time_table_type)
     touch("* id:'#{combo_time_table_type}'")
   end
 
@@ -19,10 +19,8 @@ class QuadroDeHorariosScreen < AndroidScreenBase
     touch("* id:'Disciplinas Online'")
   }
 
-  def validate_only_online
-  end
-
-  def validate_only_presential
+  def validate_no_online_courses_message
+    # is_on_page? ""
   end
 
   def validate_no_schedule_available
