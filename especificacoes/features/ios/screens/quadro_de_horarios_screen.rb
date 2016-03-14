@@ -10,11 +10,10 @@ class QuadroDeHorariosScreen < IOSScreenBase
   end
 
   def validate_no_schedule_available
-  # is_on_page? "O seu quadro de horário ainda não está disponível para consulta."
-    pending
+    is_on_page? "Quadro de Horário não disponível"
   end
 
   def validate_no_class_registration
-    is_on_page? "Você não está matriculado em nenhuma disciplina no Período Acadêmico vigente!"
+    is_on_page? "Quadro de Horário não disponível"
   end
 end
