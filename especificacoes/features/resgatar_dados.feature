@@ -1,6 +1,6 @@
 # language: pt
 Funcionalidade: Resgatar Dados
-Nesta funcionalidade é possível resgatar a matrícula
+Nesta funcionalidade é possível resgatar a matrícula e obter informações sobre o processo de recuperação de senha
 
   Contexto: Pular Tutorial
     Dado que pulei o tutorial

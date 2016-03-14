@@ -69,7 +69,7 @@ Então(/^o botão de continuar deve estar desabilitado$/) do
 end
 
 Então(/^devo ver um alerta com uma mensagem de erro$/) do
-  @pageMatricula.is_on_page? "Identidade ou data de nascimento inválida."
+  @pageMatricula.is_on_page? "Aluno não encontrado!"
 end
 
 Então(/^devo estar na tela com as matrículas do usuário$/) do
