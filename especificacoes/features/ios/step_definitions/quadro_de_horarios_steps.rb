@@ -2,10 +2,6 @@
 Dado(/^que estou na tela de quadro de horarios$/) do
   @pageQuadroHorario = page(QuadroDeHorariosScreen).await(timeout:5)
 end
-Dado(/^que preenchi o campo de matrícula com uma matricula que não possui disciplinas escolhidas$/) do
-  # @pageLogin.enter_matricula()
-  pending
-end
 ######### QUANDO #########
 
 ######### ENTãO #########

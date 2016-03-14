@@ -7,6 +7,10 @@ Given(/^I am on a page that contains '(.*?)'$/) do |page_text|
   @page.is_on_page? page_text
 end
 
+Dado(/^que preenchi o campo de matrícula com uma matricula que não possui disciplinas escolhidas$/) do
+  @pageLogin.enter_matricula("201301031194")
+end
+
 Dado(/^que estou na tela inicial$/) do
   @pageHome = page(HomeScreen).await(timeout:5)
 end
