@@ -8,7 +8,7 @@ Dado(/^que preenchi o campo de matrícula com uma matricula do período vigente$
 end
 
 Dado(/^que preenchi o campo de matrícula com uma matricula que não possui notas lançadas$/) do
-  @pageLogin.enter_matricula("201409026841")
+  @pageLogin.enter_matricula("201301031194")
 end
 
 Dado(/^que preenchi o campo de matrícula com uma matricula não relacionada ao período vigente$/) do
