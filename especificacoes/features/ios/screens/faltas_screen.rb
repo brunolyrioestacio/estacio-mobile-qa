@@ -11,7 +11,7 @@ class FaltasScreen < IOSScreenBase
   end
 
   def attendance_is_not_on_page?
-    is_on_page?("Faltas",false)
+    is_on_page?("% Falta",false)
   end
 
   def validate_no_attendance_message

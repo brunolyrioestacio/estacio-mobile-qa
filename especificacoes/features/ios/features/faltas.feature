@@ -6,7 +6,7 @@ Funcionalidade: Faltas
   E estou na tela de Login
 
   @reinstall
-  Cenário: Visualização das faltas de um aluno de presencial
+  Cenário: Visualização das faltas de um aluno presencial
     Dado que preenchi o campo de matrícula com uma matricula do período vigente
     E preenchi o campo de senha
     Quando tocar no botão de login
@@ -17,6 +17,7 @@ Funcionalidade: Faltas
     Dado que estou na tela de faltas
     Então devo visualizar informações de porcentagem de faltas das disciplinas
 
+  @nao  
   @reinstall
   Cenário: Visualização das faltas de um aluno de graduação EAD
     Dado que preenchi o campo de matrícula com uma matricula de graduação EAD do período vigente
