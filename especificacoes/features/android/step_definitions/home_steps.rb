@@ -10,6 +10,9 @@ end
 Quando(/^tocar no botão de faltas$/) do
   @pageHome.tocar_botao_faltas
 end
+Quando(/^tocar no botão de atendimento agendado$/) do
+  @pageHome.touch_new_service_button
+end
 ###########E############
 
 
