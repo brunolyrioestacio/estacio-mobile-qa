@@ -13,7 +13,7 @@ Funcionalidade: Atendimento Agendado
     E escolher uma categoria, tipo e e movito de agendamento
     E clicar em próximo
     E selecionar o horário disponível
-    E estou vendo os dados previamente selecionados para o agendamento
-    E preenchi o campo de observação
-    E cliquei no botão de confirmação
+    E ver os dados previamente selecionados para o agendamento
+    E preencher o campo de observação
+    E clicar no botão de confirmação
     Então devo visualizar uma mensagem de confirmação do agendamento
