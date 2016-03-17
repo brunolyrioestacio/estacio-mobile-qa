@@ -29,6 +29,9 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
     touch("* id:'#{spinner_cause}'")
     touch("* marked:'#{cause_name}'")
   end
+  def choose_existing_category_type_cause do
+
+  end
   def touch_next_button do
     touch("* id:'#{next_button}'")
   end
@@ -49,5 +52,10 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   def validate_confirmation_message_is_on_page do
     is_on_page? ""
   end
-
+  def validate_existing_service_message_is_on_page do
+    is_on_page? ""
+  end
+  def validate_schedule_limite_message_is_on_page do
+    is_on_page? ""
+  end
 end

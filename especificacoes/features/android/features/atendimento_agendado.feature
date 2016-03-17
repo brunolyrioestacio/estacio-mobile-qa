@@ -23,7 +23,7 @@ Funcionalidade: Atendimento Agendado
     Quando tocar no botão de atendimento agendado
     Dado que estou na tela de Atendimento Agendado
     Quando tocar no botão de criação de agendamento
-    E escolher a mesma categoria, tipo e e movito de agendamento de um agendamento existente
+    E escolher a mesma categoria, tipo e movito de agendamento de um agendamento existente
     E clicar em próximo
     E selecionar o horário disponível
     E ver os dados previamente selecionados para o agendamento
