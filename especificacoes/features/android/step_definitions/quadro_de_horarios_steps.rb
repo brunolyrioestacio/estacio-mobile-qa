@@ -1,15 +1,4 @@
 ######### DADO #########
-M = Hash["exclusivamente presencial"=>"201502468361","flex"=>"201401359558",
-        "exclusivamente de EAD"=>"201407212771","que está fora"=>"201402031831"]
-Dado(/^que realizei o processo de login usando uma matrícula "(.*?)" do período vigente$/) do |tipo_matricula|
-  matricula = M[tipo_matricula]
-  @pageLogin.enter_matricula(matricula)
-  steps %Q{
-    E preenchi o campo de senha
-    Quando tocar no botão de login
-    Dado que estou na tela inicial
-  }
-end
 
 Dado(/^que estou visualizando o horario das disciplinas presenciais do dia corrente da semana$/) do
   @pageQuadroHorario.validate_presential_courses_is_on_page
