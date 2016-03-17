@@ -11,6 +11,9 @@ Quando(/^escolher uma categoria, tipo e e movito de agendamento$/) do
   @pageAtendimento.choose_type
   @pageAtendimento.choose_cause
 end
+Quando(/^escolher a mesma categoria, tipo e e movito de agendamento de um agendamento existente$/) do
+
+end
 Quando(/^clicar em próximo$/) do
   @pageAtendimento.touch_next_button
 end
@@ -30,4 +33,12 @@ end
 ######### ENTãO #########
 Então(/^devo visualizar uma mensagem de confirmação do agendamento$/) do
   @pageAtendimento.validate_confirmation_message_is_on_page
+end
+
+Então(/^devo visualizar uma mensagem de aviso sobre a existencia de um atendimento com o mesmo assunto$/) do
+  
+end
+
+Então(/^devo ver uma mensagem de aviso sobre o limite de agendamentos em aberto$/) do
+  
 end
