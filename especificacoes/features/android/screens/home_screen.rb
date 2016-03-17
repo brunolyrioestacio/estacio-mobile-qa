@@ -12,9 +12,9 @@ class HomeScreen < AndroidScreenBase
   element(:manual_button)         {'guide_of_student_item'}
   element(:notas_button)          {'Notas'}
   element(:horarios_button)       {"Quadro de\n horários"}
-  element(:faltas_button)        {'Faltas'}
+  element(:faltas_button)         {'Faltas'}
+  element(:atendimento_button)    {'Atendimento Agendado'}
 
-  # Declare todas as acoes da tela
   action(:tocar_botao_sair) {
     touch("* marked:'#{sair_button}'")
   }
@@ -26,6 +26,10 @@ class HomeScreen < AndroidScreenBase
   }
 
   action(:tocar_botao_quadro_de_horarios){
+    touch("* marked:'#{horarios_button}'")
+  }
+
+  action(:tocar_botao_atendimento_agendado){
     touch("* marked:'#{horarios_button}'")
   }
 
