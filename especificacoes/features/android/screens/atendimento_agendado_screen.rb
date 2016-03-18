@@ -1,9 +1,9 @@
 class AtendimentoAgendadoScreen < AndroidScreenBase
   trait(:trait)                 { "* id:'#{layout_name}'" }
 
-  element(:layout_name)            {''}
+  element(:layout_name)            {'scheduled_service_view'}
   element(:next_button)            {''}
-  element(:new_service_button)     {''}
+  element(:new_service_button)     {'create_scheduled_service_fab'}
   element(:available_hour_button)  {''}
   element(:confirmation_button)    {''}
   element(:observation_field)      {''}
@@ -50,12 +50,12 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
     touch("* id:'#{confirmation_button}'")
   end
   def validate_confirmation_message_is_on_page do
-    is_on_page? ""
+    is_on_page? "Agendamento realizado com sucesso."
   end
   def validate_existing_service_message_is_on_page do
-    is_on_page? ""
+    is_on_page? "Você ja possui um agendamento previsto para o mesmo assunto"
   end
   def validate_schedule_limite_message_is_on_page do
-    is_on_page? ""
+    is_on_page? "Não é possível agendar um novo agendamento"
   end
 end
