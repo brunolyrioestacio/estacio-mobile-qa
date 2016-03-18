@@ -10,7 +10,7 @@ Funcionalidade: Atendimento Agendado
     Quando tocar no botão de atendimento agendado
     Dado que estou na tela de Atendimento Agendado
     Quando tocar no botão de criação de agendamento
-    E escolher uma categoria, tipo e movito de agendamento
+    E escolher uma categoria, tipo e motivo de agendamento
     E clicar em próximo
     E selecionar o horário disponível
     E ver os dados previamente selecionados para o agendamento
@@ -23,7 +23,7 @@ Funcionalidade: Atendimento Agendado
     Quando tocar no botão de atendimento agendado
     Dado que estou na tela de Atendimento Agendado
     Quando tocar no botão de criação de agendamento
-    E escolher a mesma categoria, tipo e movito de agendamento de um agendamento existente
+    E escolher a mesma categoria, tipo e motivo de agendamento de um agendamento existente
     E clicar em próximo
     E selecionar o horário disponível
     E ver os dados previamente selecionados para o agendamento
@@ -37,3 +37,12 @@ Funcionalidade: Atendimento Agendado
     Dado que estou na tela de Atendimento Agendado
     Quando tocar no botão de criação de agendamento
     Então devo ver uma mensagem de aviso sobre o limite de agendamentos em aberto
+
+  Cenário: Cancelar atendimento
+    Dado que realizei o processo de login usando uma matrícula "sem pendencias de atendimento" do período vigente
+    Quando tocar no botão de atendimento agendado
+    Dado que estou na tela de Atendimento Agendado
+    Quando clicar no botão de detalhes de um agendamento em aberto
+    E clicar no botão cancelar
+    E clicar no botão de confirmação
+    Então devo ver uma mensagem de confirmação de cancelamento do atendimento

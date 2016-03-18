@@ -6,12 +6,12 @@ Dado(/^que estou na tela de Atendimento Agendado$/)
 Quando(/^tocar no botão de criação de agendamento$/) do
   @pageAtendimento.touch_new_service_button
 end
-Quando(/^escolher uma categoria, tipo e e movito de agendamento$/) do
+Quando(/^escolher uma categoria, tipo e e motivo de agendamento$/) do
   @pageAtendimento.choose_category
   @pageAtendimento.choose_type
   @pageAtendimento.choose_cause
 end
-Quando(/^escolher a mesma categoria, tipo e movito de agendamento de um agendamento existente$/) do
+Quando(/^escolher a mesma categoria, tipo e motivo de agendamento de um agendamento existente$/) do
   @pageAtendimento.choose_existing_category_type_cause
 end
 Quando(/^clicar em próximo$/) do
