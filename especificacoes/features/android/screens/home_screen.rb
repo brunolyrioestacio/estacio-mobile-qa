@@ -13,7 +13,7 @@ class HomeScreen < AndroidScreenBase
   element(:notas_button)          {'Notas'}
   element(:horarios_button)       {"Quadro de\n horários"}
   element(:faltas_button)         {'Faltas'}
-  element(:atendimento_button)    {'Atendimento Agendado'}
+  element(:atendimento_button)    {"Atendimento \nAgendado"}
 
   action(:tocar_botao_sair) {
     touch("* marked:'#{sair_button}'")
@@ -30,7 +30,7 @@ class HomeScreen < AndroidScreenBase
   }
 
   action(:tocar_botao_atendimento_agendado){
-    touch("* marked:'#{horarios_button}'")
+    touch("* marked:'#{atendimento_button}'")
   }
 
   action(:tocar_botao_confirmar_sair){
