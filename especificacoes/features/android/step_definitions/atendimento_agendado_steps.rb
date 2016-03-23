@@ -30,10 +30,21 @@ end
 Quando(/^clicar no botão de confirmação$/) do
   @pageAtendimento.touch_confirmation_button
 end
+Quando(/^clicar no botão de detalhes de um agendamento em aberto$/) do
+  @pageAtendimento.touch_scheduled_service_detail_button
+end
+
+Quando(/^clicar no botão cancelar$/) do
+  @pageAtendimento.touch_cancel_button
+end
 
 ######### ENTãO #########
 Então(/^devo visualizar uma mensagem de confirmação do agendamento$/) do
   @pageAtendimento.validate_confirmation_message_is_on_page
+end
+
+Então(/^devo ver uma mensagem de confirmação de cancelamento do atendimento$/) do
+  @pageAtendimento.validate_cancel_confirmation_message_is_on_page
 end
 
 Então(/^devo visualizar uma mensagem de aviso sobre a existencia de um atendimento com o mesmo assunto$/) do
