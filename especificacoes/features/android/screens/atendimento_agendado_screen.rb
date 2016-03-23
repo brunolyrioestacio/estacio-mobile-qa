@@ -7,12 +7,13 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   element(:available_hour_button)  {''}
   element(:confirmation_button)    {''}
   element(:observation_field)      {''}
-  element(:spinner_category)       {''}
-  element(:spinner_type)           {''}
-  element(:spinner_cause)          {''}
+  element(:spinner_category)       {'spinner_category'}
+  element(:spinner_type)           {'spinner_type'}
+  element(:spinner_cause)          {'spinner_cause'}
   element(:category_name)          {''}
   element(:type_name)              {''}
   element(:cause_name)             {''}
+  element(:detail_button)          {'detail_btn'}
 
   def touch_new_service_button
     touch("* id:'#{new_service_button}'")
@@ -48,6 +49,15 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   end
   def touch_confirmation_button
     touch("* id:'#{confirmation_button}'")
+  end
+  def touch_scheduled_service_detail_button
+    pending
+  end
+  def touch_cancel_button
+    pending
+  end
+  def validate_cancel_confirmation_message_is_on_page
+    pending
   end
   def validate_confirmation_message_is_on_page
     is_on_page? "Agendamento realizado com sucesso."
