@@ -40,6 +40,18 @@ Funcionalidade: Atendimento Agendado
     Então devo ver uma mensagem de aviso sobre o limite de agendamentos em aberto
 
   @reinstall
+  Cenário: Avaliar atendimento
+    Dado que realizei o processo de login usando uma matrícula "agendamentos a serem avaliados" do período vigente
+    Quando tocar no botão de atendimento agendado
+    Dado que estou na tela de Atendimento Agendado
+    Quando tocar no botão de avaliar atendimento
+    Dado que estou na tela de avaliação de atendimento
+    E tenho 3 opções de avaliação
+    Quando clicar na opção ruim
+    Dado que estou na tela de validação do porque da escolha ruim
+    Então devo ver todos os porques relacionados a escolha ruim
+
+  @reinstall
   Cenário: Cancelar atendimento
     Dado que realizei o processo de login usando uma matrícula "sem pendencias de atendimento" do período vigente
     Quando tocar no botão de atendimento agendado
