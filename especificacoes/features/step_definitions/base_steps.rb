@@ -8,7 +8,7 @@ Given(/^I am on a page that contains '(.*?)'$/) do |page_text|
 end
 
 Dado(/^que preenchi o campo de matrícula com uma matricula que não possui disciplinas escolhidas$/) do
-  @pageLogin.enter_matricula("201301031194")
+  @pageLogin.enter_matricula("201301287555")
 end
 
 Dado(/^que estou na tela inicial$/) do

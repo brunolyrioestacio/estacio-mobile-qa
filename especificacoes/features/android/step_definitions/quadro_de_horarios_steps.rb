@@ -15,7 +15,7 @@ Dado(/^que estou na tela de quadro de horarios$/) do
 end
 
 Dado(/^que realizei o processo de login usando uma matrícula que não possui disciplinas escolhidas$/) do
-  matricula = "201301031194"
+  matricula = "201301287555"
   @pageLogin.enter_matricula(matricula)
   steps %Q{
     E preenchi o campo de senha
