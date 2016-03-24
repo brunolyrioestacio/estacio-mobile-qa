@@ -1,20 +1,28 @@
 class AtendimentoAgendadoScreen < AndroidScreenBase
   trait(:trait)                 { "* id:'#{layout_name}'" }
 
-  element(:layout_name)            {'scheduled_service_view'}
-  element(:next_button)            {''}
-  element(:new_service_button)     {'create_scheduled_service_fab'}
-  element(:available_hour_button)  {''}
-  element(:confirmation_button)    {''}
-  element(:observation_field)      {''}
-  element(:spinner_category)       {'spinner_category'}
-  element(:spinner_type)           {'spinner_type'}
-  element(:spinner_cause)          {'spinner_cause'}
-  element(:category_name)          {''}
-  element(:type_name)              {''}
-  element(:cause_name)             {''}
-  element(:detail_button)          {'detail_btn'}
-
+  element(:layout_name)                 {'scheduled_service_view'}
+  element(:next_button)                 {''}
+  element(:new_service_button)          {'create_scheduled_service_fab'}
+  element(:available_hour_button)       {''}
+  element(:confirmation_button)         {'Ok'}
+  element(:observation_field)           {''}
+  element(:spinner_category)            {'spinner_category'}
+  element(:spinner_type)                {'spinner_type'}
+  element(:spinner_cause)               {'spinner_cause'}
+  element(:detail_button)               {'detail_btn'}
+  element(:review_buttonn)              {'review_btn'}
+  element(:cancel_button)               {'cancel_btn'}
+  element(:bad_option_radio_button)     {'bad_option'}
+  def validate_review_screen_is_on_page?
+    pending
+  end
+  def touch_bad_option
+    touch("* id:'#{bad_option_radio_button}'")
+  end
+  def touch_review_button
+    touch("* id:'#{review_button}'")
+  end
   def touch_new_service_button
     touch("* id:'#{new_service_button}'")
   end
@@ -30,9 +38,13 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
     touch("* id:'#{spinner_cause}'")
     touch("* marked:'#{cause_name}'")
   end
-  def choose_existing_category_type_cause
 
+  def choose_existing_category_type_cause
+    touch("* marked:'#{category_name}'")
+    touch("* marked:'#{type_name}'")
+    touch("* marked:'#{cause_name}'")
   end
+
   def touch_next_button
     touch("* id:'#{next_button}'")
   end
@@ -50,14 +62,24 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   def touch_confirmation_button
     touch("* id:'#{confirmation_button}'")
   end
+  def validate_review_options
+    is_on_page? "Bom"
+    is_on_page? "Regular"
+    is_on_page? "Ruim"
+  end
   def touch_scheduled_service_detail_button
-    pending
+    touch("* id:'#{detail_button}'")
   end
   def touch_cancel_button
-    pending
+    touch("* id:'#{cancel_button}'")
   end
   def validate_cancel_confirmation_message_is_on_page
     pending
+  end
+  def validate_bad_option_choose_reasons
+    is_on_page? "Pelo atendimento prestado"
+    is_on_page? "Pela resolução do motivo do atendimento"
+    is_on_page? "Pelo cumprimento do horário marcado"
   end
   def validate_confirmation_message_is_on_page
     is_on_page? "Agendamento realizado com sucesso."

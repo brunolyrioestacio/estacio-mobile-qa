@@ -48,8 +48,7 @@ Funcionalidade: Atendimento Agendado
     Dado que estou na tela de avaliação de atendimento
     E tenho 3 opções de avaliação
     Quando clicar na opção ruim
-    Dado que estou na tela de validação do porque da escolha ruim
-    Então devo ver todos os porques relacionados a escolha ruim
+    Então devo ver todos os motivos relacionados a avaliação ruim
 
   @reinstall
   Cenário: Cancelar atendimento

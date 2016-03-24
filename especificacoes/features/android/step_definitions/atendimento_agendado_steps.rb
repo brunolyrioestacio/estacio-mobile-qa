@@ -1,9 +1,20 @@
 ######### DADO #########
+Dado(/^tenho 3 opções de avaliação$/) do
+  @pageAtendimento.validate_review_options
+end
+Dado(/^que estou na tela de avaliação de atendimento$/) do
+  @pageAtendimento.validate_review_screen_is_on_page
+end
 Dado(/^que estou na tela de Atendimento Agendado$/) do
   @pageAtendimento = page(AtendimentoAgendadoScreen).await(timeout:5)
 end
 ######### QUANDO #########
-
+Quando(/^clicar na opção ruim$/) do
+  @pageAtendimento.touch_bad_option
+end
+Quando(/^tocar no botão de avaliar atendimento$/) do
+  @pageAtendimento.touch_review_button
+end
 Quando(/^tocar no botão de criação de agendamento$/) do
   @pageAtendimento.touch_new_service_button
 end
@@ -39,6 +50,9 @@ Quando(/^clicar no botão cancelar$/) do
 end
 
 ######### ENTãO #########
+Então(/^devo ver todos os motivos relacionados a avaliação ruim$/) do
+  @pageAtendimento.validate_bad_option_choose_reasons
+end
 Então(/^devo visualizar uma mensagem de confirmação do agendamento$/) do
   @pageAtendimento.validate_confirmation_message_is_on_page
 end
