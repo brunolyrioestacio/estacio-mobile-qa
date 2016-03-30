@@ -2,11 +2,11 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   trait(:trait)                 { "* id:'#{layout_name}'" }
 
   element(:layout_name)                 {'scheduled_service_view'}
-  element(:next_button)                 {''}
+  element(:next_button)                 {'button_next_step'}
   element(:new_service_button)          {'create_scheduled_service_fab'}
-  element(:available_hour_button)       {''}
+  element(:available_hour_button)       {'select_hour'}
   element(:confirmation_button)         {'Ok'}
-  element(:observation_field)           {''}
+  element(:observation_field)           {'observations'}
   element(:spinner_category)            {'spinner_category'}
   element(:spinner_type)                {'spinner_type'}
   element(:spinner_cause)               {'spinner_cause'}
@@ -46,7 +46,7 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   end
 
   def touch_next_button
-    touch("* id:'#{next_button}'")
+    touch("* marked:'#{next_button}'")
   end
   def touch_available_hour_button
     touch("* id:'#{available_hour_button}'")
