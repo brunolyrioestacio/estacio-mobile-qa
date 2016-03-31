@@ -5,7 +5,7 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   element(:next_button)                 {'button_next_step'}
   element(:new_service_button)          {'create_scheduled_service_fab'}
   element(:available_hour_button)       {'select_hour'}
-  element(:confirmation_button)         {'Ok'}
+  element(:confirmation_button)         {'Concluir'}
   element(:observation_field)           {'observations'}
   element(:spinner_category)            {'spinner_category'}
   element(:spinner_type)                {'spinner_type'}
@@ -14,6 +14,10 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   element(:review_buttonn)              {'review_btn'}
   element(:cancel_button)               {'cancel_btn'}
   element(:bad_option_radio_button)     {'bad_option'}
+  element(:category_name)               {'MATRÍCULA/TRANSFERÊNCIA'}
+  element(:type_name)                   {'SECRETARIA'}
+  element(:cause_name)                  {'ESCLARECER DÚVIDAS SOBRE TRANSFERÊNCIA (TURNO/CURSO/CAMPUS)'}
+  element(:ok_button)                   {'Ok'}
   def validate_review_screen_is_on_page?
     pending
   end
@@ -27,22 +31,28 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
     touch("* id:'#{new_service_button}'")
   end
   def choose_category
+    sleep 3
     touch("* id:'#{spinner_category}'")
+    sleep 1
     touch("* marked:'#{category_name}'")
   end
   def choose_type
+    sleep 3
     touch("* id:'#{spinner_type}'")
+    sleep 1
     touch("* marked:'#{type_name}'")
   end
   def choose_cause
+    sleep 3
     touch("* id:'#{spinner_cause}'")
+    sleep 1
     touch("* marked:'#{cause_name}'")
   end
 
   def choose_existing_category_type_cause
-    touch("* marked:'#{category_name}'")
-    touch("* marked:'#{type_name}'")
-    touch("* marked:'#{cause_name}'")
+    choose_category
+    choose_type
+    choose_cause
   end
 
   def touch_next_button
@@ -60,7 +70,7 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
     enter "Obs etc 154325", observation_field
   end
   def touch_confirmation_button
-    touch("* id:'#{confirmation_button}'")
+    touch("* marked:'#{confirmation_button}'")
   end
   def validate_review_options
     is_on_page? "Bom"
@@ -83,6 +93,7 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   end
   def validate_confirmation_message_is_on_page
     is_on_page? "Agendamento realizado com sucesso."
+    touch("* marked:'#{ok_button}''")
   end
   def validate_existing_service_message_is_on_page
     is_on_page? "Você ja possui um agendamento previsto para o mesmo assunto"

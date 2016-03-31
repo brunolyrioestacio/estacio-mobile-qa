@@ -3,7 +3,7 @@ Funcionalidade: Atendimento Agendado
   ##
   Contexto:
     Dado que estou na tela de Login
-
+  @novo
   Cenário: Novo atendimento
     Dado que realizei o processo de login usando uma matrícula "sem pendencias de atendimento" do período vigente
     Quando tocar no botão de atendimento agendado
@@ -12,12 +12,14 @@ Funcionalidade: Atendimento Agendado
     E escolher uma categoria, tipo e motivo de agendamento
     E clicar em próximo
     E selecionar o horário disponível
+    E clicar em próximo
     E ver os dados previamente selecionados para o agendamento
     E preencher o campo de observação
     E clicar no botão de confirmação
     Então devo visualizar uma mensagem de confirmação do agendamento
 
   @reinstall
+  @mesmo
   Cenário: Novo atendimento - Atendimento com o mesmo assunto
     Dado que realizei o processo de login usando uma matrícula "sem pendencias de atendimento" do período vigente
     Quando tocar no botão de atendimento agendado
@@ -26,6 +28,7 @@ Funcionalidade: Atendimento Agendado
     E escolher a mesma categoria, tipo e motivo de agendamento de um agendamento existente
     E clicar em próximo
     E selecionar o horário disponível
+    E clicar em próximo
     E ver os dados previamente selecionados para o agendamento
     E preencher o campo de observação
     E clicar no botão de confirmação
