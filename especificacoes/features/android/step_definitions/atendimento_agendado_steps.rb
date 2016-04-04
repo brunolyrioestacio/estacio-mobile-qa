@@ -41,6 +41,9 @@ end
 Quando(/^clicar no botão de confirmação$/) do
   @pageAtendimento.touch_confirmation_button
 end
+Quando(/^clicar no botão de confirmação de cancelamento$/) do
+  @pageAtendimento.touch_cancel_confirmation_button
+end
 Quando(/^clicar no botão de detalhes de um agendamento em aberto$/) do
   @pageAtendimento.touch_scheduled_service_detail_button
 end

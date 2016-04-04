@@ -13,11 +13,12 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   element(:detail_button)               {'detail_btn'}
   element(:review_buttonn)              {'review_btn'}
   element(:cancel_button)               {'cancel_btn'}
+  element(:cancel_confirmation_button)  {'Sim'}
   element(:bad_option_radio_button)     {'bad_option'}
-  element(:category_name)               {'MATRÍCULA/TRANSFERÊNCIA'}
+  element(:category_name)               {'ENTREGA E RETIRADA DE DOCUMENTO/MATERIAL DIDÁTICO'}
   element(:type_name)                   {'SECRETARIA'}
-  element(:cause_name)                  {'ESCLARECER DÚVIDAS SOBRE TRANSFERÊNCIA (TURNO/CURSO/CAMPUS)'}
-  element(:ok_button)                   {'Ok'}
+  element(:cause_name)                  {'RETIRAR DOCUMENTOS / DECLARAÇÕES'}
+  element(:ok_button)                   {'OK'}
   def validate_review_screen_is_on_page?
     pending
   end
@@ -83,8 +84,11 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   def touch_cancel_button
     touch("* id:'#{cancel_button}'")
   end
+  def touch_cancel_confirmation_button
+    touch("* marked:'#{cancel_confirmation_button}'")
+  end
   def validate_cancel_confirmation_message_is_on_page
-    pending
+    is_on_page? "Cancelamento Realizado com Sucesso!"
   end
   def validate_bad_option_choose_reasons
     is_on_page? "Pelo atendimento prestado"
@@ -96,7 +100,7 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
     touch("* marked:'#{ok_button}''")
   end
   def validate_existing_service_message_is_on_page
-    is_on_page? "Você ja possui um agendamento previsto para o mesmo assunto"
+    is_on_page? "Você já possui um agendamento previsto para o mesmo assunto."
   end
   def validate_schedule_limite_message_is_on_page
     is_on_page? "Não é possível agendar um novo agendamento"
