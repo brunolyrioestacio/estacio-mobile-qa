@@ -9,7 +9,7 @@ Dado(/^que estou na tela de Atendimento Agendado$/) do
   @pageAtendimento = page(AtendimentoAgendadoScreen).await(timeout:5)
 end
 ######### QUANDO #########
-Quando(/^clicar na opção ruim$/) do
+Quando(/^tocar na opção ruim$/) do
   @pageAtendimento.touch_bad_option
 end
 Quando(/^tocar no botão de avaliar atendimento$/) do
@@ -26,7 +26,7 @@ end
 Quando(/^escolher a mesma categoria, tipo e motivo de agendamento de um agendamento existente$/) do
   @pageAtendimento.choose_existing_category_type_cause
 end
-Quando(/^clicar em próximo$/) do
+Quando(/^tocar em próximo$/) do
   @pageAtendimento.touch_next_button
 end
 Quando(/^selecionar o horário disponível$/) do
@@ -38,18 +38,21 @@ end
 Quando(/^preencher o campo de observação$/) do
   @pageAtendimento.fill_observation_field
 end
-Quando(/^clicar no botão de confirmação$/) do
+Quando(/^tocar no botão de confirmação$/) do
   @pageAtendimento.touch_confirmation_button
 end
-Quando(/^clicar no botão de confirmação de cancelamento$/) do
+Quando(/^tocar no botão de confirmação de cancelamento$/) do
   @pageAtendimento.touch_cancel_confirmation_button
 end
-Quando(/^clicar no botão de detalhes de um agendamento em aberto$/) do
+Quando(/^tocar no botão de detalhes de um agendamento em aberto$/) do
   @pageAtendimento.touch_scheduled_service_detail_button
 end
 
-Quando(/^clicar no botão cancelar$/) do
+Quando(/^tocar no botão cancelar$/) do
   @pageAtendimento.touch_cancel_button
+end
+Quando(/^tocar no botão de reagendamento$/) do
+  @pageAtendimento.touch_reschedule_button
 end
 
 ######### ENTãO #########

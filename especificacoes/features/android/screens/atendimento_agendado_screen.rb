@@ -13,6 +13,7 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   element(:detail_button)               {'detail_btn'}
   element(:review_buttonn)              {'review_btn'}
   element(:cancel_button)               {'cancel_btn'}
+  element(:reschedule_button)           {'reschedule_btn'}
   element(:cancel_confirmation_button)  {'Sim'}
   element(:bad_option_radio_button)     {'bad_option'}
   element(:category_name)               {'ENTREGA E RETIRADA DE DOCUMENTO/MATERIAL DIDÁTICO'}
@@ -21,6 +22,9 @@ class AtendimentoAgendadoScreen < AndroidScreenBase
   element(:ok_button)                   {'OK'}
   def validate_review_screen_is_on_page?
     pending
+  end
+  def touch_reschedule_buttontouch_reschedule_buttontouch_reschedule_buttontouch_reschedule_button
+    touch("* id:'#{reschedule_btn}'")
   end
   def touch_bad_option
     touch("* id:'#{bad_option_radio_button}'")

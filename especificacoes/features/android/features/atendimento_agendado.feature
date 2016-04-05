@@ -12,12 +12,12 @@ Funcionalidade: Atendimento Agendado
     Dado que estou na tela de Atendimento Agendado
     Quando tocar no botão de criação de agendamento
     E escolher uma categoria, tipo e motivo de agendamento
-    E clicar em próximo
+    E tocar em próximo
     E selecionar o horário disponível
-    E clicar em próximo
+    E tocar em próximo
     E ver os dados previamente selecionados para o agendamento
     E preencher o campo de observação
-    E clicar no botão de confirmação
+    E tocar no botão de confirmação
     Então devo visualizar uma mensagem de confirmação do agendamento
 
   @reinstall
@@ -28,13 +28,25 @@ Funcionalidade: Atendimento Agendado
     Dado que estou na tela de Atendimento Agendado
     Quando tocar no botão de criação de agendamento
     E escolher a mesma categoria, tipo e motivo de agendamento de um agendamento existente
-    E clicar em próximo
+    E tocar em próximo
     E selecionar o horário disponível
-    E clicar em próximo
+    E tocar em próximo
     E ver os dados previamente selecionados para o agendamento
     E preencher o campo de observação
-    E clicar no botão de confirmação
+    E tocar no botão de confirmação
     Então devo visualizar uma mensagem de aviso sobre a existencia de um atendimento com o mesmo assunto
+
+  Cenário: Reagendamento
+    Dado que realizei o processo de login usando uma matrícula "sem pendencias de atendimento" do período vigente
+    Quando tocar no botão de atendimento agendado
+    Quando tocar no botão de detalhes de um agendamento em aberto
+    E tocar no botão de reagendamento
+    E selecionar o horário disponível
+    E tocar em próximo
+    E ver os dados previamente selecionados para o agendamento
+    E preencher o campo de observação
+    E tocar no botão de confirmação
+    Então devo visualizar uma mensagem de confirmação do agendamento
 
   @reinstall
   @cancel @xpto
@@ -42,9 +54,9 @@ Funcionalidade: Atendimento Agendado
     Dado que realizei o processo de login usando uma matrícula "sem pendencias de atendimento" do período vigente
     Quando tocar no botão de atendimento agendado
     Dado que estou na tela de Atendimento Agendado
-    Quando clicar no botão de detalhes de um agendamento em aberto
-    E clicar no botão cancelar
-    E clicar no botão de confirmação de cancelamento
+    Quando tocar no botão de detalhes de um agendamento em aberto
+    E tocar no botão cancelar
+    E tocar no botão de confirmação de cancelamento
     Então devo ver uma mensagem de confirmação de cancelamento do atendimento
 
   @reinstall
@@ -63,5 +75,5 @@ Funcionalidade: Atendimento Agendado
     Quando tocar no botão de avaliar atendimento
     Dado que estou na tela de avaliação de atendimento
     E tenho 3 opções de avaliação
-    Quando clicar na opção ruim
+    Quando tocar na opção ruim
     Então devo ver todos os motivos relacionados a avaliação ruim
