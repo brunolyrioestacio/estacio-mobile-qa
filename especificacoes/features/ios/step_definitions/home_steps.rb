@@ -40,6 +40,9 @@ Quando(/^tocar no botão de Atendimento Agendado$/) do
   @pageHome.tocar_botao_atendimento
 end
 
+Quando(/^tocar no botão de histórico escolar$/) do
+  @pageHome.tocar_botao_historico_escolar
+end
 
 #############Então#########
 

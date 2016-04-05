@@ -16,6 +16,7 @@ class HomeScreen < IOSScreenBase
    element(:quadro_button)         {'Quadro de Horários'}
    element(:faltas_button)         {'Faltas'}
    element(:data_prova_button)      {'Data de Provas'}
+   element(:historico_escolar_button) {'Histórico Escolar'}
    element(:atendimento_button)         {'Atendimento Agendado'}
    element(:requerimento_button)         {'Requerimento/Reclamação'}
 
@@ -63,6 +64,9 @@ class HomeScreen < IOSScreenBase
 
    action(:tocar_botao_requerimento){
      touch("* marked:'#{requerimento_button}'")
+   }
+   action(:tocar_botao_historico_escolar){
+     touch("* marked:'#{historico_escolar_button}'")
    }
 
    action(:tocar_botao_data_de_prova){
