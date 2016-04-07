@@ -8,7 +8,7 @@ class HomeScreen < AndroidScreenBase
   element(:sair_button)           {'log_out'}
   element(:confirmar_sair_button) {'custom_alert_second_btn'}
   element(:banner)                {'carousel_view_pager'}
-  element(:matricula_button)      {'open_student_card'}
+  element(:matricula_button)      {'home_student_card_info'}
   element(:manual_button)         {'guide_of_student_item'}
   element(:notas_button)          {'Notas'}
   element(:horarios_button)       {"Quadro de\n Horários"}
