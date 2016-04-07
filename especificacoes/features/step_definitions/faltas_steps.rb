@@ -8,7 +8,7 @@ Dado(/^que preenchi o campo de matrícula com uma matricula de graduação EAD d
 end
 
 Dado(/^que preenchi o campo de matrícula com uma matricula não ativa$/) do
-  @pageLogin.enter_matricula("201402031831")
+  @pageLogin.enter_matricula("200602091643")
 end
 
 ######### QUANDO #########
