@@ -14,9 +14,13 @@ class HomeScreen < AndroidScreenBase
   element(:horarios_button)       {"Quadro de\n Horários"}
   element(:faltas_button)         {'Frequência'}
   element(:atendimento_button)    {"Atendimento \nAgendado"}
+  element(:requirement_button)    {'open_requirement'}
 
   action(:tocar_botao_sair) {
     touch("* marked:'#{sair_button}'")
+  }
+  action(:tocar_botao_requerimentos) {
+    touch("* id:'#{requirement_button}'")
   }
   action(:tocar_botao_faltas){
     touch("* marked:'#{faltas_button}'")
