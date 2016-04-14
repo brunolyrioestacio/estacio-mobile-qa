@@ -13,7 +13,7 @@ end
 Quando(/^tocar no botão de atendimento agendado$/) do
   @pageHome.tocar_botao_atendimento_agendado
 end
-Quando(/^tocar no botão de requerimentos$/) do
+Quando(/^tocar no botão de Requerimentos$/) do
   @pageHome.tocar_botao_requerimentos
 end
 ###########E############
