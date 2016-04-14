@@ -6,39 +6,27 @@ Através dessa Funcionalidade é possível consultar a data das provas do Aluno
     Dado que pulei o tutorial
     E estou na tela de Login
 
-    @reinstall
+  @reinstall
   Cenário: Vizualizar a data das provas de um aluno presencial
-    Dado que preenchi o campo de matrícula com uma matricula do período vigente
-    E preenchi o campo de senha
-    Quando tocar no botão de login
-    Dado que estou na tela inicial
-    E interagi com o OnBoarding
+    Dado que realizei o processo de login usando uma matrícula "exclusivamente presencial" do período vigente
     E toquei no botão Outras Funções
     Quando tocar no botão de data de prova
     Dado que estou na tela de data de prova
-    Então devo vizualizar a data das provas de Estrutura de dados
+    Então devo vizualizar a data das provas das disciplinas presenciais
 
-    @reinstall
+  @reinstall
+  Cenário: Vizualização de data de prova - aluno online
+    Dado que realizei o processo de login usando uma matrícula "exclusivamente de EAD" do período vigente
+    E toquei no botão Outras Funções
+    Quando tocar no botão de data de prova
+    Dado que estou na tela de data de prova
+    E toquei no botão de datas de provas online
+    Então devo vizualizar a data das provas das disciplinas online
+
+  @reinstall
   Cenário: Vizualização de data de prova - aluno sem provas
-    Dado que preenchi o campo de matrícula com uma matricula do período vigente
-    E preenchi o campo de senha
-    Quando tocar no botão de login
-    Dado que estou na tela inicial
-    E interagi com o OnBoarding
+    Dado que realizei o processo de login usando uma matrícula "que não possui provas marcadas" do período vigente
     E toquei no botão Outras Funções
     Quando tocar no botão de data de prova
     Dado que estou na tela de data de prova
     Então devo ver uma mensagem de não há provas agendadas
-
-    @reinstall
-  Cenário: Vizualização de data de prova - aluno online
-  Dado que preenchi o campo de matrícula com uma matricula do período vigente
-  E preenchi o campo de senha
-  Quando tocar no botão de login
-  Dado que estou na tela inicial
-  E interagi com o OnBoarding
-  E toquei no botão Outras Funções
-  Quando tocar no botão de data de prova
-  Dado que estou na tela de data de prova
-  E toquei no botão de datas de provas online
-  Então devo vizualizar a data das provas de Projeto de design editorial

@@ -17,14 +17,14 @@ end
 ############ E ############
 
 ############ Então ###########
-Então(/^devo vizualizar a data das provas de Estrutura de dados$/) do
-  @pageData.is_on_page? "ESTRUTURA DE DADOS"
+Então(/^devo vizualizar a data das provas das disciplinas presenciais$/) do
+  @pageData.validate_presential_exam_date_is_on_page
 end
 
 Então(/^devo ver uma mensagem de não há provas agendadas$/) do
-  @pageData.is_on_page? "Sem provas"
+  @pageData.validate_no_exam_dates_exception_message
 end
 
-Então(/^devo vizualizar a data das provas de Projeto de design editorial$/) do
-  @pageData.is_on_page? "Projeto de design editorial"
+Então(/^devo vizualizar a data das provas das disciplinas online$/) do
+  @pageData.validate_online_exam_date_is_on_page
 end
