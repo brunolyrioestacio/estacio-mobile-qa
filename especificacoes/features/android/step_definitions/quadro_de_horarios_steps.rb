@@ -32,7 +32,15 @@ Quando(/^tocar na opção de Disciplinas Online$/) do
   @pageQuadroHorario.touch_online_courses
 end
 
+Quando(/^tocar na aba de Domingo$/) do
+  @pageQuadroHorario.touch_sunday_tab
+end
+
 ######### ENTãO #########
+Então (/^devo vizualizar as disciplinas relacionadas para este dia$/) do
+  @pageQuadroHorario.validate_sunday_classes_is_on_page
+end
+
 Então(/^devo ver um aviso sobre a não inscrição em disciplinas online$/) do
   @pageQuadroHorario.validate_no_online_courses_message
 end
