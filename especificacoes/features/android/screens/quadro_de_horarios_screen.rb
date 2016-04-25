@@ -6,7 +6,7 @@ class QuadroDeHorariosScreen < AndroidScreenBase
   element(:layout_name)           { 'timesheet_activity' }
   element(:spinner_time_table_type) {'spinner_nav'}
   element(:label_online_courses)  {'Disciplinas Online'}
-
+  element(:sunday_tab)             {'Dom'}
   def getCurrentDayName
     return Time.now.strftime("%A")
   end
@@ -14,9 +14,16 @@ class QuadroDeHorariosScreen < AndroidScreenBase
   def validate_course_is_on_page(course)
     is_on_page? course
   end
-
+  def validate_sunday_classes_is_on_page
+    is_on_page? "Módulo Tcc"
+  end
+  def touch_sunday_tab
+    touch("* marked:'#{sunday_tab}'")
+  end
   def validate_presential_courses_is_on_page
     case getCurrentDayName
+    when "Sunday"
+      is_on_page? "Você não possui nenhuma aula neste dia."
     when "Monday"
       is_on_page?"Modelagem de Sistemas"
     when "Tuesday"
@@ -33,6 +40,8 @@ class QuadroDeHorariosScreen < AndroidScreenBase
   end
   def validate_only_presential_courses_is_on_page
     case getCurrentDayName
+    when "Sunday"
+      is_on_page? "Você não possui nenhuma aula neste dia."
     when "Monday"
       is_on_page?"Você não possui nenhuma aula neste dia."
     when "Tuesday"
