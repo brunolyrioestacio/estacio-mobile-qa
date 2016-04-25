@@ -1,4 +1,4 @@
-class FaltasScreen < IOSScreenBase
+class FrequenciaScreen < IOSScreenBase
   # The screen identificator
   trait(:trait)                 { "* marked:'#{layout_name}'" }
 

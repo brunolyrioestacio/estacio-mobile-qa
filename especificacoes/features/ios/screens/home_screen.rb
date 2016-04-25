@@ -14,7 +14,7 @@ class HomeScreen < IOSScreenBase
    element(:manual_button)         {'Manual do Aluno'}
    element(:notas_button)         {'Notas'}
    element(:quadro_button)         {'Quadro de Horários'}
-   element(:faltas_button)         {'Faltas'}
+   element(:frequencia_button)         {'Frequência'}
    element(:data_prova_button)      {'Data de Provas'}
    element(:historico_escolar_button) {'Histórico Escolar'}
    element(:atendimento_button)         {'Atendimento Agendado'}
@@ -58,8 +58,8 @@ class HomeScreen < IOSScreenBase
      touch("* marked:'#{quadro_button}'")
    }
 
-   action(:tocar_botao_faltas_aluno){
-     touch("* marked:'#{faltas_button}'")
+   action(:tocar_botao_frequencia_aluno){
+     touch("* text:'#{frequencia_button}'")
    }
 
    action(:tocar_botao_requerimento){
