@@ -13,8 +13,10 @@ Cenário: Visualização de Quadro de Horario - Aluno matriculado exclusivamente
   E tocar na opção de Disciplinas Online
   Então devo ver um aviso sobre a não inscrição em disciplinas online
 
+@dom
+@reinstall
 Cenário: Vizualização de Quadro de Horário - Horário Domingo
-  Dado que realizei o processo de login usando uma matrícula "exclusivamente presencial" do período vigente
+  Dado que realizei o processo de login usando uma matrícula "que possui aulas aos domingos" do período vigente
   Quando tocar no botão de quadro de horarios
   Dado que estou na tela de quadro de horarios
   Quando tocar na aba de Domingo
