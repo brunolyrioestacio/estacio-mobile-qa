@@ -12,7 +12,7 @@ class HomeScreen < AndroidScreenBase
   element(:manual_button)         {'guide_of_student_item'}
   element(:notas_button)          {'Notas'}
   element(:horarios_button)       {"Quadro de\n Horários"}
-  element(:faltas_button)         {'Frequência'}
+  element(:frequencia_button)         {'Frequência'}
   element(:atendimento_button)    {"Atendimento \nAgendado"}
   element(:requirement_button)    {'open_requirement'}
 
@@ -22,8 +22,8 @@ class HomeScreen < AndroidScreenBase
   action(:tocar_botao_requerimentos) {
     touch("* id:'#{requirement_button}'")
   }
-  action(:tocar_botao_faltas){
-    touch("* marked:'#{faltas_button}'")
+  action(:tocar_botao_frequencia){
+    touch("* marked:'#{frequencia_button}'")
   }
   action(:tocar_botao_notas_aluno){
     touch("* marked:'#{notas_button}'")
