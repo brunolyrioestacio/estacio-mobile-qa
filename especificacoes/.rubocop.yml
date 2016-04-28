@@ -1,2 +1,6 @@
 Metrics/LineLength:
   Max: 130
+Metrics/MethodLength:
+  Max: 18
+Documentation:
+  Enabled: false
