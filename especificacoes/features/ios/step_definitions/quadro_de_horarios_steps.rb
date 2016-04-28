@@ -9,7 +9,7 @@ Dado(/^que estou visualizando apenas o horario das disciplinas presenciais do di
   @page_quadro_horario.validate_only_presential_courses_is_on_page
 end
 Dado(/^que realizei o processo de login usando uma matrícula que não possui disciplinas escolhidas$/) do
-  matricula = "200602091643"
+  matricula = '200602091643'
   @pageLogin.enter_matricula(matricula)
   steps %Q{
     E preenchi o campo de senha
@@ -37,9 +37,6 @@ end
 ######### ENTAO #########
 Então(/^devo visualizar o horario das disciplinas online$/) do
   @page_quadro_horario.validate_online_courses_is_on_page
-end
-Então(/^devo vizualizar o horario da disciplina de Modelagem de Sistemas$/) do
-  @page_quadro_horario.schedule_is_on_page?
 end
 Então(/^devo visualizar o horario da disciplina de "(.*?)"$/) do |disciplina_nome|
   @page_quadro_horario.validate_course_is_on_page(disciplina_nome)
