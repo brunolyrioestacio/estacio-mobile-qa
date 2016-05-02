@@ -19,3 +19,18 @@ Funcionalidade:
     Quando tocar no botão de Requerimentos
     Dado que estou na tela de Requerimentos
     Então devo ver uma lista de requerimentos existentes abertos ou concluídos
+
+@Criar
+@reinstall
+  Cenário: Criar Requerimento
+    Dado que realizei o processo de login usando uma matrícula "que possui requerimentos" do período vigente
+    Quando tocar no botão de Requerimentos
+    Dado que estou na tela de Requerimentos
+    Quando tocar no botão de criação de Requerimento
+    E tocar no botão flutuante de Requerimento
+    E escolher uma categoria
+    E um tipo de requerimento
+    E tocar em próximo para validar os dados escolhidos
+    E preencher o campo de observação com informações sobre o requerimento
+    E tocar em finalizar
+    Então devo ver uma mensagem de confirmação da criação de Requerimento
