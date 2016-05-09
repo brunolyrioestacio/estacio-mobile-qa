@@ -35,7 +35,7 @@ Funcionalidade: Atendimento Agendado
     E preencher o campo de observação
     E tocar no botão de confirmação
     Então devo visualizar uma mensagem de aviso sobre a existencia de um atendimento com o mesmo assunto
-    
+
   @reinstall
   @cancel @xpto
   Cenário: Cancelar atendimento
@@ -46,3 +46,12 @@ Funcionalidade: Atendimento Agendado
     E tocar no botão cancelar
     E tocar no botão de confirmação de cancelamento
     Então devo ver uma mensagem de confirmação de cancelamento do atendimento
+
+  @reinstall
+  @3
+  Cenário: Novo atendimento - 3 atendimentos em aberto
+    Dado que realizei o processo de login usando uma matrícula "com 3 atendimentos em aberto" do período vigente
+    Quando tocar no botão de atendimento agendado
+    Dado que estou na tela de Atendimento Agendado
+    Quando tocar no botão de criação de agendamento
+    Então devo vizualizar uma mensagem de aviso sobre o limite de atendimentos em aberto
