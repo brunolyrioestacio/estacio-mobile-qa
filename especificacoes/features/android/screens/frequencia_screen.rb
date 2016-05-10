@@ -1,4 +1,4 @@
-class FaltasScreen < AndroidScreenBase
+class FrequenciaScreen < AndroidScreenBase
   # The screen identificator
   trait(:trait)                 { "* id:'#{layout_name}'" }
 

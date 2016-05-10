@@ -7,11 +7,14 @@ end
 Quando(/^tocar no botão de quadro de horarios$/) do
   @pageHome.tocar_botao_quadro_de_horarios
 end
-Quando(/^tocar no botão de faltas$/) do
-  @pageHome.tocar_botao_faltas
+Quando(/^tocar no botão de Frequência$/) do
+  @pageHome.tocar_botao_frequencia
 end
 Quando(/^tocar no botão de atendimento agendado$/) do
   @pageHome.tocar_botao_atendimento_agendado
+end
+Quando(/^tocar no botão de Requerimentos$/) do
+  @pageHome.tocar_botao_requerimentos
 end
 ###########E############
 

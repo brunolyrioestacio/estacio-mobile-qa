@@ -1,4 +1,18 @@
+M = Hash["exclusivamente presencial"=>"201502468361","flex"=>"201401359558",
+        "exclusivamente de EAD"=>"201407212771","que está fora"=>"201402031831",
+        "que não possui provas marcadas"=>""
+        ]
 ######### DADO #########
+Dado(/^que realizei o processo de login usando uma matrícula "(.*?)" do período vigente$/) do |tipo_matricula|
+  matricula = M[tipo_matricula]
+  @pageLogin.enter_matricula(matricula)
+  steps %Q{
+    E preenchi o campo de senha
+    Quando tocar no botão de login
+    Dado que estou na tela inicial
+    E interagi com o OnBoarding
+  }
+end
 Dado(/^estou na tela de Login$/) do
   step "que estou na tela de Login"
 end

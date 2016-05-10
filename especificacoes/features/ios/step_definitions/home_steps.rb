@@ -32,14 +32,17 @@ Quando(/^tocar no botão de Requerimentos$/) do
   @pageHome.tocar_botao_requerimento
 end
 
-Quando(/^tocar no botão de faltas/) do
-  @pageHome.tocar_botao_faltas_aluno
+Quando(/^tocar no botão de Frequência/) do
+  @pageHome.tocar_botao_frequencia_aluno
 end
 
 Quando(/^tocar no botão de Atendimento Agendado$/) do
   @pageHome.tocar_botao_atendimento
 end
 
+Quando(/^tocar no botão de histórico escolar$/) do
+  @pageHome.tocar_botao_historico_escolar
+end
 
 #############Então#########
 
@@ -68,6 +71,6 @@ Então(/^devo estar na tela inicial com o tile preenchido com Atendimento Agenda
   @pageHome.is_on_page? "Atendimento Agendado"
 end
 
-Então(/^devo estar na tela inicial com o tile preenchido com faltas$/) do
-  @pageHome.is_on_page? "Faltas"
+Então(/^devo estar na tela inicial com o tile preenchido com Frequência$/) do
+  @pageHome.is_on_page? "Frequência"
 end

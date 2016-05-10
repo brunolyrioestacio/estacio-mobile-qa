@@ -46,23 +46,23 @@ Cenário: Preenchimento do Tile com Quadro de Horarios
   E tocar no botão de quadro de horarios
   Então devo estar na tela inicial com o tile preenchido com quadro de horarios
 
-@preencher @quadro
+@preencher @req
 Cenário: Preenchimento do Tile com Requerimentos
   Dado que estou na tela inicial
   Quando tocar no tile de adicionar um atalho
   E tocar no botão de Requerimentos
   Então devo estar na tela inicial com o tile preenchido com Requerimentos
 
-@preencher @quadro
+@preencher @atendimento
 Cenário: Preenchimento do Tile com Atendimento Agendado
   Dado que estou na tela inicial
   Quando tocar no tile de adicionar um atalho
   E tocar no botão de Atendimento Agendado
   Então devo estar na tela inicial com o tile preenchido com Atendimento Agendado
 
-@preencher @quadro
-Cenário: Preenchimento do Tile com Faltas
+@preencher @freq
+Cenário: Preenchimento do Tile com Frequência
   Dado que estou na tela inicial
   Quando tocar no tile de adicionar um atalho
-  E tocar no botão de faltas
-  Então devo estar na tela inicial com o tile preenchido com faltas
+  E tocar no botão de Frequência
+  Então devo estar na tela inicial com o tile preenchido com Frequência
