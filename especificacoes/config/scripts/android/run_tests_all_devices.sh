@@ -9,10 +9,10 @@
 ## CODE BEGIN  #############################################################
 [ $# -lt 1 ] && echo "Wrong number of parameters." && exit 1
 
-# Counting the number of lines returned from the command ADB devices
+# Counting the number of lines returned from the command adb devices
 # This command will return at least 2 as result, because of one header line and one empty line at end
 # So if the result is less than or equal 2, it means that there are no devices or emulators connected
-number_of_devices=$($ADB devices | wc -l)
+number_of_devices=$(adb devices | wc -l)
 [ $number_of_devices -le 2 ] && echo "There are no devices or emulators connected!" && exit 1
 
 echo Inicio da execução: $(date)
@@ -25,7 +25,7 @@ mkdir $reports_path
 cd $WORKSPACE/especificacoes
 calabash-android resign $1
 
-for device in $($ADB devices | grep "device$" | cut -f 1)
+for device in $(adb devices | grep "device$" | cut -f 1)
 do
   cd $WORKSPACE/especificacoes
   # Creates the reports folder
