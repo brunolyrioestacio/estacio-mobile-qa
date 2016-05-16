@@ -4,7 +4,7 @@ class QuadroDeHorariosScreen < IOSScreenBase
 
   # Declare todos os elementos da tela
   element(:layout_name)                     { 'timeTableView' }
-  element(:timesheet_type_chooser_button)   { '' }
+  element(:timesheet_type_chooser_button)   { 'changeTimetableBarButton' }
   element(:sunday_tab)                      { 'Dom' }
 
   def current_day_name
@@ -54,7 +54,8 @@ class QuadroDeHorariosScreen < IOSScreenBase
   end
 
   def touch_sunday_tab
-    touch("* marked:'#{sunday_tab}'")
+    sleep 3
+    touch("* text:'#{sunday_tab}'")
   end
 
   def touch_online_courses
@@ -83,10 +84,10 @@ class QuadroDeHorariosScreen < IOSScreenBase
   end
 
   def validate_no_schedule_available
-    is_on_page? 'Quadro de Horário não disponível'
+    is_on_page? 'Você não está matriculado em nenhuma disciplina no Período Acadêmico vigente!'
   end
 
   def validate_no_class_registration
-    is_on_page? 'Quadro de Horário não disponível'
+    is_on_page? 'Você não está matriculado em nenhuma disciplina no Período Acadêmico vigente!'
   end
 end

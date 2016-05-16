@@ -14,6 +14,7 @@ Cenário: Visualização de Quadro de Horario
   E tocar na opção de Disciplinas Online
   Então devo ver um aviso sobre a não inscrição em disciplinas online
 
+@Dom
 @reinstall
 Cenário: Vizualização de Quadro de Horário - Horário Domingo
   Dado que realizei o processo de login usando uma matrícula "que possui aulas aos domingos" do período vigente
@@ -58,4 +59,4 @@ Cenário: Visualização de Quadro de Horários - Aluno não matriculado
   E toquei no botão Outras Funções
   Quando tocar no botão de quadro de horarios
   Dado que estou na tela de quadro de horarios
-  Então devo ver uma mensagem de aviso sobre a falta de horarios devido ao aluno não estar matrículado em nenhuma disciplina
+  Então devo ver uma mensagem de aviso sobre a falta de horarios devido ao aluno não estar matriculado em nenhuma disciplina
