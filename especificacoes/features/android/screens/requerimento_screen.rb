@@ -2,8 +2,8 @@ class RequerimentosScreen < AndroidScreenBase
   trait(:trait)                             { "* id:'#{layout_name}'" }
 
   element(:layout_name)                     { 'requirement_view' }
-  element(:new_requirement_button)          { 'insert_button_identificator' }
-  element(:new_requirement_float_button)    { '' }
+  element(:new_requirement_button)          { 'create_requirement_fab' }
+  element(:new_requirement_float_button)    { 'Novo Requerimento' }
   element(:category)                        { 'Estágio' }
   element(:category_spinner)                { '' }
   element(:requirement_type)                { 'Solicitar redução ch de estágio-letras/pedag./hist' }
@@ -21,11 +21,18 @@ class RequerimentosScreen < AndroidScreenBase
   end
 
   def touch_new_requirement_button
-    touch("* marked:'#{new_requirement_button}'")
+    a = query("* id:'#{new_requirement_button}'")[0]
+    h = a['rect']['height']
+    w = a['rect']['width']
+    center_x = a['rect']['center_x']
+    center_y = a['rect']['center_y']
+    x1 = (center_x + w / 2) - 10
+    y1 = (center_y + h / 2) - 10
+    system("adb shell input tap #{x1} #{y1}")
   end
 
   def touch_new_requirement_float_button
-    touch("* marked:'#{new_requirement_button}'")
+    touch("* marked:'#{new_requirement_float_button}'")
   end
 
   def choose_categoty
