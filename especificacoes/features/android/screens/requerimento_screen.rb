@@ -4,13 +4,14 @@ class RequerimentosScreen < AndroidScreenBase
   element(:layout_name)                     { 'requirement_view' }
   element(:new_requirement_button)          { 'create_requirement_fab' }
   element(:new_requirement_float_button)    { 'Novo Requerimento' }
-  element(:category)                        { 'Estágio' }
-  element(:category_spinner)                { '' }
-  element(:requirement_type)                { 'Solicitar redução ch de estágio-letras/pedag./hist' }
-  element(:requirement_type_spinner)        { '' }
-  element(:next_button)                     { '' }
-  element(:obsersation_field)               { '' }
-  element(:finish_button)                   { '' }
+  element(:category)                        { 'ESTÁGIO' }
+  element(:category_spinner)                { 'spinner_category' }
+  element(:requirement_type)                { 'SOLICITAR REDUÇÃO CH DE ESTÁGIO-LETRAS/PEDAG./HIST' }
+  element(:requirement_type_spinner)        { 'spinner_type' }
+  element(:next_button)                     { 'Próximo' }
+  element(:observation_field)               { 'textarea' }
+  element(:finish_button)                   { 'Abrir Requerimento' }
+  element(:requerimento_description_text)   { 'Requerimento onde o aluno solicita redução ' }
 
   def validate_no_requeriments_message
     is_on_page? "Não existem requerimentos para consulta."
@@ -49,12 +50,17 @@ class RequerimentosScreen < AndroidScreenBase
     touch("* marked:'#{requirement_type}'")
   end
 
+  def validate_requirements_information_is_on_page
+    is_on_page? requerimento_description_text
+  end
+
   def touch_next_button
     touch("* marked:'#{next_button}'")
   end
 
   def fill_obsersation_field
-    enter 'Obs etc 154325', observation_field
+    sleep 3
+    query("* marked:'#{observation_field}'", setText: 'obs test 123')
   end
 
   def touch_finish_button

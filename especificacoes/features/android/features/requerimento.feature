@@ -30,7 +30,8 @@ Funcionalidade:
     E tocar no botão flutuante de Requerimento
     E escolher uma categoria
     E um tipo de requerimento
-    E tocar em próximo para validar os dados escolhidos
+    E tocar em próximo para validar as informações do requerimento escolhido
+    E tocar em próximo novamente
     E preencher o campo de observação com informações sobre o requerimento
     E tocar em finalizar
     Então devo ver uma mensagem de confirmação da criação de Requerimento

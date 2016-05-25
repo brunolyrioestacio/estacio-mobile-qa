@@ -20,7 +20,12 @@ Quando(/^um tipo de requerimento$/) do
   @page_requerimentos.choose_requirement_type
 end
 
-Quando(/^tocar em próximo para validar os dados escolhidos$/) do
+Quando(/^tocar em próximo para validar as informações do requerimento escolhido$/) do
+  @page_requerimentos.touch_next_button
+end
+
+Quando(/^tocar em próximo novamente$/) do
+  @page_requerimentos.validate_requirements_information_is_on_page
   @page_requerimentos.touch_next_button
 end
 
