@@ -1,11 +1,11 @@
 ############## Dado #################
-Dado (/^que estou na tela de historico escolar$/) do
-  @pageHistorico = page(HistoricoEscolarScreen).await(timeout:5)
+Dado(/^que estou na tela de historico escolar$/) do
+  @page_historico = page(HistoricoEscolarScreen).await(timeout: 5)
 end
 
 ################### Quando ################
 
-############# Então #############
+############# Entao #############
 Então(/^devo ver o CR do aluno$/) do
-  @pageHistorico.is_on_page? "CR Geral"
+  @page_historico.cr_is_on_page?
 end

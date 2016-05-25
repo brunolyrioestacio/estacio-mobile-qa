@@ -31,7 +31,7 @@ Então(/^devo estar na tela de Login$/) do
 end
 
 Então(/^devo interagir com o OnBoarding$/) do
+  sleep 4
   @pageHome.tocar_botao_entendi
-  sleep 1
   @pageHome.tocar_botao_entendi
 end
