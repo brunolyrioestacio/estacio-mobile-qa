@@ -50,3 +50,18 @@ Funcionalidade:
     E preencher o campo de observação com informações sobre a ouvidoria
     E tocar em finalizar para abrir o requerimento de ouvidoria
     Então devo ver uma mensagem de confirmação da criação de Ouvidoria
+
+@CriarReclamacao
+@reinstall
+  Cenário: Criar Reclamação
+    Dado que realizei o processo de login usando uma matrícula "que possui requerimentos" do período vigente
+    Quando tocar no botão de Requerimentos
+    Dado que estou na tela de Requerimentos
+    Quando tocar no botão de criação de Requerimento
+    E tocar no botão flutuante de Reclamação
+    E escolher um tipo de reclamação
+    E tocar em próximo para validar as informações do tipo de reclamação escolhida
+    E tocar em próximo novamente
+    E preencher o campo de observação com informações sobre a reclamação
+    E tocar em finalizar para abrir o requerimento de reclamação
+    Então devo ver uma mensagem de confirmação da criação de Reclamação
