@@ -7,4 +7,5 @@ Funcionalidade: Push (Somente Android)
   Cenário: Notificações Push
     Dado que enviei uma mensagem Push para devices Android
     Quando tocar no botão de Notificações
-    Então devo ver a mensagem Push enviada previamente
+    Então devo estar na tela de Notificações
+    E devo ver a mensagem Push enviada previamente
