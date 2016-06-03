@@ -12,9 +12,19 @@ class HomeScreen < AndroidScreenBase
   element(:manual_button)         {'guide_of_student_item'}
   element(:notas_button)          {'Notas'}
   element(:horarios_button)       {"Quadro de\n Horários"}
-  element(:frequencia_button)         {'Frequência'}
+  element(:frequencia_button)     {'Frequência'}
   element(:atendimento_button)    {"Atendimento \nAgendado"}
   element(:requirement_button)    {'open_requirement'}
+  element(:notification_button)   {'notification_off'}
+
+  def touch_notifications_button
+    sleep 4
+    touch("* marked:'#{notification_button}'")
+  end
+
+  def send_push(n)
+    m = system("curl \"https://manage.pushio.com/api/v1/notify_app/ya0abMIQOg/TyGQBdqBpY7rmyb9zHog\" -d 'payload={\"message\":\"Test QA #{n}\"}&audience=broadcast'")
+  end
 
   action(:tocar_botao_sair) {
     touch("* marked:'#{sair_button}'")

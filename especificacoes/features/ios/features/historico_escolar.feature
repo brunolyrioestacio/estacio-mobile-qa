@@ -7,11 +7,16 @@ Contexto: Login
   E estou na tela de Login
 
   Cenário: Visualização de Histórico Escolar
-    Dado que preenchi o campo de matrícula com uma matricula do período vigente
-    E preenchi o campo de senha
-    Quando tocar no botão de login
-    Dado que estou na tela inicial
-    E interagi com o OnBoarding
+    Dado que realizei o processo de login usando uma matrícula "comum" do período vigente
+    E toquei no botão Outras Funções
+    Quando tocar no botão de histórico escolar
+    Dado que estou na tela de historico escolar
+    Então devo ver o CR do aluno
+
+  @bug
+  @reinstall
+  Cenário: Visualização de Histórico Escolar - Bug do CR em branco
+    Dado que realizei o processo de login usando uma matrícula "com CR em branco em algum dos períodos"
     E toquei no botão Outras Funções
     Quando tocar no botão de histórico escolar
     Dado que estou na tela de historico escolar
