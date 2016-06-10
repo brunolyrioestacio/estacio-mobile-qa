@@ -1,13 +1,10 @@
 class CarteiraDigitalScreen < IOSScreenBase
-  # Identificador da tela
-   trait(:trait)                 { "* marked:'#{layout_name}'" }
+  trait(:trait)                 { "* marked:'#{layout_name}'" }
 
-  # Declare todos os elementos da tela
-   element(:layout_name)         { 'digitalCardView' }
+  element(:layout_name)         { 'digitalCardView' }
 
-   def valida_dados_na_tela(matricula,cpf)
-     is_on_page? matricula
-     is_on_page? cpf
-   end
-
+  def validate_personal_informations_is_on_page(registration, cpf)
+    is_on_page? registration
+    is_on_page? cpf
+  end
 end
