@@ -1,25 +1,35 @@
 class HomeScreen < AndroidScreenBase
   # Identificador da tela
 
-  trait(:trait)                 { "* id:'#{layout_name}'" }
+  trait(:trait)                   { "* id:'#{layout_name}'" }
 
   # Declare todos os elementos da tela
   element(:layout_name)           { 'home_view' }
-  element(:sair_button)           {'log_out'}
-  element(:confirmar_sair_button) {'custom_alert_second_btn'}
-  element(:banner)                {'carousel_view_pager'}
-  element(:matricula_button)      {'home_student_card_info'}
-  element(:manual_button)         {'guide_of_student_item'}
-  element(:notas_button)          {'Notas'}
-  element(:horarios_button)       {"Quadro de\n Horários"}
-  element(:frequencia_button)     {'Frequência'}
-  element(:atendimento_button)    {"Atendimento \nAgendado"}
-  element(:requirement_button)    {'open_requirement'}
-  element(:notification_button)   {'notification_off'}
+  element(:sair_button)           { 'log_out' }
+  element(:confirmar_sair_button) { 'custom_alert_second_btn' }
+  element(:banner)                { 'carousel_view_pager' }
+  element(:matricula_button)      { 'registration_holder' }
+  element(:manual_button)         { 'guide_of_student_item' }
+  element(:notas_button)          { 'Notas' }
+  element(:horarios_button)       { "Quadro de\n Horários" }
+  element(:frequencia_button)     { 'Frequência' }
+  element(:atendimento_button)    { "Atendimento \nAgendado" }
+  element(:requirement_button)    { 'open_requirement' }
+  element(:notification_button)   { 'notification_off' }
+  element(:side_menu)             { 'Open navigation drawer' }
 
   def touch_notifications_button
     sleep 4
     touch("* marked:'#{notification_button}'")
+  end
+
+  def touch_registration
+    sleep 3
+    touch("* marked:'#{matricula_button}'")
+  end
+
+  def touch_side_menu
+    touch("* marked:'#{side_menu}'")
   end
 
   def send_push(n)
