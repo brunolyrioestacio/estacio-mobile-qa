@@ -5,7 +5,7 @@ class HomeScreen < AndroidScreenBase
 
   # Declare todos os elementos da tela
   element(:layout_name)           { 'home_view' }
-  element(:sair_button)           { 'log_out' }
+  element(:logout_button)         { 'Sair' }
   element(:confirmar_sair_button) { 'custom_alert_second_btn' }
   element(:banner)                { 'carousel_view_pager' }
   element(:matricula_button)      { 'registration_holder' }
@@ -37,7 +37,8 @@ class HomeScreen < AndroidScreenBase
   end
 
   def tocar_botao_sair
-    touch("* marked:'#{sair_button}'")
+    drag_until_element_is_visible(:down, logout_button, nil, 5)
+    touch("* marked:'#{logout_button}'")
   end
 
   def tocar_botao_requerimentos

@@ -5,7 +5,8 @@ Através dessa funcionalidade é possível realizar o processo de autentificaç�
 @login
 Cenário: Logout
   Dado que estou logado
-  E toquei no botão Sair
-  E vi um alerta com o aviso de logout
-  E toquei no botão de Sair do alerta
+  Quando tocar no menu lateral
+  E tocar no botão Sair
+  E ver um alerta com o aviso de logout
+  E confirmar o logout
   Então devo estar na tela de Login
