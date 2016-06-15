@@ -5,14 +5,11 @@ Nesta funcionalidade é possível resgatar a matrícula e obter informações so
   Contexto: Pular Tutorial
     Dado que pulei o tutorial
 
-  @login
-  @forgot
   Cenário: Esqueci minha senha
     Dado que estou na tela de Login
     E toquei no botão esqueci minha senha
     Então devo ver um alerta com os passos para redefinir senha
 
-  @nobuttonm
   Cenário: Tratamento de exceção do não preenchimento dos campos de identidade e data de nascimento
     Dado que estou na tela de Login
     E toquei no botão de esqueci minha matricula
@@ -22,7 +19,6 @@ Nesta funcionalidade é possível resgatar a matrícula e obter informações so
     E não preenchi o campo de data de nascimento
     Então o botão de continuar deve estar desabilitado
 
-    @nobuttonm
   Cenário: Tratamento de exceção do não preenchimento do campo de identidade
     Dado que estou na tela de Login
     E toquei no botão de esqueci minha matricula
@@ -32,7 +28,6 @@ Nesta funcionalidade é possível resgatar a matrícula e obter informações so
     E preenchi o campo de data de nascimento
     Então o botão de continuar deve estar desabilitado
 
-    @nobuttonm
   Cenário: Tratamento de exceção do não preenchimento do campo de data de nascimento
     Dado que estou na tela de Login
     E toquei no botão de esqueci minha matricula
@@ -42,7 +37,6 @@ Nesta funcionalidade é possível resgatar a matrícula e obter informações so
     E não preenchi o campo de data de nascimento
     Então o botão de continuar deve estar desabilitado
 
-    @errorm
   Cenário: Tratamento de exceção do preenchimento do campo de identidade e data de nascimento
     Dado que estou na tela de Login
     E toquei no botão de esqueci minha matricula
@@ -53,7 +47,6 @@ Nesta funcionalidade é possível resgatar a matrícula e obter informações so
     Quando tocar no botão de continuar
     Então devo ver um alerta com uma mensagem de erro
 
-    @foi
   Cenário: Resgate de matrícula
     Dado que estou na tela de Login
     E toquei no botão de esqueci minha matricula

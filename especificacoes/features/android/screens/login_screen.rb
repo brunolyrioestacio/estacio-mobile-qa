@@ -1,40 +1,35 @@
 class LoginScreen < AndroidScreenBase
-  # Identificador da tela
+  trait(:trait)                         { "* id:'#{layout_name}'" }
 
-   trait(:trait)                 { "* id:'#{layout_name}'" }
+  element(:layout_name)                 { 'login_activity' }
+  element(:login_button)                { 'login_btn' }
+  element(:campo_matricula)             { 'input_registration' }
+  element(:campo_senha)                 { 'input_password' }
+  element(:esqueci_senha_button)        { 'forgot_password' }
+  element(:esqueci_matricula_button)    { 'forgot_registration' }
 
-  # Declare todos os elementos da tela
-  element(:layout_name)         { 'login_activity' }
-  element(:login_button)        { 'login_btn' }
-  element(:campo_matricula)     { 'input_registration' }
-  element(:campo_senha)         { 'input_password' }
-  element(:esqueci_senha_button){ 'forgot_password' }
-  element(:esqueci_matricula_button) {'forgot_registration'}
+  def tocar_botao_login
+    touch("* id:'#{login_button}'")
+  end
 
-  # Declare todas as acoes da tela
+  def tocar_botao_esqueci_senha
+    touch("* id:'#{esqueci_senha_button}'")
+  end
 
-   action(:tocar_botao_login) {
-     touch("* id:'#{login_button}'")
-   }
-
-   action(:tocar_botao_esqueci_senha) {
-     touch("* id:'#{esqueci_senha_button}'")
-   }
-
-   action(:tocar_botao_esqueci_matricula){
-     touch("* id:'#{esqueci_matricula_button}'")
-   }
+  def tocar_botao_esqueci_matricula
+    touch("* id:'#{esqueci_matricula_button}'")
+  end
 
   def enter_matricula(matricula)
     enter matricula, campo_matricula
   end
 
-  def enter_senha (senha)
+  def enter_senha(senha)
+    sleep 2
     enter senha, campo_senha
   end
 
   def btn_disabled?
     query("* id:'#{login_button}' enabled:'false'")
   end
-
 end
