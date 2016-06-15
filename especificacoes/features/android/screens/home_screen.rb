@@ -34,6 +34,7 @@ class HomeScreen < AndroidScreenBase
 
   def send_push(n)
     m = system("curl \"https://manage.pushio.com/api/v1/notify_app/ya0abMIQOg/TyGQBdqBpY7rmyb9zHog\" -d 'payload={\"message\":\"Test QA #{n}\"}&audience=broadcast'")
+    sleep 6
   end
 
   def tocar_botao_sair
