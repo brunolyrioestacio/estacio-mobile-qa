@@ -9,7 +9,7 @@ class HomeScreen < AndroidScreenBase
   element(:confirmar_sair_button) { 'custom_alert_second_btn' }
   element(:banner)                { 'carousel_view_pager' }
   element(:matricula_button)      { 'registration_holder' }
-  element(:manual_button)         { 'guide_of_student_item' }
+  element(:manual_button)         { 'Manual do Aluno' }
   element(:notas_button)          { 'Notas' }
   element(:horarios_button)       { "Quadro de\n Horários" }
   element(:frequencia_button)     { 'Frequência' }
@@ -17,6 +17,7 @@ class HomeScreen < AndroidScreenBase
   element(:requirement_button)    { 'open_requirement' }
   element(:notification_button)   { 'notification_off' }
   element(:side_menu)             { 'Open navigation drawer' }
+  element(:data_de_prova_button)  { "Data de\n Provas" }
 
   def touch_notifications_button
     sleep 4
@@ -75,7 +76,16 @@ class HomeScreen < AndroidScreenBase
   end
 
   def tocar_botao_manual_aluno
-    touch("* id:'#{manual_button}'")
+    drag_until_element_is_visible(:down, manual_button, nil, 5)
+    touch("* marked:'#{manual_button}'")
+  end
+
+  def validate_student_manual_is_on_page
+    is_on_page? 'Manual do Aluno'
+  end
+
+  def tocar_botao_data_de_prova
+    touch("* marked:'#{data_de_prova_button}'")
   end
 
   def alerta_logout_is_visible?

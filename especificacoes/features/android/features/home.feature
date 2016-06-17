@@ -14,7 +14,8 @@ Cenário: Validação dos banners
 @manual
 Cenário: Vizualização do Manual do Aluno
   Dado que estou na tela inicial
-  E toquei no botão de Manual do Aluno
+  Quando tocar no menu lateral
+  E tocar no botão de Manual do Aluno
   Então devo vizualizar o Manual do aluno
 
 @carteirinha
