@@ -1,10 +1,9 @@
 # language: pt
-Funcionalidade: DataDeProva (Somente Android)
-Através dessa Funcionalidade é possível consultar a data das provas do Aluno
+Funcionalidade: Data De Provas (Somente Android)
+Através dessa Funcionalidade é possível consultar a data das provas presenciais e online do Aluno
 
   Contexto: Login
-    Dado que pulei o tutorial
-    E estou na tela de Login
+    Dado que estou na tela de Login
 
   @reinstall
   Cenário: Vizualizar a data das provas de um aluno presencial

@@ -7,14 +7,6 @@ Dado(/^toquei no botão de datas de provas online$/) do
   @page_data.tocar_botao_data_online
 end
 
-############ Quando ###########
-
-Quando(/^tocar no botão de data de prova$/) do
-  @pageHome.tocar_botao_data_de_prova
-end
-
-############ E ############
-
 ############ Então ###########
 Então(/^devo vizualizar a data das provas das disciplinas presenciais$/) do
   @page_data.validate_presential_exam_date_is_on_page

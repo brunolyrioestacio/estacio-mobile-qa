@@ -16,15 +16,15 @@ end
 Quando(/^tocar no botão de Requerimentos$/) do
   @pageHome.tocar_botao_requerimentos
 end
-###########E############
-
-
-Quando(/^toquei no botão de Manual do Aluno$/) do
+Quando(/^tocar no botão de data de prova$/) do
+  @pageHome.tocar_botao_data_de_prova
+end
+########### E ############
+Quando(/^tocar no botão de Manual do Aluno$/) do
   @pageHome.tocar_botao_manual_aluno
 end
 
-######### ENTãO #########
-
-Então (/^devo vizualizar o Manual do aluno$/) do
-  @pageHome.is_on_page? "Manual do Aluno"
+######### ENTAO #########
+Então(/^devo vizualizar o Manual do aluno$/) do
+  @pageHome.validate_student_manual_is_on_page
 end

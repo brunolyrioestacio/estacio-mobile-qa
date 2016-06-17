@@ -1,8 +1,8 @@
 class DataDeProvaScreen < AndroidScreenBase
   trait(:trait)                 { "* marked:'#{layout_name}'" }
 
-  element(:layout_name)         { '' }
-  element(:online_button)       { '' }
+  element(:layout_name)         { 'exam_dates_activity' }
+  element(:online_button)       { 'Online' }
 
   def tocar_botao_data_online
     touch("* marked:'#{online_button}'")
