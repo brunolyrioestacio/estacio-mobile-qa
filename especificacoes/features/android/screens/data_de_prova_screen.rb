@@ -9,11 +9,13 @@ class DataDeProvaScreen < AndroidScreenBase
   end
 
   def validate_presential_exam_date_is_on_page
-    is_on_page? 'ESTRUTURA DE DADOS'
+    is_on_page? 'Elementos de Máquinas'
+    is_on_page? '14'
   end
 
   def validate_online_exam_date_is_on_page
-    is_on_page? 'Projeto de design editorial'
+    is_on_page? 'Linguagem de Programação I'
+    is_on_page? '4'
   end
 
   def validate_no_exam_dates_exception_message

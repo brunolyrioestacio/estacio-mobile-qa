@@ -7,14 +7,14 @@ Através dessa Funcionalidade é possível consultar a data das provas presencia
 
   @reinstall
   Cenário: Vizualizar a data das provas de um aluno presencial
-    Dado que realizei o processo de login usando uma matrícula "exclusivamente presencial" do período vigente
+    Dado que realizei o processo de login usando uma matrícula "com provas presenciais" do período vigente
     Quando tocar no botão de data de prova
     Dado que estou na tela de data de prova
     Então devo vizualizar a data das provas das disciplinas presenciais
 
   @reinstall
   Cenário: Vizualização de data de prova - aluno online
-    Dado que realizei o processo de login usando uma matrícula "exclusivamente de EAD" do período vigente
+    Dado que realizei o processo de login usando uma matrícula "com provas online" do período vigente
     Quando tocar no botão de data de prova
     Dado que estou na tela de data de prova
     E toquei no botão de datas de provas online
