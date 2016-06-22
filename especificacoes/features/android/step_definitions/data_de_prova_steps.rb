@@ -12,7 +12,11 @@ Então(/^devo vizualizar a data das provas das disciplinas presenciais$/) do
   @page_data.validate_presential_exam_date_is_on_page
 end
 
-Então(/^devo ver uma mensagem de não há provas agendadas$/) do
+Então(/^devo ver uma mensagem sobre a não existencia de provas online marcadas$/) do
+  @page_data.validate_no_exam_dates_exception_message
+end
+
+Então(/^devo ver uma mensagem sobre a não existencia de provas presenciais marcadas$/) do
   @page_data.validate_no_exam_dates_exception_message
 end
 
