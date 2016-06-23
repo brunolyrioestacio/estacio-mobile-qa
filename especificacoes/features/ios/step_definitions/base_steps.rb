@@ -2,7 +2,7 @@ M = Hash['exclusivamente presencial' => '201502468361', 'flex' => '201401359558'
          'exclusivamente de EAD' => '201407212771', 'que está fora' => '201402031831',
          'sem pendencias de atendimento' => '200301489494',
          'que não possui requerimentos' => '',
-         'comum' => '201401359558',
+         'comum' => '201402389388',
          'com CR em branco em algum dos períodos' => '201001174666',
          'que possui requerimentos' => '201401359558',
          'que possui aulas aos domingos' => '201312054001',
