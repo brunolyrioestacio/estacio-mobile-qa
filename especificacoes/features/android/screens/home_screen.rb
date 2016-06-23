@@ -18,6 +18,7 @@ class HomeScreen < AndroidScreenBase
   element(:notification_button)   { 'notification_off' }
   element(:side_menu)             { 'Open navigation drawer' }
   element(:data_de_prova_button)  { "Data de\n Provas" }
+  element(:school_records_button) { 'Histórico Escolar' }
 
   def touch_notifications_button
     sleep 4
@@ -27,6 +28,12 @@ class HomeScreen < AndroidScreenBase
   def touch_registration
     sleep 3
     touch("* marked:'#{matricula_button}'")
+  end
+
+  def touch_school_records_button
+    sleep 3
+    drag_until_element_is_visible(:down, school_records_button, nil, 5)
+    touch("* marked:'#{school_records_button}'")
   end
 
   def touch_side_menu
