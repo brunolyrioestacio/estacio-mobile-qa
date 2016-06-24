@@ -2,7 +2,7 @@ class HistoricoEscolarScreen < AndroidScreenBase
   trait(:trait)                 { "* marked:'#{layout_name}'" }
 
   element(:layout_name)         { 'student_card_activity' }
-  element(:bug_semester)        { '2014.1' }
+  element(:bug_semester)        { '2014.1 - EAD' }
 
   def cr_is_on_page?
     is_on_page? 'CR Geral'
@@ -14,7 +14,6 @@ class HistoricoEscolarScreen < AndroidScreenBase
   end
 
   def navigate_at_semesters
-    drag_until_element_is_visible(:left, bug_semester, query("* marked:'#{bug_semester}'")[1])
     touch("* marked:'#{bug_semester}'")
   end
 end
