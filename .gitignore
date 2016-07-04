@@ -5,3 +5,4 @@ especificacoes/test_servers/*
 screenshot*.png
 android-output/
 ios-output/
+.ruby-version
