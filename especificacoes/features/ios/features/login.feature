@@ -2,19 +2,15 @@
 Funcionalidade: Login(Somente iOS)
 Através dessa funcionalidade é possível realizar o processo de autentificação do aluno no sistema SIA Aluno
 
-  @tuto
-  Contexto: Pular Tutorial
-    Dado que pulei o tutorial
-
   @logout
   @reinstall
   Cenário: Logout
-    Dado que estou logado
-    Dado que estou na tela inicial
-    E toquei no botão Outras Funções
-    E toquei no botão Sair
-    E vi um alerta com a mensagem de aviso sobre logout
-    E toquei no botão Sair do alerta
+    Dado que pulei o tutorial
+    E que realizei o processo de login usando uma matrícula "comum" do período vigente
+    Quando tocar no menu lateral
+    E tocar no botão Sair
+    E ver um alerta com o aviso de logout
+    E confirmar o logout
     Então devo estar na tela de Login
 
   @login
