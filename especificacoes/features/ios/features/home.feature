@@ -21,6 +21,7 @@ Cenário: Validação do banner
 @carteira
 Cenário: Vizualização da Carteira Digital do Estudante
   Dado que estou na tela inicial
+  Quando tocar no menu lateral
   Quando tocar na matricula
   Então devo estar na tela da Carteira Digital do Estudante
   E devo ver meus dados pessoais
@@ -35,8 +36,8 @@ Cenário: Preenchimento do Tile com Manual do Aluno
 @manual
 Cenário: Vizualização do Manual do Aluno
   Dado que estou na tela inicial
-  E toquei no botão Outras Funções
-  Quando tocar no botão de manual do aluno
+  Quando tocar no menu lateral
+  E tocar no botão de manual do aluno
   Então devo vizualizar o manual do aluno
 
 @preencher @nota

@@ -6,7 +6,7 @@ class HomeScreen < IOSScreenBase
    element(:sair_button)              { 'Sair' }
    element(:banner)                   { 'bannerView' }
    element(:banner_view)              { 'bannerDetailView' }
-   element(:matricula_container)      { 'userRegistrationView' }
+   element(:matricula_container)      { 'dash_matricula' }
    element(:atalho_button)            { "Adicionar\num atalho" }
    element(:manual_button)            { 'Manual do Aluno' }
    element(:notas_button)             { 'Notas' }
@@ -16,9 +16,15 @@ class HomeScreen < IOSScreenBase
    element(:historico_escolar_button) { 'Histórico Escolar' }
    element(:atendimento_button)       { 'Atendimento Agendado' }
    element(:requerimento_button)      { 'Requerimento/Reclamação' }
+   element(:side_menu)                { 'menuButton' }
 
    def tocar_botao_entendi
      touch("* marked:'#{entendi_button}'")[1]
+   end
+
+   def touch_side_menu
+     touch("* marked:'#{side_menu}'")
+     sleep 3
    end
 
    def tocar_botao_outras_funcoes
