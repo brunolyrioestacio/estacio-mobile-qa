@@ -9,10 +9,10 @@ class HomeScreen < IOSScreenBase
    element(:matricula_container)      { 'dash_matricula' }
    element(:atalho_button)            { "Adicionar\num atalho" }
    element(:manual_button)            { 'Manual do Aluno' }
-   element(:notas_button)             { 'Notas' }
+   element(:notas_button)             { 'Notas de Provas' }
    element(:quadro_button)            { 'Quadro de Horários' }
    element(:frequencia_button)        { 'Frequência' }
-   element(:data_prova_button)        { 'Data de Provas' }
+   element(:data_prova_button)        { 'Datas de Provas' }
    element(:historico_escolar_button) { 'Histórico Escolar' }
    element(:atendimento_button)       { 'Atendimento Agendado' }
    element(:requerimento_button)      { 'Requerimento/Reclamação' }

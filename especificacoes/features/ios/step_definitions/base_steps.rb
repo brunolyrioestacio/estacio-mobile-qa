@@ -85,3 +85,7 @@ Dado(/^que pulei o tutorial$/)do
     @pageLogin = page(LoginScreen).await(timeout:5)
   end
 end
+
+Quando(/^toquei no menu lateral$/) do
+  @pageHome.touch_side_menu
+end

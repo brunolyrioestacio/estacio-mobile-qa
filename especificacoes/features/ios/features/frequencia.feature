@@ -12,7 +12,7 @@ Funcionalidade: Frequência
     Quando tocar no botão de login
     Dado que estou na tela inicial
     E interagi com o OnBoarding
-    E toquei no botão Outras Funções
+    E toquei no menu lateral
     Quando tocar no botão de Frequência
     Dado que estou na tela de frequência
     Então devo visualizar informações de porcentagem de faltas das disciplinas
@@ -25,7 +25,7 @@ Funcionalidade: Frequência
     Quando tocar no botão de login
     Dado que estou na tela inicial
     E interagi com o OnBoarding
-    E toquei no botão Outras Funções
+    E toquei no menu lateral
     Quando tocar no botão de Frequência
     Dado que estou na tela de frequência
     Então não devo visualizar informações de porcentagem de faltas
@@ -38,7 +38,7 @@ Funcionalidade: Frequência
     Quando tocar no botão de login
     Dado que estou na tela inicial
     E interagi com o OnBoarding
-    E toquei no botão Outras Funções
+    E toquei no menu lateral
     Dado que estou na tela inicial
     Quando tocar no botão de Frequência
     Dado que estou na tela de frequência
@@ -51,7 +51,7 @@ Funcionalidade: Frequência
     Quando tocar no botão de login
     Dado que estou na tela inicial
     E interagi com o OnBoarding
-    E toquei no botão Outras Funções
+    E toquei no menu lateral
     Dado que estou na tela inicial
     Quando tocar no botão de Frequência
     Dado que estou na tela de frequência
