@@ -8,7 +8,7 @@ Given(/^I am on a page that contains '(.*?)'$/) do |page_text|
 end
 
 Dado(/^que preenchi o campo de matrícula com uma matricula que não possui disciplinas escolhidas$/) do
-  @pageLogin.enter_matricula("200602091643")
+  @pageLogin.enter_matricula('200602091643')
 end
 
 Dado(/^que estou na tela inicial$/) do
@@ -33,16 +33,14 @@ When(/^I drag the screen (down|up|left|right)$/) do |direction|
   @page.drag_to direction.to_sym
 end
 
-Quando (/^toquei no botão Sair$/) do
+Quando(/^tocar no botão Sair$/) do
   @pageHome.tocar_botao_sair
 end
-
 
 Quando(/^toquei no banner$/) do
   sleep 4
   @pageHome.tocar_banner
 end
-
 
 ######### THEN #########
 
@@ -61,5 +59,5 @@ Then(/^I should see a page that contains '(.*?)'$/) do |page_text|
 end
 
 Então(/^devo ver um alerta de redirecionamento para uma página externa$/) do
-  @pageHome.is_on_page? "Você será direcionado para um site externo. Deseja continuar?"
+  @pageHome.is_on_page? 'Você será direcionado para um site externo. Deseja continuar?'
 end
