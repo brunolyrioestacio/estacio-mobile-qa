@@ -20,7 +20,7 @@ class HomeScreen < AndroidScreenBase
   element(:data_de_prova_button)  { "Data de\n Provas" }
 
   def touch_notifications_button
-    sleep 4
+    sleep 8
     touch("* marked:'#{notification_button}'")
   end
 
@@ -34,8 +34,8 @@ class HomeScreen < AndroidScreenBase
   end
 
   def send_push(n)
-    m = system("curl \"https://manage.pushio.com/api/v1/notify_app/ya0abMIQOg/TyGQBdqBpY7rmyb9zHog\" -d 'payload={\"message\":\"Test QA #{n}\"}&audience=broadcast'")
-    sleep 6
+    sleep 3
+    m = system("curl \"https://manage.pushio.com/api/v1/notify_app/ya0abMIQOg/TyGQBdqBpY7rmyb9zHog\" -d 'payload={\"message\":\"Test QA #{n}\"}&tag_query=teste'")
   end
 
   def tocar_botao_sair
