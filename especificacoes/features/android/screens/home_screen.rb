@@ -10,14 +10,14 @@ class HomeScreen < AndroidScreenBase
   element(:banner)                { 'carousel_view_pager' }
   element(:matricula_button)      { 'registration_holder' }
   element(:manual_button)         { 'Manual do Aluno' }
-  element(:notas_button)          { 'Notas' }
+  element(:notas_button)          { "Notas de\n Provas" }
   element(:horarios_button)       { "Quadro de\n Horários" }
   element(:frequencia_button)     { 'Frequência' }
   element(:atendimento_button)    { "Atendimento \nAgendado" }
   element(:requirement_button)    { 'open_requirement' }
   element(:notification_button)   { 'notification_off' }
   element(:side_menu)             { 'Open navigation drawer' }
-  element(:data_de_prova_button)  { "Data de\n Provas" }
+  element(:data_de_prova_button)  { "Datas de\n Provas" }
 
   def touch_notifications_button
     sleep 8
