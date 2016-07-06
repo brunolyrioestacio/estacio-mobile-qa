@@ -11,7 +11,7 @@ Contexto: Login
     Quando tocar no botão de login
     Dado que estou na tela inicial
     E interagi com o OnBoarding
-    E toquei no botão Outras Funções
+    E toquei no menu lateral
     Quando tocar no botão de Notas
     Dado que estou na tela de Notas
     Então devo vizualizar as notas da disciplina de Estrutura de Dados
@@ -23,7 +23,7 @@ Contexto: Login
     Quando tocar no botão de login
     Dado que estou na tela inicial
     E interagi com o OnBoarding
-    E toquei no botão Outras Funções
+    E toquei no menu lateral
     Quando tocar no botão de Notas
     Dado que estou na tela de Notas
     Então devo ver uma mensagem de aviso sobre a falta de notas lançadas
@@ -35,7 +35,7 @@ Contexto: Login
     Quando tocar no botão de login
     Dado que estou na tela inicial
     E interagi com o OnBoarding
-    E toquei no botão Outras Funções
+    E toquei no menu lateral
     Quando tocar no botão de Notas
     Dado que estou na tela de Notas
     Então devo ver uma mensagem de aviso sobre a falta de notas lançadas devido ao aluno não estar matriculado

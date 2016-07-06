@@ -8,7 +8,7 @@ Contexto: Login
 
   Cenário: Visualização de Histórico Escolar
     Dado que realizei o processo de login usando uma matrícula "comum" do período vigente
-    E toquei no botão Outras Funções
+    E toquei no menu lateral
     Quando tocar no botão de histórico escolar
     Dado que estou na tela de historico escolar
     Então devo ver o CR do aluno
@@ -17,7 +17,7 @@ Contexto: Login
   @reinstall
   Cenário: Visualização de Histórico Escolar - Bug do CR em branco
     Dado que realizei o processo de login usando uma matrícula "com CR em branco em algum dos períodos"
-    E toquei no botão Outras Funções
+    E toquei no menu lateral
     Quando tocar no botão de histórico escolar
     Dado que estou na tela de historico escolar
     Então devo ver o CR do aluno

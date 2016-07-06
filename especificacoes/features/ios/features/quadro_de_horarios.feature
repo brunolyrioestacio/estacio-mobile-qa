@@ -6,7 +6,7 @@ Contexto:
 
 Cenário: Visualização de Quadro de Horario
   Dado que realizei o processo de login usando uma matrícula "exclusivamente presencial" do período vigente
-  E toquei no botão Outras Funções
+  E toquei no menu lateral
   Quando tocar no botão de quadro de horarios
   Dado que estou na tela de quadro de horarios
   E que estou visualizando apenas o horario das disciplinas presenciais do dia corrente da semana
@@ -18,7 +18,7 @@ Cenário: Visualização de Quadro de Horario
 @reinstall
 Cenário: Vizualização de Quadro de Horário - Horário Domingo
   Dado que realizei o processo de login usando uma matrícula "que possui aulas aos domingos" do período vigente
-  E toquei no botão Outras Funções
+  E toquei no menu lateral
   Quando tocar no botão de quadro de horarios
   Dado que estou na tela de quadro de horarios
   Quando tocar na aba de Domingo
@@ -28,7 +28,7 @@ Cenário: Vizualização de Quadro de Horário - Horário Domingo
 @reinstall
 Cenário: Visualização de Quadro de Horario - Aluno Flex
   Dado que realizei o processo de login usando uma matrícula "flex" do período vigente
-  E toquei no botão Outras Funções
+  E toquei no menu lateral
   Quando tocar no botão de quadro de horarios
   Dado que estou na tela de quadro de horarios
   E que estou visualizando o horario das disciplinas presenciais do dia corrente da semana
@@ -39,7 +39,7 @@ Cenário: Visualização de Quadro de Horario - Aluno Flex
 @reinstall
 Cenário: Visualização de Quadro de Horario - Aluno exclusivamente EAD
   Dado que realizei o processo de login usando uma matrícula "exclusivamente de EAD" do período vigente
-  E toquei no botão Outras Funções
+  E toquei no menu lateral
   Quando tocar no botão de quadro de horarios
   Dado que estou na tela de quadro de horarios
   Então devo visualizar o horario da disciplina de "Gerenciamento de Aquisições"
@@ -47,7 +47,7 @@ Cenário: Visualização de Quadro de Horario - Aluno exclusivamente EAD
 @reinstall
 Cenário: Visualização de Quadro de Horários - Aluno sem disciplinas
   Dado que realizei o processo de login usando uma matrícula que não possui disciplinas escolhidas
-  E toquei no botão Outras Funções
+  E toquei no menu lateral
   Quando tocar no botão de quadro de horarios
   Dado que estou na tela de quadro de horarios
   Então devo ver uma mensagem de aviso sobre a indisponibilidade de consulta ao quadro de horario
@@ -56,7 +56,7 @@ Cenário: Visualização de Quadro de Horários - Aluno sem disciplinas
 @reinstall
 Cenário: Visualização de Quadro de Horários - Aluno não matriculado
   Dado que realizei o processo de login usando uma matrícula "que está fora" do período vigente
-  E toquei no botão Outras Funções
+  E toquei no menu lateral
   Quando tocar no botão de quadro de horarios
   Dado que estou na tela de quadro de horarios
   Então devo ver uma mensagem de aviso sobre a falta de horarios devido ao aluno não estar matriculado em nenhuma disciplina

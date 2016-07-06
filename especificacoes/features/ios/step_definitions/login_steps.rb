@@ -1,31 +1,33 @@
 ######### DADO #########
 
 Dado(/^que estou na tela de tutorial$/) do
-  @pageTutorial = page(TutorialScreen).await(timeout:5)
+  @page_tutorial = page(TutorialScreen).await(timeout: 5)
 end
 
 ######### QUANDO #########
 
-
-###########E############
+########### E ############
 Quando(/^o pular$/) do
-  @pageTutorial.tocar_botao_pular
+  @page_tutorial.tocar_botao_pular
 end
-
 
 Quando(/^toquei no botão Outras Funções$/) do
   @pageHome.tocar_botao_outras_funcoes
 end
 
-Quando (/^vi um alerta com a mensagem de aviso sobre logout$/) do
+Quando(/^vi um alerta com a mensagem de aviso sobre logout$/) do
   @pageHome.alerta_logout_is_visible?
 end
 
-Quando (/^toquei no botão Sair do alerta$/) do
+Quando(/^confirmar o logout$/) do
   @pageHome.tocar_botao_sair
 end
 
-######### ENTãO #########
+######### ENTAO #########
+Quando(/^ver um alerta com o aviso de logout$/) do
+  @pageHome.alerta_logout_is_visible?
+end
+
 Então(/^devo estar na tela de Login$/) do
   @pageLogin = page(LoginScreen).await(timeout:5)
 end
