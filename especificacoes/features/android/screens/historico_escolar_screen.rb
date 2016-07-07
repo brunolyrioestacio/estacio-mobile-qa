@@ -14,6 +14,7 @@ class HistoricoEscolarScreen < AndroidScreenBase
   end
 
   def navigate_at_semesters
+    drag_until_element_is_visible(:left, bug_semester)
     touch("* marked:'#{bug_semester}'")
   end
 end
