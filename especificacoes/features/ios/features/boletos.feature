@@ -23,7 +23,7 @@ competência e um botão para a segunda via de boleto
     E clicar na aba de boletos não pendentes
     Então devo visualizar uma mensagem sobre a falta de boletos não pendentes
 
-  Cenário: Aluno com boleto pendentes e não pendentes
+  Cenário: Aluno com boletos pendentes e não pendentes
     Dado que realizei o processo de login usando uma matrícula "com boletos dos dois tipos"
     Quando navegar até a funcionalidade de boletos
     Então devo visualizar boletos dos dois tipos
@@ -31,14 +31,30 @@ competência e um botão para a segunda via de boleto
   Cenário: 2ª via de boletos - Copiar código de barras
     Dado que realizei o processo de login usando uma matrícula "com boletos pendentes"
     Quando navegar até a funcionalidade de boletos
-    E escolher um dos boletos pendentes e navegas até sua opção de segunda via
+    E escolher um dos boletos pendentes e navegar até sua opção de segunda via
     E clicar no botão de código de barras
     Então devo visualizar uma mensagem de confirmação da cópia
 
-  Cenário: 2ª via de boletos - Enviar boleto para email alternativo
-    Dado que realizei o processo de login usando uma matrícula "com boletos pendentes"
+  Cenário: 2ª via de boletos - Enviar boleto apenas para email alternativo
+    Dado que realizei o processo de login usando uma matrícula "sem email principal"
     Quando navegar até a funcionalidade de boletos
-    E escolher um dos boletos pendentes e navegas até sua opção de segunda via
+    E escolher um dos boletos pendentes e navegar até sua opção de segunda via
     E preencher o campo de email opcional, visto que não tenho email principal
+    E clicar no botão de envio por email
+    Então devo visualizar uma mensagem de confirmação de email enviado
+
+  Cenário: 2ª via de boletos - Enviar boleto apenas para email principal
+    Dado que realizei o processo de login usando uma matrícula "com email principal"
+    Quando navegar até a funcionalidade de boletos
+    E escolher um dos boletos pendentes e navegar até sua opção de segunda via
+    E não preencher o campo de email alternativo
+    E clicar no botão de envio por email
+    Então devo visualizar uma mensagem de confirmação de email enviado
+
+  Cenário: 2ª via de boletos - Enviar boleto para email principal e alternativo
+    Dado que realizei o processo de login usando uma matrícula "com email principal"
+    Quando navegar até a funcionalidade de boletos
+    E escolher um dos boletos pendentes e navegar até sua opção de segunda via
+    E preencher o campo de email opcional
     E clicar no botão de envio por email
     Então devo visualizar uma mensagem de confirmação de email enviado
