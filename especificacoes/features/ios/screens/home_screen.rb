@@ -17,6 +17,12 @@ class HomeScreen < IOSScreenBase
    element(:atendimento_button)       { 'Atendimento Agendado' }
    element(:requerimento_button)      { 'Requerimento/Reclamação' }
    element(:side_menu)                { 'menuButton' }
+   element(:boletos_button)           { 'Boletos' }
+
+   def navigate_to_bank_slip
+     touch_side_menu
+     touch("* marked:'#{boletos_button}'")
+   end
 
    def tocar_botao_entendi
      touch("* marked:'#{entendi_button}'")[1]
