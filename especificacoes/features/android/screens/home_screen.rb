@@ -19,6 +19,13 @@ class HomeScreen < AndroidScreenBase
   element(:side_menu)             { 'Open navigation drawer' }
   element(:data_de_prova_button)  { "Datas de\n Provas" }
   element(:school_records_button) { 'Histórico Escolar' }
+  element(:boletos_button)        { 'Boletos' }
+
+  def navigate_to_bank_slip
+    touch_side_menu
+    drag_until_element_is_visible(:down, boletos_button, nil, 5)
+    touch("* marked:'#{boletos_button}'")
+  end
 
   def touch_notifications_button
     sleep 8
