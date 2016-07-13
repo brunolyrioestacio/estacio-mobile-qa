@@ -6,7 +6,13 @@ M = Hash['exclusivamente presencial' => '201502468361', 'flex' => '201401359558'
          'com CR em branco em algum dos períodos' => '201001174666',
          'que possui requerimentos' => '201401359558',
          'que possui aulas aos domingos' => '201312054001',
-         'com 3 atendimentos em aberto' => '200501002475']
+         'com 3 atendimentos em aberto' => '200501002475',
+         'sem boletos pendentes' => '201401359558',
+         'sem boletos não pendentes' => '201503251357',
+         'com boletos dos dois tipos' => '201506715583',
+         'com boletos pendentes' => '201304068676',
+         'sem email principal' => '201402051311',
+         'com email principal' => '201506715583']
 ######### DADO #########
 Dado(/^que realizei o processo de login usando uma matrícula "(.*?)" do período vigente$/) do |tipo_matricula|
   matricula = M[tipo_matricula]
