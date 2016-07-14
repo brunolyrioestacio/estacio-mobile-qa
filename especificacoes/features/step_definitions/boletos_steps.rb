@@ -1,10 +1,4 @@
-######### DADO #########
-
 ######### QUANDO #########
-Quando(/^navegar até a funcionalidade de boletos$/) do
-  @pageHome.navigate_to_bank_slip
-  @page_bank_slip = page(BoletosScreen).await(timeout: 5)
-end
 
 Quando(/^clicar na aba de boletos pendentes$/) do
   @page_bank_slip.touch_pending_bank_slips

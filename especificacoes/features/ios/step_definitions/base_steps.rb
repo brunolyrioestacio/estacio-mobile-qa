@@ -7,7 +7,7 @@ M = Hash['exclusivamente presencial' => '201502468361', 'flex' => '201401359558'
          'que possui requerimentos' => '201401359558',
          'que possui aulas aos domingos' => '201312054001',
          'com 3 atendimentos em aberto' => '200501002475',
-         'sem boletos pendentes' => '201401359558',
+         'sem boletos pendentes' => '200602109496',
          'sem boletos não pendentes' => '201503251357',
          'com boletos dos dois tipos' => '201506715583',
          'com boletos pendentes' => '201304068676',
@@ -94,4 +94,9 @@ end
 
 Quando(/^toquei no menu lateral$/) do
   @pageHome.touch_side_menu
+end
+
+Quando(/^navegar até a funcionalidade de boletos$/) do
+  @pageHome.navigate_to_bank_slip
+  @page_bank_slip = page(BoletosScreen).await(timeout: 5)
 end

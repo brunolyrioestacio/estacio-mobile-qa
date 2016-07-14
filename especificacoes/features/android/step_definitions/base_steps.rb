@@ -11,7 +11,7 @@ M = Hash['exclusivamente presencial' => '201502468361', 'flex' => '201401359558'
          'com provas online' => '201402389388',
          'que não possui provas online marcadas' => '201606006665',
          'que não possui provas presenciais marcadas' => '201606006665',
-         'sem boletos pendentes' => '201401359558',
+         'sem boletos pendentes' => '200602109496',
          'sem boletos não pendentes' => '201503251357',
          'com boletos dos dois tipos' => '201506715583',
          'com boletos pendentes' => '201304068676',
@@ -53,10 +53,13 @@ Dado(/^que realizei o processo de login usando uma matrícula "(.*?)"$/) do |tip
 end
 
 Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
+  @page_home = page(HomeScreen).await(timeout: 5)
   case nome_funcionalide
   when 'Atendimento Agendado'
-    @page_home = page(HomeScreen).await(timeout: 5)
     @page_home.navigate_to_scheduled_service
     @page_atendimento = page(AtendimentoAgendadoScreen).await(timeout: 5)
+  when 'boletos'
+    @pageHome.navigate_to_bank_slip
+    @page_bank_slip = page(BoletosScreen).await(timeout: 5)
   end
 end
