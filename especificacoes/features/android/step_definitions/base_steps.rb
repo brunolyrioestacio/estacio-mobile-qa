@@ -51,3 +51,12 @@ Dado(/^que realizei o processo de login usando uma matrícula "(.*?)"$/) do |tip
     Dado que estou na tela inicial
   }
 end
+
+Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
+  case nome_funcionalide
+  when 'Atendimento Agendado'
+    @page_home = page(HomeScreen).await(timeout: 5)
+    @page_home.navigate_to_scheduled_service
+    @page_atendimento = page(AtendimentoAgendadoScreen).await(timeout: 5)
+  end
+end

@@ -1,7 +1,4 @@
-######### DADO #########
-Dado(/^que estou na tela de Atendimento Agendado$/) do
-  @page_atendimento = page(AtendimentoAgendadoScreen).await(timeout: 5)
-end
+
 ######### QUANDO #########
 Quando(/^tocar no botão de criação de agendamento$/) do
   @page_atendimento.touch_new_service_button

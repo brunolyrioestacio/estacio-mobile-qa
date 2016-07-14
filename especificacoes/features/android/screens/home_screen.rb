@@ -13,7 +13,7 @@ class HomeScreen < AndroidScreenBase
   element(:notas_button)          { "Notas de\n Provas" }
   element(:horarios_button)       { "Quadro de\n Horários" }
   element(:frequencia_button)     { 'Frequência' }
-  element(:atendimento_button)    { "Atendimento \nAgendado" }
+  element(:atendimento_button)    { 'Atendimento agendado' }
   element(:requirement_button)    { 'open_requirement' }
   element(:notification_button)   { 'notification_off' }
   element(:side_menu)             { 'Open navigation drawer' }
@@ -25,6 +25,12 @@ class HomeScreen < AndroidScreenBase
     touch_side_menu
     drag_until_element_is_visible(:down, boletos_button, nil, 5)
     touch("* marked:'#{boletos_button}'")
+  end
+
+  def navigate_to_scheduled_service
+    touch_side_menu
+    drag_until_element_is_visible(:down, atendimento_button, nil, 5)
+    touch("* marked:'#{atendimento_button}'")
   end
 
   def touch_notifications_button

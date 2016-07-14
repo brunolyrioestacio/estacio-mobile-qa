@@ -10,9 +10,6 @@ end
 Quando(/^tocar no botão de Frequência$/) do
   @pageHome.tocar_botao_frequencia
 end
-Quando(/^tocar no botão de atendimento agendado$/) do
-  @pageHome.tocar_botao_atendimento_agendado
-end
 Quando(/^tocar no botão de Requerimentos$/) do
   @pageHome.tocar_botao_requerimentos
 end
