@@ -27,11 +27,14 @@ class BoletosScreen < AndroidScreenBase
   end
 
   def touch_pending_bank_slip_item_and_go_to_second_copy
+    sleep 1
     touch("* id:'#{bank_slip_item}'")
+    sleep 1
     touch("* id:'#{second_bank_slip_button}'")
   end
 
   def touch_copy_button
+    sleep 1
     touch("* id:'#{copy_button}'")
   end
 
