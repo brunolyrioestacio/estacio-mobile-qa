@@ -13,9 +13,6 @@ end
 Quando(/^tocar no botão de Requerimentos$/) do
   @pageHome.tocar_botao_requerimentos
 end
-Quando(/^tocar no botão de data de prova$/) do
-  @pageHome.tocar_botao_data_de_prova
-end
 Quando(/^tocar no botão de histórico escolar$/) do
   @pageHome.touch_school_records_button
 end

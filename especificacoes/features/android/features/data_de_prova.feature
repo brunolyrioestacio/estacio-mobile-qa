@@ -1,5 +1,5 @@
 # language: pt
-Funcionalidade: Data De Provas (Somente Android)
+Funcionalidade: Datas De Provas (Somente Android)
 Através dessa Funcionalidade é possível consultar a data das provas presenciais e online do Aluno
 
   Contexto: Login
@@ -8,29 +8,25 @@ Através dessa Funcionalidade é possível consultar a data das provas presencia
   @reinstall
   Cenário: Vizualizar a data das provas de um aluno presencial
     Dado que realizei o processo de login usando uma matrícula "com provas presenciais" do período vigente
-    Quando tocar no botão de data de prova
-    Dado que estou na tela de data de prova
+    Quando navegar até a funcionalidade de Datas de provas
     Então devo vizualizar a data das provas das disciplinas presenciais
 
   @reinstall
   Cenário: Vizualização de data de prova - aluno online
     Dado que realizei o processo de login usando uma matrícula "com provas online" do período vigente
-    Quando tocar no botão de data de prova
-    Dado que estou na tela de data de prova
-    E toquei no botão de datas de provas online
+    Quando navegar até a funcionalidade de Datas de provas
+    E tocar no botão de datas de provas online
     Então devo vizualizar a data das provas das disciplinas online
 
   @reinstall
   Cenário: Vizualização de data de prova - aluno sem provas presenciais
     Dado que realizei o processo de login usando uma matrícula "que não possui provas presenciais marcadas" do período vigente
-    Quando tocar no botão de data de prova
-    Dado que estou na tela de data de prova
+    Quando navegar até a funcionalidade de Datas de provas
     Então devo ver uma mensagem sobre a não existencia de provas presenciais marcadas
 
   @reinstall
   Cenário: Vizualização de data de prova - aluno sem provas online
     Dado que realizei o processo de login usando uma matrícula "que não possui provas online marcadas" do período vigente
-    Quando tocar no botão de data de prova
-    Dado que estou na tela de data de prova
-    E toquei no botão de datas de provas online
+    Quando navegar até a funcionalidade de Datas de provas
+    E tocar no botão de datas de provas online
     Então devo ver uma mensagem sobre a não existencia de provas online marcadas

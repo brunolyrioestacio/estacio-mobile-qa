@@ -61,5 +61,8 @@ Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
   when 'boletos'
     @pageHome.navigate_to_bank_slip
     @page_bank_slip = page(BoletosScreen).await(timeout: 5)
+  when 'Datas de provas'
+    @pageHome.navigate_to_exam_dates
+    @page_data = page(DataDeProvaScreen).await(timeout: 5)
   end
 end
