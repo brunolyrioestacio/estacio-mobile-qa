@@ -13,7 +13,7 @@ class BoletosScreen < IOSScreenBase
   element(:primary_email_label)     { 'Principal:' }
   element(:view_to_hide_keyboard)   { 'invoiceDetailOrLabel' }
   OPTIONAL_EMAIL = 'meupai.omeupai@gmail.com'.freeze
-  NO_PENDING_BANK_SLIPS_MESSAGE = 'Você não possui nenhum boleto em processamento, com pagamento pendente a vencer para consulta.'.freeze
+  NO_PENDING_BANK_SLIPS_MESSAGE = 'Você não possui nenhum boleto em processamento, a vencer ou vencido para consulta.'.freeze
   NO_NOT_PENDING_BANK_SLIPS_MESSAGE = 'Você não possui nenhum boleto pago, negociado, bloqueado ou cancelado para consulta.'.freeze
   COPY_MESSAGE = 'Código de barras copiado com sucesso!'.freeze
   SENT_EMAIL_MESSAGE = 'Boleto enviado com sucesso'.freeze
