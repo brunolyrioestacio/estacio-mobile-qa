@@ -4,22 +4,22 @@ class HomeScreen < AndroidScreenBase
   trait(:trait)                   { "* id:'#{layout_name}'" }
 
   # Declare todos os elementos da tela
-  element(:layout_name)           { 'home_view' }
-  element(:logout_button)         { 'Sair' }
-  element(:confirmar_sair_button) { 'custom_alert_second_btn' }
-  element(:banner)                { 'carousel_view_pager' }
-  element(:matricula_button)      { 'registration_holder' }
-  element(:manual_button)         { 'Manual do Aluno' }
-  element(:notas_button)          { "Notas de\n Provas" }
-  element(:horarios_button)       { "Quadro de\n Horários" }
-  element(:frequencia_button)     { 'Frequência' }
-  element(:atendimento_button)    { 'Atendimento agendado' }
-  element(:requirement_button)    { 'open_requirement' }
-  element(:notification_button)   { 'notification_off' }
-  element(:side_menu)             { 'Open navigation drawer' }
-  element(:data_de_prova_button)  { "Datas de\n Provas" }
-  element(:school_records_button) { 'Histórico Escolar' }
-  element(:boletos_button)        { 'Boletos' }
+  element(:layout_name)              { 'home_view' }
+  element(:logout_button)            { 'Sair' }
+  element(:confirmar_sair_button)    { 'custom_alert_second_btn' }
+  element(:banner)                   { 'carousel_view_pager' }
+  element(:matricula_button)         { 'registration_holder' }
+  element(:manual_button)            { 'Manual do Aluno' }
+  element(:notas_button)             { "Notas de\n Provas" }
+  element(:horarios_button)          { "Quadro de\n Horários" }
+  element(:frequencia_button)        { 'Frequência' }
+  element(:atendimento_button)       { 'Atendimento agendado' }
+  element(:requirement_button)       { 'open_requirement' }
+  element(:notification_button)      { 'notification_off' }
+  element(:side_menu)                { 'Open navigation drawer' }
+  element(:datas_de_provas_button)   { 'Datas de provas' }
+  element(:school_records_button)    { 'Histórico Escolar' }
+  element(:boletos_button)           { 'Boletos' }
 
   def navigate_to_bank_slip
     touch_side_menu
@@ -31,6 +31,12 @@ class HomeScreen < AndroidScreenBase
     touch_side_menu
     drag_until_element_is_visible(:down, atendimento_button, nil, 5)
     touch("* marked:'#{atendimento_button}'")
+  end
+
+  def navigate_to_exam_dates
+    touch_side_menu
+    drag_until_element_is_visible(:down, datas_de_provas_button, nil, 5)
+    touch("* marked:'#{datas_de_provas_button}'")
   end
 
   def touch_notifications_button
@@ -102,10 +108,6 @@ class HomeScreen < AndroidScreenBase
 
   def validate_student_manual_is_on_page
     is_on_page? 'Manual do Aluno'
-  end
-
-  def tocar_botao_data_de_prova
-    touch("* marked:'#{data_de_prova_button}'")
   end
 
   def alerta_logout_is_visible?
