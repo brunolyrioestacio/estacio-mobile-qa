@@ -1,6 +1,6 @@
 ######### DADO #########
 Dado(/^que estou na tela de frequência$/) do
-  @pageFrequencia = page(FrequenciaScreen).await(timeout: 5)
+  @page_frequencia = page(FrequenciaScreen).await(timeout: 5)
 end
 
 Dado(/^que preenchi o campo de matrícula com uma matricula de graduação EAD do período vigente$/) do
@@ -13,17 +13,15 @@ end
 
 ######### QUANDO #########
 
-######### ENTÃO #########
+######### ENTAO #########
 Então(/^devo visualizar informações de porcentagem de faltas das disciplinas$/) do
-  @pageFrequencia.attendance_is_on_page?
+  @page_frequencia.attendance_is_on_page?
 end
-
 
 Então(/^não devo visualizar informações de porcentagem de faltas$/) do
-  @pageFrequencia.attendance_is_not_on_page?
+  @page_frequencia.attendance_is_not_on_page?
 end
 
-
 Então(/^devo ver uma mensagem de aviso sobre a falta de frequências para o aluno$/) do
-  @pageFrequencia.validate_no_attendance_message
+  @page_frequencia.validate_no_attendance_message
 end

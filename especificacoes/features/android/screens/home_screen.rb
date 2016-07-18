@@ -27,6 +27,12 @@ class HomeScreen < AndroidScreenBase
     touch("* marked:'#{boletos_button}'")
   end
 
+  def navigate_to_student_attendance
+    touch_side_menu
+    drag_until_element_is_visible(:down, frequencia_button, nil, 5)
+    touch("* marked:'#{frequencia_button}'")
+  end
+
   def navigate_to_scheduled_service
     touch_side_menu
     drag_until_element_is_visible(:down, atendimento_button, nil, 5)
@@ -71,10 +77,6 @@ class HomeScreen < AndroidScreenBase
 
   def tocar_botao_requerimentos
     touch("* id:'#{requirement_button}'")
-  end
-
-  def tocar_botao_frequencia
-    touch("* marked:'#{frequencia_button}'")
   end
 
   def tocar_botao_notas_aluno
