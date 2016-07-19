@@ -1,6 +1,10 @@
 # language: pt
 Funcionalidade: Frequência
-  Atravé
+  Através dessa funcionalidade o aluno consegue visualizar suas informações de frequência das disciplinas
+em que está matriculado. Assim, para cada disciplina, é possível ver sua carga horária, total de
+faltas e o limite de faltas permitidas. Caso o aluno seja da modalidade de EAD, só é mostrada a carga
+horária de cada disciplina.
+
   Contexto:
     Dado que estou na tela de Login
 
