@@ -5,10 +5,10 @@ class NotasScreen < AndroidScreenBase
   element(:layout_name)         { 'student_grades_view' }
 
   def grades_is_on_page?
-    is_on_page? '10.0' # AV1
-    is_on_page? '2.0' # AV2
-    #is_on_page? '-' # AV3
-    #is_on_page? '-' # AVR
+    is_on_page? '4.4' # AV1
+    is_on_page? '5.2' # AV2
+    # is_on_page? '-' # AV3
+    # is_on_page? '-' # AVR
   end
 
   def validate_no_grades

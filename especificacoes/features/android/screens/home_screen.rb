@@ -10,7 +10,7 @@ class HomeScreen < AndroidScreenBase
   element(:banner)                   { 'carousel_view_pager' }
   element(:matricula_button)         { 'registration_holder' }
   element(:manual_button)            { 'Manual do Aluno' }
-  element(:notas_button)             { "Notas de\n Provas" }
+  element(:notas_button)             { 'Notas de provas' }
   element(:horarios_button)          { "Quadro de\n Horários" }
   element(:frequencia_button)        { 'Frequência' }
   element(:atendimento_button)       { 'Atendimento agendado' }
@@ -45,6 +45,12 @@ class HomeScreen < AndroidScreenBase
     touch("* marked:'#{datas_de_provas_button}'")
   end
 
+  def navigate_to_student_grades
+    touch_side_menu
+    drag_until_element_is_visible(:down, notas_button, nil, 5)
+    touch("* marked:'#{notas_button}'")
+  end
+
   def touch_notifications_button
     sleep 8
     touch("* marked:'#{notification_button}'")
@@ -77,10 +83,6 @@ class HomeScreen < AndroidScreenBase
 
   def tocar_botao_requerimentos
     touch("* id:'#{requirement_button}'")
-  end
-
-  def tocar_botao_notas_aluno
-    touch("* marked:'#{notas_button}'")
   end
 
   def tocar_botao_quadro_de_horarios

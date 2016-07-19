@@ -1,6 +1,6 @@
 ######### DADO #########
 Dado(/^que estou na tela de Notas$/) do
-  @pageNotas = page(NotasScreen).await(timeout:5)
+  @page_notas = page(NotasScreen).await(timeout: 5)
 end
 
 Dado(/^que preenchi o campo de matrícula com uma matricula do período vigente$/) do
@@ -17,15 +17,19 @@ end
 
 ######### QUANDO #########
 
-######### ENTãO #########
+######### ENTÃO #########
 Então (/^devo vizualizar as notas da disciplina de Estrutura de Dados$/) do
-  @pageNotas.grades_is_on_page?
+  @page_notas.grades_is_on_page?
+end
+
+Então(/^devo vizualizar as notas das disciplina em que estou matriculado$/) do
+  @page_notas.grades_is_on_page?
 end
 
 Então (/^devo ver uma mensagem de aviso sobre a falta de notas lançadas$/) do
-  @pageNotas.validate_no_grades
+  @page_notas.validate_no_grades
 end
 
 Então (/^devo ver uma mensagem de aviso sobre a falta de notas lançadas devido ao aluno não estar matriculado$/) do
-  @pageNotas.validate_no_registration
+  @page_notas.validate_no_registration
 end

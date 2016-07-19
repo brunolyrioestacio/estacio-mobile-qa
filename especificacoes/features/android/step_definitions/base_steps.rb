@@ -20,7 +20,9 @@ M = Hash['exclusivamente presencial' => '201502468361', 'flex' => '201401359558'
          'de graduação presencial' => '201401359558',
          'de graduação EAD' => '201512955639',
          'não ativa' => '200902006765',
-         'que não possui disciplinas escolhidas' => '200602091643'
+         'que não possui disciplinas escolhidas' => '200602091643',
+         'que não possui notas lançadas' => '201301287555',
+         'não relacionada' => '201402031831'
         ]
 Dado(/^que realizei o processo de login usando uma matrícula "(.*?)" do período vigente$/) do |tipo_matricula|
   matricula = M[tipo_matricula]
@@ -71,5 +73,8 @@ Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
   when 'Frequência'
     @page_home.navigate_to_student_attendance
     @page_frequencia = page(FrequenciaScreen).await(timeout: 5)
+  when 'Notas de Provas'
+    @page_home.navigate_to_student_grades
+    @page_notas = page(NotasScreen).await(timeout: 5)
   end
 end
