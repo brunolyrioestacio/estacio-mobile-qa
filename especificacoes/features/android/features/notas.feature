@@ -9,7 +9,7 @@ inscrito, caso as mesmas ja tenham sido lançadas.
   Cenário: Visualização de Notas
     Dado que realizei o processo de login usando uma matrícula "comum" do período vigente
     Quando navegar até a funcionalidade de Notas de Provas
-    Então devo vizualizar as notas das disciplina em que estou matriculado
+    Então devo vizualizar as notas das disciplinas em que estou matriculado
 
   @reinstall
   Cenário: Visualização de Notas - Aluno sem notas

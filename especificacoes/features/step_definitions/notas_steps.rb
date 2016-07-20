@@ -22,7 +22,7 @@ Então (/^devo vizualizar as notas da disciplina de Estrutura de Dados$/) do
   @page_notas.grades_is_on_page?
 end
 
-Então(/^devo vizualizar as notas das disciplina em que estou matriculado$/) do
+Então(/^devo vizualizar as notas das disciplinas em que estou matriculado$/) do
   @page_notas.grades_is_on_page?
 end
 
