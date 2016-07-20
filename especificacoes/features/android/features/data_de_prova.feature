@@ -1,6 +1,7 @@
 # language: pt
 Funcionalidade: Datas De Provas (Somente Android)
-Através dessa Funcionalidade é possível consultar a data das provas presenciais e online do Aluno
+  Através dessa Funcionalidade é possível consultar as datas das provas presenciais e online das disciplinas
+que o aluno está matriculado.
 
   Contexto: Login
     Dado que estou na tela de Login
