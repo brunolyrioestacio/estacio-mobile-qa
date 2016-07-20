@@ -1,4 +1,4 @@
-############ Dado #############
+############ Quando #############
 Quando(/^tocar no botão de datas de provas online$/) do
   @page_data.tocar_botao_data_online
 end
