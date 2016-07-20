@@ -10,14 +10,14 @@ que o aluno está matriculado.
   Cenário: Vizualizar a data das provas de um aluno presencial
     Dado que realizei o processo de login usando uma matrícula "com provas presenciais" do período vigente
     Quando navegar até a funcionalidade de Datas de provas
-    Então devo vizualizar a data das provas das disciplinas presenciais
+    Então devo vizualizar as datas das provas das disciplinas presenciais
 
   @reinstall
   Cenário: Vizualização de data de prova - aluno online
     Dado que realizei o processo de login usando uma matrícula "com provas online" do período vigente
     Quando navegar até a funcionalidade de Datas de provas
     E tocar no botão de datas de provas online
-    Então devo vizualizar a data das provas das disciplinas online
+    Então devo vizualizar as datas das provas das disciplinas online
 
   @reinstall
   Cenário: Vizualização de data de prova - aluno sem provas presenciais
