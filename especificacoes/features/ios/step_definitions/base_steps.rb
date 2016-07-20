@@ -12,7 +12,11 @@ M = Hash['exclusivamente presencial' => '201502468361', 'flex' => '201401359558'
          'com boletos dos dois tipos' => '201506715583',
          'com boletos pendentes' => '201304068676',
          'sem email principal' => '201402051311',
-         'com email principal' => '201506715583']
+         'com email principal' => '201506715583',
+         'com provas presenciais' => '201402389388',
+         'com provas online' => '201402389388',
+         'que não possui provas online marcadas' => '201606006665',
+         'que não possui provas presenciais marcadas' => '201606006665']
 ######### DADO #########
 Dado(/^que realizei o processo de login usando uma matrícula "(.*?)" do período vigente$/) do |tipo_matricula|
   matricula = M[tipo_matricula]
@@ -96,7 +100,14 @@ Quando(/^toquei no menu lateral$/) do
   @pageHome.touch_side_menu
 end
 
-Quando(/^navegar até a funcionalidade de boletos$/) do
-  @pageHome.navigate_to_bank_slip
-  @page_bank_slip = page(BoletosScreen).await(timeout: 5)
+Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
+  @page_home = page(HomeScreen).await(timeout: 5)
+  case nome_funcionalide
+  when 'boletos'
+    @page_home.navigate_to_bank_slip
+    @page_bank_slip = page(BoletosScreen).await(timeout: 5)
+  when 'Datas de provas'
+    @page_home.navigate_to_exam_dates
+    @page_data = page(DataDeProvaScreen).await(timeout: 5)
+  end
 end

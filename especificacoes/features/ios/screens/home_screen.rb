@@ -24,6 +24,11 @@ class HomeScreen < IOSScreenBase
      touch("* marked:'#{boletos_button}'")
    end
 
+   def navigate_to_exam_dates
+     touch_side_menu
+     touch("* marked:'#{data_prova_button}'")
+   end
+
    def tocar_botao_entendi
      touch("* marked:'#{entendi_button}'")[1]
    end
@@ -79,10 +84,6 @@ class HomeScreen < IOSScreenBase
 
    def tocar_botao_historico_escolar
      touch("* marked:'#{historico_escolar_button}'")
-   end
-
-   def tocar_botao_data_de_prova
-     touch("* marked:'#{data_prova_button}'")
    end
 
    def tocar_botao_atendimento
