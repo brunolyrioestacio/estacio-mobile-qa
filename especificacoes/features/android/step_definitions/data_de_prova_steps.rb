@@ -4,7 +4,7 @@ Quando(/^tocar no botão de datas de provas online$/) do
 end
 
 ############ Entao ###########
-Então(/^devo vizualizar a data das provas das disciplinas presenciais$/) do
+Então(/^devo vizualizar as datas das provas das disciplinas presenciais$/) do
   @page_data.validate_presential_exam_date_is_on_page
 end
 
@@ -16,6 +16,6 @@ Então(/^devo ver uma mensagem sobre a não existencia de provas presenciais mar
   @page_data.validate_no_exam_dates_exception_message
 end
 
-Então(/^devo vizualizar a data das provas das disciplinas online$/) do
+Então(/^devo vizualizar as datas das provas das disciplinas online$/) do
   @page_data.validate_online_exam_date_is_on_page
 end
