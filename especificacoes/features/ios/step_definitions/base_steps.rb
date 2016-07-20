@@ -16,7 +16,11 @@ M = Hash['exclusivamente presencial' => '201502468361', 'flex' => '201401359558'
          'com provas presenciais' => '201402389388',
          'com provas online' => '201402389388',
          'que não possui provas online marcadas' => '201606006665',
-         'que não possui provas presenciais marcadas' => '201606006665']
+         'que não possui provas presenciais marcadas' => '201606006665',
+         'de graduação presencial' => '201401359558',
+         'de graduação EAD' => '201512955639',
+         'não ativa' => '200902006765',
+         'que não possui disciplinas escolhidas' => '200602091643']
 ######### DADO #########
 Dado(/^que realizei o processo de login usando uma matrícula "(.*?)" do período vigente$/) do |tipo_matricula|
   matricula = M[tipo_matricula]
@@ -109,5 +113,8 @@ Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
   when 'Datas de provas'
     @page_home.navigate_to_exam_dates
     @page_data = page(DataDeProvaScreen).await(timeout: 5)
+  when 'Frequência'
+    @page_home.navigate_to_student_attendance
+    @page_frequencia = page(FrequenciaScreen).await(timeout: 5)
   end
 end

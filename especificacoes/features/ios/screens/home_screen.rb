@@ -24,6 +24,11 @@ class HomeScreen < IOSScreenBase
      touch("* marked:'#{boletos_button}'")
    end
 
+   def navigate_to_student_attendance
+     touch_side_menu
+     touch("* marked:'#{frequencia_button}'")
+   end
+
    def navigate_to_exam_dates
      touch_side_menu
      touch("* marked:'#{data_prova_button}'")
