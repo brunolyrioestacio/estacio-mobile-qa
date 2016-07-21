@@ -20,7 +20,9 @@ M = Hash['exclusivamente presencial' => '201502468361', 'flex' => '201401359558'
          'de graduação presencial' => '201401359558',
          'de graduação EAD' => '201512955639',
          'não ativa' => '200902006765',
-         'que não possui disciplinas escolhidas' => '200602091643']
+         'que não possui disciplinas escolhidas' => '200602091643',
+         'que não possui notas lançadas' => '201301287555',
+         'não relacionada' => '201402031831']
 ######### DADO #########
 Dado(/^que realizei o processo de login usando uma matrícula "(.*?)" do período vigente$/) do |tipo_matricula|
   matricula = M[tipo_matricula]
@@ -43,14 +45,14 @@ Dado(/^que realizei o processo de login usando uma matrícula "(.*?)"$/) do |tip
   }
 end
 Dado(/^estou na tela de Login$/) do
-  step "que estou na tela de Login"
+  step 'que estou na tela de Login'
 end
 Dado(/^interagi com o OnBoarding$/) do
-  step "devo interagir com o OnBoarding"
+  step 'devo interagir com o OnBoarding'
 end
 Dado(/^que estou logado$/) do
   begin
-    @pageTutorial = page(TutorialScreen).await(timeout:5)
+    @page_tutorial = page(TutorialScreen).await(timeout: 5)
     steps %Q{
       Dado que estou na tela de tutorial
       Quando o pular
@@ -65,12 +67,12 @@ Dado(/^que estou logado$/) do
       Então devo interagir com o OnBoarding
     }
   rescue
-    @pageHome = page(HomeScreen).await(timeout: 5)
+    @page_home = page(HomeScreen).await(timeout: 5)
   end
 end
-Dado (/^que pulei o tutorial e estou logado$/) do
+Dado(/^que pulei o tutorial e estou logado$/) do
   begin
-    @pageTutorial = page(TutorialScreen).await(timeout:5)
+    @page_tutorial = page(TutorialScreen).await(timeout: 5)
     steps %Q{
       Dado que estou na tela de tutorial
       Quando o pular
@@ -83,25 +85,25 @@ Dado (/^que pulei o tutorial e estou logado$/) do
       Dado que estou na tela inicial
     }
   rescue
-    @pageHome = page(HomeScreen).await(timeout: 5)
+    @page_home = page(HomeScreen).await(timeout: 5)
   end
 end
 
-Dado(/^que pulei o tutorial$/)do
+Dado(/^que pulei o tutorial$/) do
   begin
-    @pageTutorial = page(TutorialScreen).await(timeout:5)
+    @page_tutorial = page(TutorialScreen).await(timeout: 5)
     steps %Q{
       Dado que estou na tela de tutorial
       Quando o pular
       Então devo estar na tela de Login
     }
   rescue
-    @pageLogin = page(LoginScreen).await(timeout:5)
+    @pageLogin = page(LoginScreen).await(timeout: 5)
   end
 end
 
 Quando(/^toquei no menu lateral$/) do
-  @pageHome.touch_side_menu
+  @page_home.touch_side_menu
 end
 
 Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
@@ -116,5 +118,8 @@ Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
   when 'Frequência'
     @page_home.navigate_to_student_attendance
     @page_frequencia = page(FrequenciaScreen).await(timeout: 5)
+  when 'Notas de Provas'
+    @page_home.navigate_to_student_grades
+    @page_notas = page(NotasScreen).await(timeout: 5)
   end
 end

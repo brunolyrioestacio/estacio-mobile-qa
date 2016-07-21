@@ -6,11 +6,10 @@ class NotasScreen < IOSScreenBase
   element(:layout_name)         { 'gradesView' }
 
   def grades_is_on_page?
-    is_on_page? 'Estrutura de dados'
-    is_on_page? '3.9' # AV1
-    is_on_page? '7.0' # AV2
-    is_on_page? '5.9' # AV3
-    is_on_page? '6.0' # AVR
+    is_on_page? '4.4' # AV1
+    is_on_page? '5.2' # AV2
+    # is_on_page? '-' # AV3
+    # is_on_page? '-' # AVR
   end
 
   def validate_no_grades
