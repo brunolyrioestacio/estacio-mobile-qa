@@ -1,7 +1,7 @@
 class HomeScreen < AndroidScreenBase
   # Identificador da tela
 
-  trait(:trait)                   { "* id:'#{layout_name}'" }
+  trait(:trait)                      { "* id:'#{layout_name}'" }
 
   # Declare todos os elementos da tela
   element(:layout_name)              { 'home_view' }
@@ -20,6 +20,12 @@ class HomeScreen < AndroidScreenBase
   element(:datas_de_provas_button)   { 'Datas de provas' }
   element(:school_records_button)    { 'Histórico Escolar' }
   element(:boletos_button)           { 'Boletos' }
+
+  def navigate_to_school_records
+    touch_side_menu
+    drag_until_element_is_visible(:down, school_records_button, nil, 5)
+    touch("* marked:'#{school_records_button}'")
+  end
 
   def navigate_to_bank_slip
     touch_side_menu

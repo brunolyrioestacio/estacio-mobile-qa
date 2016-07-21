@@ -76,5 +76,8 @@ Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
   when 'Notas de Provas'
     @page_home.navigate_to_student_grades
     @page_notas = page(NotasScreen).await(timeout: 5)
+  when 'Histórico Escolar'
+    @page_home.navigate_to_school_records
+    @page_historico_escolar = page(HistoricoEscolarScreen).await(timeout: 5)
   end
 end
