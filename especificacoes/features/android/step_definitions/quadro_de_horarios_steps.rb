@@ -24,7 +24,7 @@ Dado(/^que realizei o processo de login usando uma matrícula que não possui di
   }
 end
 ######### QUANDO #########
-Quando(/^tocar no spinner de escolha de tipo de quadro de horarios$/) do
+Quando(/^tocar no botão de escolha de tipo de quadro de horarios$/) do
   @page_quadro_horario.touch_spinner_time_table_type
 end
 

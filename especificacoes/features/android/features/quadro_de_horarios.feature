@@ -12,7 +12,7 @@ Cenário: Visualização de Quadro de Horario - Aluno matriculado exclusivamente
   Dado que realizei o processo de login usando uma matrícula "exclusivamente presencial" do período vigente
   Quando navegar até a funcionalidade de Quadro de Horários
   E visualizar apenas o horario das disciplinas presenciais do dia corrente da semana
-  E tocar no spinner de escolha de tipo de quadro de horarios
+  E tocar no botão de escolha de tipo de quadro de horarios
   E tocar na opção de Disciplinas Online
   Então devo ver um aviso sobre a não inscrição em disciplinas online
 
