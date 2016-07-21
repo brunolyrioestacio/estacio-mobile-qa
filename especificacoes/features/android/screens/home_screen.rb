@@ -11,7 +11,7 @@ class HomeScreen < AndroidScreenBase
   element(:matricula_button)         { 'registration_holder' }
   element(:manual_button)            { 'Manual do Aluno' }
   element(:notas_button)             { 'Notas de provas' }
-  element(:horarios_button)          { "Quadro de\n Horários" }
+  element(:horarios_button)          { 'Quadro de horário' }
   element(:frequencia_button)        { 'Frequência' }
   element(:atendimento_button)       { 'Atendimento agendado' }
   element(:requirement_button)       { 'open_requirement' }
@@ -20,6 +20,12 @@ class HomeScreen < AndroidScreenBase
   element(:datas_de_provas_button)   { 'Datas de provas' }
   element(:school_records_button)    { 'Histórico Escolar' }
   element(:boletos_button)           { 'Boletos' }
+
+  def navigate_to_timesheet
+    touch_side_menu
+    drag_until_element_is_visible(:down, horarios_button, nil, 5)
+    touch("* marked:'#{horarios_button}'")
+  end
 
   def navigate_to_school_records
     touch_side_menu
