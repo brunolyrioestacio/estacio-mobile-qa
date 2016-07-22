@@ -28,7 +28,7 @@ Cenário: Visualização de Quadro de Horario - Aluno Flex
   Dado que realizei o processo de login usando uma matrícula "flex" do período vigente
   Quando navegar até a funcionalidade de Quadro de Horários
   E visualizar o horario das disciplinas presenciais do dia corrente da semana
-  E tocar no spinner de escolha de tipo de quadro de horarios
+  E tocar no botão de escolha de tipo de quadro de horarios
   E tocar na opção de Disciplinas Online
   Então devo visualizar o horario das disciplinas online
 
