@@ -32,7 +32,7 @@ class QuadroDeHorariosScreen < AndroidScreenBase
   end
 
   def validate_only_presential_courses_is_on_page
-    case getCurrentDayName
+    case current_day_name
     when 'Sunday'
       is_on_page? 'Você não possui nenhuma aula neste dia.'
     when 'Monday'
