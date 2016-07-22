@@ -40,7 +40,7 @@ Cenário: Visualização de Quadro de Horario - Aluno exclusivamente EAD
 
 @reinstall
 Cenário: Visualização de Quadro de Horários - Aluno sem disciplinas
-  Dado que realizei o processo de login usando uma matrícula que não possui disciplinas escolhidas
+  Dado que realizei o processo de login usando uma matrícula "que não possui disciplinas escolhidas"
   Quando navegar até a funcionalidade de Quadro de Horários
   Então devo ver uma mensagem de aviso sobre a indisponibilidade de consulta ao quadro de horario
 
