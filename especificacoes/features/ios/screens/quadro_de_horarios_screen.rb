@@ -33,19 +33,19 @@ class QuadroDeHorariosScreen < IOSScreenBase
   def validate_only_presential_courses_is_on_page
     case current_day_name
     when 'Sunday'
-      is_on_page? "Você não possui nenhuma aula neste dia."
+      is_on_page? 'Você não possui nenhuma aula neste dia.'
     when 'Monday'
-      is_on_page?"Você não possui nenhuma aula neste dia."
+      is_on_page? 'Você não possui nenhuma aula neste dia.'
     when 'Tuesday'
-      is_on_page?"Você não possui nenhuma aula neste dia."
+      is_on_page? 'Você não possui nenhuma aula neste dia.'
     when 'Wednesday'
-      is_on_page?"TÓPICOS ESPECIAIS"
+      is_on_page? 'TÓPICOS ESPECIAIS'
     when 'Thursday'
-      is_on_page?"TÓPICOS ESPECIAIS"
+      is_on_page? 'TÓPICOS ESPECIAIS'
     when 'Friday'
-      is_on_page?"TÓPICOS ESPECIAIS"
+      is_on_page? 'TÓPICOS ESPECIAIS'
     when 'Saturday'
-      is_on_page?"Você não possui nenhuma aula neste dia."
+      is_on_page? 'Você não possui nenhuma aula neste dia.'
     end
   end
 
@@ -59,11 +59,10 @@ class QuadroDeHorariosScreen < IOSScreenBase
   end
 
   def touch_online_courses
-    touch("* marked:'Quadro de horários - On-line'")
+    touch("* marked:'Online'")
   end
 
   def validate_online_courses_is_on_page
-    is_on_page? 'AUDITORIA DE SISTEMAS'
     is_on_page? 'QUALIDADE DE SOFTWARE'
   end
 
@@ -73,10 +72,6 @@ class QuadroDeHorariosScreen < IOSScreenBase
 
   def validate_course_is_on_page(course)
     is_on_page? course
-  end
-
-  def schedule_is_on_page?
-    is_on_page? 'MODELAGEM DE SISTEMAS'
   end
 
   def validate_no_online_courses_message

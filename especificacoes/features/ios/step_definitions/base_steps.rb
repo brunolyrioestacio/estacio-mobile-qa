@@ -124,5 +124,8 @@ Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
   when 'Histórico Escolar'
     @page_home.navigate_to_school_records
     @page_historico_escolar = page(HistoricoEscolarScreen).await(timeout: 5)
+  when 'Quadro de Horários'
+    @page_home.navigate_to_timesheet
+    @page_quadro_horario = page(QuadroDeHorariosScreen).await(timeout: 5)
   end
 end
