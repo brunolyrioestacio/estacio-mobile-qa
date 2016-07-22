@@ -14,11 +14,11 @@ class RequerimentosScreen < AndroidScreenBase
   element(:requeriment_description_text)    { 'Requerimento onde o aluno solicita redução ' }
 
   def validate_no_requeriments_message
-    is_on_page? "Não existem requerimentos para consulta."
+    is_on_page? 'Não existem requerimentos para consulta.'
   end
 
   def validate_requirements_is_on_page
-    is_on_page? "SITUAÇÃO"
+    is_on_page? 'SITUAÇÃO'
   end
 
   def touch_new_requirement_button
@@ -35,6 +35,7 @@ class RequerimentosScreen < AndroidScreenBase
   def touch_new_requirement_float_button
     touch("* marked:'#{new_requirement_float_button}'")
   end
+
   def choose_categoty
     sleep 2
     touch("* marked:'#{category_spinner}'")

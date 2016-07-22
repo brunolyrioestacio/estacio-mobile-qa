@@ -1,8 +1,3 @@
-######### DADO #########
-Dado(/^que estou na tela de Requerimentos$/) do
-  @page_requerimentos = page(RequerimentosScreen).await(timeout: 5)
-end
-
 ######### QUANDO #########
 Quando(/^tocar no botão de criação de Requerimento$/) do
   @page_requerimentos.touch_new_requirement_button

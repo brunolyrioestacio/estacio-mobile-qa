@@ -6,29 +6,23 @@ a assuntos que façam parte da vida acadêmica do aluno.
   Contexto:
     Dado que estou na tela de Login
 
-  @semReq
   @reinstall
   Cenário: Consultar Requerimento - Aluno sem requerimentos
     Dado que realizei o processo de login usando uma matrícula "que não possui requerimentos" do período vigente
-    Quando tocar no botão de Requerimentos
-    Dado que estou na tela de Requerimentos
+    Quando navegar até a funcionalidade de Requerimentos
     Então devo ver uma mensagem sobre a falta de requerimentos existentes abertos ou concluídos
 
-  @comReq
   @reinstall
   Cenário: Consultar Requerimento
     Dado que realizei o processo de login usando uma matrícula "que possui requerimentos" do período vigente
-    Quando tocar no botão de Requerimentos
-    Dado que estou na tela de Requerimentos
+    Quando navegar até a funcionalidade de Requerimentos
     Então devo ver uma lista de requerimentos existentes abertos ou concluídos
-
-@CriarReq
-@reinstall
+  @criar
+  @reinstall
   Cenário: Criar Requerimento
     Dado que realizei o processo de login usando uma matrícula "que possui requerimentos" do período vigente
-    Quando tocar no botão de Requerimentos
-    Dado que estou na tela de Requerimentos
-    Quando tocar no botão de criação de Requerimento
+    Quando navegar até a funcionalidade de Requerimentos
+    E tocar no botão de criação de Requerimento
     E tocar no botão flutuante de Requerimento
     E escolher uma categoria
     E um tipo de requerimento

@@ -14,12 +14,18 @@ class HomeScreen < AndroidScreenBase
   element(:horarios_button)          { 'Quadro de horário' }
   element(:frequencia_button)        { 'Frequência' }
   element(:atendimento_button)       { 'Atendimento agendado' }
-  element(:requirement_button)       { 'open_requirement' }
+  element(:requirement_button)       { 'Requerimentos' }
   element(:notification_button)      { 'notification_off' }
   element(:side_menu)                { 'Open navigation drawer' }
   element(:datas_de_provas_button)   { 'Datas de provas' }
   element(:school_records_button)    { 'Histórico Escolar' }
   element(:boletos_button)           { 'Boletos' }
+
+  def navigate_to_requirements
+    touch_side_menu
+    drag_until_element_is_visible(:down, requirement_button, nil, 5)
+    touch("* marked:'#{requirement_button}' * id:'design_menu_item_text'")
+  end
 
   def navigate_to_timesheet
     touch_side_menu
