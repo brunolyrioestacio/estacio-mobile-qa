@@ -21,6 +21,12 @@ class HomeScreen < AndroidScreenBase
   element(:school_records_button)    { 'Histórico Escolar' }
   element(:boletos_button)           { 'Boletos' }
 
+  def navigate_to_student_card
+    touch_side_menu
+    drag_until_element_is_visible(:down, matricula_button, nil, 5)
+    touch("* id:'#{matricula_button}'")
+  end
+
   def navigate_to_student_manual
     touch_side_menu
     drag_until_element_is_visible(:down, manual_button, nil, 5)

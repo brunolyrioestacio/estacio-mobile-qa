@@ -16,9 +16,8 @@ Cenário: Vizualização do Manual do Aluno
   Quando navegar até a funcionalidade de Manual do Aluno
   Então devo vizualizar o manual do aluno
 
+@carteirinha
 Cenário: Vizualização da Carteira Digital do Estudante
   Dado que estou na tela inicial
-  Quando tocar no menu lateral
-  E tocar na matricula
-  Então devo estar na tela da Carteira Digital do Estudante
-  E devo ver meus dados pessoais
+  Quando navegar até a funcionalidade de Carteirinha de Estudante
+  Então devo ver meus dados pessoais
