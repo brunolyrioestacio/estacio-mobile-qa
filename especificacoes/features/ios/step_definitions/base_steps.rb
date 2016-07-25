@@ -127,5 +127,7 @@ Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
   when 'Quadro de Horários'
     @page_home.navigate_to_timesheet
     @page_quadro_horario = page(QuadroDeHorariosScreen).await(timeout: 5)
+  when 'Manual do Aluno'
+    @page_home.navigate_to_student_manual
   end
 end

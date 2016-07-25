@@ -19,6 +19,11 @@ class HomeScreen < IOSScreenBase
    element(:side_menu)                { 'menuButton' }
    element(:boletos_button)           { 'Boletos' }
 
+   def navigate_to_student_manual
+     touch_side_menu
+     touch("* marked:'#{manual_button}'")
+   end
+
    def navigate_to_timesheet
      touch_side_menu
      touch("* marked:'#{quadro_button}'")

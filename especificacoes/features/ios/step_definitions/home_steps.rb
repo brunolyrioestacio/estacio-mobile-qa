@@ -1,18 +1,14 @@
-######### DADO #########
 ######### QUANDO #########
 Quando(/^tocar na mesma$/) do
   @pageHome.tocar_detalhe_banner
 end
 
-###########E############
-
+########### E ############
 Quando(/^estou na tela de detalhes do banner$/) do
   @pageHome.estou_no_detalhe_do_banner
 end
 
-
-######### ENTãO #########
-
+######### ENTAO #########
 Quando(/^tocar no tile de adicionar um atalho$/) do
   @pageHome.tocar_adicionar_atalho
 end
@@ -51,9 +47,8 @@ Então(/^devo estar na tela inicial com o tile preenchido com manual do aluno$/)
 end
 
 Então(/^devo vizualizar o manual do aluno$/) do
-  @pageHome.is_on_page? "Manual do Aluno"
+  @pageHome.is_on_page? 'Manual do Aluno'
 end
-
 
 Então(/^devo estar na tela inicial com o tile preenchido com Notas$/) do
   @pageHome.is_on_page? "Notas"
