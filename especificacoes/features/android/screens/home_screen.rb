@@ -9,7 +9,7 @@ class HomeScreen < AndroidScreenBase
   element(:confirmar_sair_button)    { 'custom_alert_second_btn' }
   element(:banner)                   { 'carousel_view_pager' }
   element(:matricula_button)         { 'registration_holder' }
-  element(:manual_button)            { 'Manual do Aluno' }
+  element(:manual_button)            { 'Manual do aluno' }
   element(:notas_button)             { 'Notas de provas' }
   element(:horarios_button)          { 'Quadro de horário' }
   element(:frequencia_button)        { 'Frequência' }
@@ -20,6 +20,12 @@ class HomeScreen < AndroidScreenBase
   element(:datas_de_provas_button)   { 'Datas de provas' }
   element(:school_records_button)    { 'Histórico Escolar' }
   element(:boletos_button)           { 'Boletos' }
+
+  def navigate_to_student_manual
+    touch_side_menu
+    drag_until_element_is_visible(:down, manual_button, nil, 5)
+    touch("* marked:'#{manual_button}'")
+  end
 
   def navigate_to_requirements
     touch_side_menu

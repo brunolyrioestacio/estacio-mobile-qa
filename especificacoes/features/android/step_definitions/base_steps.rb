@@ -85,5 +85,7 @@ Quando(/^navegar até a funcionalidade de (.*?)$/) do |nome_funcionalide|
   when 'Requerimentos'
     @page_home.navigate_to_requirements
     @page_requerimentos = page(RequerimentosScreen).await(timeout: 5)
+  when 'Manual do Aluno'
+    @page_home.navigate_to_student_manual
   end
 end

@@ -22,6 +22,6 @@ Quando(/^tocar no botão de Manual do Aluno$/) do
 end
 
 ######### ENTAO #########
-Então(/^devo vizualizar o Manual do aluno$/) do
+Então(/^devo vizualizar o manual do aluno$/) do
   @pageHome.validate_student_manual_is_on_page
 end
