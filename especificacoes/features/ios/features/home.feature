@@ -16,12 +16,11 @@ Cenário: Validação do banner
   Quando tocar na mesma
   Então devo ver um alerta de redirecionamento para uma página externa
 
+@carteirinha
 Cenário: Vizualização da Carteira Digital do Estudante
   Dado que estou na tela inicial
-  Quando tocar no menu lateral
-  Quando tocar na matricula
-  Então devo estar na tela da Carteira Digital do Estudante
-  E devo ver meus dados pessoais
+  Quando navegar até a funcionalidade de Carteirinha de Estudante
+  Então devo ver meus dados pessoais
 
 Cenário: Preenchimento do Tile com Manual do Aluno
   Dado que estou na tela inicial
