@@ -1,6 +1,9 @@
 # language: pt
 Funcionalidade: Home(Somente iOS)
-Através dessa funcionalidade é possível ter acesso aos banners e aos atalhos para outras funcionalidades do aplicativo
+  Através dessa funcionalidade é possível ter acesso aos banners da Estácio, como também
+é possível adicionar atalhos paras as funcionalidades mais acessadas pelo aluno no app.
+Juntamente com o acesso a home, é possível acessar a Carteirinha Digital do Aluno, o Manual
+do Aluno e também as outras funcionalidades do app.
 
 Contexto: Login
   Dado que pulei o tutorial e estou logado
@@ -16,50 +19,48 @@ Cenário: Validação do banner
   Quando tocar na mesma
   Então devo ver um alerta de redirecionamento para uma página externa
 
-@carteirinha
 Cenário: Vizualização da Carteira Digital do Estudante
   Dado que estou na tela inicial
   Quando navegar até a funcionalidade de Carteirinha de Estudante
   Então devo ver meus dados pessoais
 
-Cenário: Preenchimento do Tile com Manual do Aluno
+Cenário: Preenchimento de atalho com Manual do Aluno
   Dado que estou na tela inicial
-  Quando tocar no tile de adicionar um atalho
-  E tocar no botão de manual do aluno
-  Então devo estar na tela inicial com o tile preenchido com manual do aluno
+  Quando tocar em uma das opções disponíveis para adicionar um atalho
+  E selecionar Manual do aluno
+  Então devo estar na tela inicial com um atalho para Manual do aluno
 
-@manual
 Cenário: Vizualização do Manual do Aluno
   Dado que estou na tela inicial
   Quando navegar até a funcionalidade de Manual do Aluno
   Então devo vizualizar o manual do aluno
 
-Cenário: Preenchimento do Tile com Notas
+ Cenário: Preenchimento de atalho com Notas de Provas
   Dado que estou na tela inicial
-  Quando tocar no tile de adicionar um atalho
-  E tocar no botão de Notas
-  Então devo estar na tela inicial com o tile preenchido com Notas
+  Quando tocar em uma das opções disponíveis para adicionar um atalho
+  E selecionar Notas de provas
+  Então devo estar na tela inicial com um atalho para Notas de provas
 
-Cenário: Preenchimento do Tile com Quadro de Horarios
+ Cenário: Preenchimento de atalho com Quadro de Horarios
   Dado que estou na tela inicial
-  Quando tocar no tile de adicionar um atalho
-  E tocar no botão de quadro de horarios
-  Então devo estar na tela inicial com o tile preenchido com quadro de horarios
+  Quando tocar em uma das opções disponíveis para adicionar um atalho
+  E selecionar Quadro de horarios
+  Então devo estar na tela inicial com um atalho para Quadro de horarios
 
-Cenário: Preenchimento do Tile com Requerimentos
+Cenário: Preenchimento de atalho com Requerimentos
   Dado que estou na tela inicial
-  Quando tocar no tile de adicionar um atalho
-  E tocar no botão de Requerimentos
-  Então devo estar na tela inicial com o tile preenchido com Requerimentos
+  Quando tocar em uma das opções disponíveis para adicionar um atalho
+  E selecionar Requerimentos
+  Então devo estar na tela inicial com um atalho para Requerimentos
 
-Cenário: Preenchimento do Tile com Atendimento Agendado
+Cenário: Preenchimento de atalho com Atendimento Agendado
   Dado que estou na tela inicial
-  Quando tocar no tile de adicionar um atalho
-  E tocar no botão de Atendimento Agendado
-  Então devo estar na tela inicial com o tile preenchido com Atendimento Agendado
+  Quando tocar em uma das opções disponíveis para adicionar um atalho
+  E selecionar Atendimento agendado
+  Então devo estar na tela inicial com um atalho para Atendimento agendado
 
-Cenário: Preenchimento do Tile com Frequência
+Cenário: Preenchimento de atalho com Frequência
   Dado que estou na tela inicial
-  Quando tocar no tile de adicionar um atalho
-  E tocar no botão de Frequência
-  Então devo estar na tela inicial com o tile preenchido com Frequência
+  Quando tocar em uma das opções disponíveis para adicionar um atalho
+  E selecionar Frequência
+  Então devo estar na tela inicial com um atalho para Frequência

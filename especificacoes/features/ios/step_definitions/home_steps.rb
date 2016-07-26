@@ -9,63 +9,50 @@ Quando(/^estou na tela de detalhes do banner$/) do
 end
 
 ######### ENTAO #########
-Quando(/^tocar no tile de adicionar um atalho$/) do
+Quando(/^tocar em uma das opções disponíveis para adicionar um atalho$/) do
   @pageHome.tocar_adicionar_atalho
 end
-Quando(/^tocar no botão de manual do aluno$/) do
-  @pageHome.tocar_botao_manual_aluno
+
+Quando(/^selecionar (.*?)$/) do |nome_funcionalide|
+  case nome_funcionalide
+  when 'Manual do aluno'
+    @pageHome.tocar_botao_manual_aluno
+  when 'Notas de provas'
+    @pageHome.tocar_botao_notas_aluno
+  when 'Quadro de horarios'
+    @pageHome.tocar_botao_quadro
+  when 'Requerimentos'
+    @pageHome.tocar_botao_requerimento
+  when 'Atendimento agendado'
+    @pageHome.tocar_botao_atendimento
+  when 'Frequência'
+    @pageHome.tocar_botao_frequencia_aluno
+  else
+    false
+  end
 end
 
-Quando(/^tocar no botão de Notas$/) do
-  @pageHome.tocar_botao_notas_aluno
-end
+############# Entao #########
 
-Quando(/^tocar no botão de quadro de horarios$/) do
-  @pageHome.tocar_botao_quadro
-end
-
-Quando(/^tocar no botão de Requerimentos$/) do
-  @pageHome.tocar_botao_requerimento
-end
-
-Quando(/^tocar no botão de Frequência/) do
-  @pageHome.tocar_botao_frequencia_aluno
-end
-
-Quando(/^tocar no botão de Atendimento Agendado$/) do
-  @pageHome.tocar_botao_atendimento
-end
-
-Quando(/^tocar no botão de histórico escolar$/) do
-  @pageHome.tocar_botao_historico_escolar
-end
-
-#############Então#########
-
-Então(/^devo estar na tela inicial com o tile preenchido com manual do aluno$/) do
-  @pageHome.is_on_page? "Manual do Aluno"
+Então(/^devo estar na tela inicial com um atalho para (.*?)$/) do |nome_funcionalide|
+  case nome_funcionalide
+  when 'Manual do aluno'
+    @pageHome.is_on_page? 'Manual do aluno'
+  when 'Notas de Provas'
+    @pageHome.is_on_page? 'Notas de provas'
+  when 'Quadro de Horários'
+    @pageHome.is_on_page? 'Quadro de Horários'
+  when 'Requerimentos'
+    @pageHome.is_on_page? 'Requerimentos'
+  when 'Atendimento agendado'
+    @pageHome.is_on_page? 'Atendimento agendado'
+  when 'Frequência'
+    @pageHome.is_on_page? 'Frequência'
+  else
+    raise "Não foi possível encontrar a funcionalidade de #{nome_funcionalide} nessa tela."
+  end
 end
 
 Então(/^devo vizualizar o manual do aluno$/) do
   @pageHome.is_on_page? 'Manual do Aluno'
-end
-
-Então(/^devo estar na tela inicial com o tile preenchido com Notas$/) do
-  @pageHome.is_on_page? "Notas"
-end
-
-Então(/^devo estar na tela inicial com o tile preenchido com quadro de horarios$/) do
-  @pageHome.is_on_page? "Quadro de Horários"
-end
-
-Então(/^devo estar na tela inicial com o tile preenchido com Requerimentos$/) do
-  @pageHome.is_on_page? "Requerimento/Reclamação"
-end
-
-Então(/^devo estar na tela inicial com o tile preenchido com Atendimento Agendado$/) do
-  @pageHome.is_on_page? "Atendimento Agendado"
-end
-
-Então(/^devo estar na tela inicial com o tile preenchido com Frequência$/) do
-  @pageHome.is_on_page? "Frequência"
 end
