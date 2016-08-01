@@ -11,7 +11,7 @@ class HomeScreen < AndroidScreenBase
   element(:matricula_button)         { 'registration_holder' }
   element(:manual_button)            { 'Manual do aluno' }
   element(:notas_button)             { 'Notas de provas' }
-  element(:horarios_button)          { 'Quadro de horário' }
+  element(:horarios_button)          { 'Quadro de horários' }
   element(:frequencia_button)        { 'Frequência' }
   element(:atendimento_button)       { 'Atendimento agendado' }
   element(:requirement_button)       { 'Requerimentos' }

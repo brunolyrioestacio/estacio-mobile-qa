@@ -1,5 +1,5 @@
 M = Hash['exclusivamente presencial' => '201502468361', 'flex' => '201401359558',
-         'exclusivamente de EAD' => '201407212771', 'que está fora' => '201402031831',
+         'exclusivamente de EAD' => '201409026841', 'que está fora' => '200602091643',
          'sem pendencias de atendimento' => '200301489494',
          'que não possui requerimentos' => '',
          'comum' => '201402389388',
@@ -20,7 +20,7 @@ M = Hash['exclusivamente presencial' => '201502468361', 'flex' => '201401359558'
          'de graduação presencial' => '201401359558',
          'de graduação EAD' => '201512955639',
          'não ativa' => '200902006765',
-         'que não possui disciplinas escolhidas' => '200602091643',
+         'que não possui disciplinas escolhidas' => '200201385956',
          'que não possui notas lançadas' => '201301287555',
          'não relacionada' => '201402031831'
         ]
