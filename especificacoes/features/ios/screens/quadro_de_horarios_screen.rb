@@ -16,15 +16,15 @@ class QuadroDeHorariosScreen < IOSScreenBase
     when 'Sunday'
       is_on_page? 'Você não possui nenhuma aula neste dia.'
     when 'Monday'
-      is_on_page? 'Modelagem de Sistemas'
+      is_on_page? 'Probabilidade E Estatística'
     when 'Tuesday'
-      is_on_page? 'Padrões de Projeto de Software'
+      is_on_page? 'Você não possui nenhuma aula neste dia.'
     when 'Wednesday'
-      is_on_page? 'Você não possui nenhuma aula neste dia.'
+      is_on_page? 'Padrões De Projeto De Software'
     when 'Thursday'
-      is_on_page? 'Estrutura de Dados'
+      is_on_page? 'Implementação De Banco De Dados'
     when 'Friday'
-      is_on_page? 'Você não possui nenhuma aula neste dia.'
+      is_on_page? 'Inteligência Empresarial'
     when 'Saturday'
       is_on_page? 'Você não possui nenhuma aula neste dia.'
     end
@@ -63,7 +63,8 @@ class QuadroDeHorariosScreen < IOSScreenBase
   end
 
   def validate_online_courses_is_on_page
-    is_on_page? 'QUALIDADE DE SOFTWARE'
+    is_on_page? 'AUDITORIA DE SISTEMAS'
+    is_on_page? 'PROGRAMAÇÃO PARA DISPOSITIVOS MÓVEIS'
   end
 
   def validate_sunday_classes_is_on_page
