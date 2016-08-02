@@ -1,7 +1,7 @@
 class HomeScreen < IOSScreenBase
    trait(:trait)                      { "* marked:'#{layout_name}'" }
    element(:layout_name)              { 'homeView' }
-   element(:entendi_button)           { 'OK, entendi' }
+   element(:entendi_button)           { 'OK, ENTENDI' }
    element(:outras_funcoes_button)    { "Outras\nFunções" }
    element(:sair_button)              { 'Sair' }
    element(:banner)                   { 'bannerView' }

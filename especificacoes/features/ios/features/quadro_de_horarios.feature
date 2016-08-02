@@ -33,11 +33,12 @@ não possuem separação semanal.
     E tocar na opção de Disciplinas Online
     Então devo visualizar o horario das disciplinas online
 
+  @ead
   @reinstall
   Cenário: Visualização de Quadro de Horario - Aluno exclusivamente EAD
     Dado que realizei o processo de login usando uma matrícula "exclusivamente de EAD" do período vigente
     Quando navegar até a funcionalidade de Quadro de Horários
-    Então devo visualizar o horario da disciplina de "Gerenciamento de Aquisições"
+    Então devo visualizar o horario da disciplina de "Processos de Desenvolvimento de Software"
 
   @reinstall
   Cenário: Visualização de Quadro de Horários - Aluno sem disciplinas
