@@ -15,8 +15,6 @@ Cenário: Vizualização de OnBoarding
 Cenário: Validação do banner
   Dado que estou na tela inicial
   E toquei no banner
-  E estou na tela de detalhes do banner
-  Quando tocar na mesma
   Então devo ver um alerta de redirecionamento para uma página externa
 
 Cenário: Vizualização da Carteira Digital do Estudante
