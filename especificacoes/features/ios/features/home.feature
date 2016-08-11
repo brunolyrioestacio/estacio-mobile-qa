@@ -12,6 +12,7 @@ Cenário: Vizualização de OnBoarding
   Dado que estou na tela inicial
   Então devo interagir com o OnBoarding
 
+@teste_manual
 Cenário: Validação do banner
   Dado que estou na tela inicial
   E toquei no banner
