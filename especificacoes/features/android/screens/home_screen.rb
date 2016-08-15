@@ -10,6 +10,7 @@ class HomeScreen < AndroidScreenBase
   element(:banner)                   { 'carousel_view_pager' }
   element(:matricula_button)         { 'registration_holder' }
   element(:manual_button)            { 'Manual do aluno' }
+  element(:atalho_button)            { 'Inserir atalho' }
   element(:notas_button)             { 'Notas de provas' }
   element(:horarios_button)          { 'Quadro de horários' }
   element(:frequencia_button)        { 'Frequência' }
@@ -20,6 +21,12 @@ class HomeScreen < AndroidScreenBase
   element(:datas_de_provas_button)   { 'Datas de provas' }
   element(:school_records_button)    { 'Histórico Escolar' }
   element(:boletos_button)           { 'Boletos' }
+  element(:agendamento_button)       { 'Agendamento de prova' }
+  element(:historico_button)         { 'Histórico escolar' }
+
+  def tocar_adicionar_atalho
+    touch("* text:'#{atalho_button}'")
+  end
 
   def navigate_to_student_card
     touch_side_menu
@@ -112,18 +119,22 @@ class HomeScreen < AndroidScreenBase
   end
 
   def tocar_botao_requerimentos
-    touch("* id:'#{requirement_button}'")
+    drag_until_element_is_visible(:down, requirement_button, nil, 5)
+    touch("* marked:'#{requirement_button}'")
   end
 
   def tocar_botao_quadro_de_horarios
+    drag_until_element_is_visible(:down, horarios_button, nil, 5)
     touch("* marked:'#{horarios_button}'")
   end
 
   def tocar_botao_atendimento_agendado
+    drag_until_element_is_visible(:down, atendimento_button, nil, 5)
     touch("* marked:'#{atendimento_button}'")
   end
 
   def tocar_botao_confirmar_sair
+    drag_until_element_is_visible(:down, confirmar_sair_button, nil, 5)
     touch("* marked:'#{confirmar_sair_button}'")
   end
 
@@ -138,6 +149,31 @@ class HomeScreen < AndroidScreenBase
   def tocar_botao_manual_aluno
     drag_until_element_is_visible(:down, manual_button, nil, 5)
     touch("* marked:'#{manual_button}'")
+  end
+
+  def tocar_botao_notas_aluno
+    drag_until_element_is_visible(:down, notas_button, nil, 5)
+    touch("* marked:'#{notas_button}'")
+  end
+
+  def tocar_botao_frequencia_aluno
+    drag_until_element_is_visible(:down, frequencia_button, nil, 5)
+    touch("* marked:'#{frequencia_button}'")
+  end
+
+  def tocar_botao_agendamento_de_prova
+    drag_until_element_is_visible(:down, agendamento_button, nil, 5)
+    touch("* marked:'#{agendamento_button}'")
+  end
+
+  def tocar_botao_boletos
+    drag_until_element_is_visible(:down, boletos_button, nil, 5)
+    touch("* marked:'#{boletos_button}'")
+  end
+
+  def tocar_botao_historico_escolar
+    drag_until_element_is_visible(:down, historico_button, nil, 5)
+    touch("* marked:'#{historico_button}'")
   end
 
   def validate_student_manual_is_on_page

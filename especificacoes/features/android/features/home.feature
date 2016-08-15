@@ -1,22 +1,79 @@
 # language: pt
 Funcionalidade: Home(Somente Android)
-Através dessa funcionalidade é possível ter acesso aos banners e aos atalhos para outras funcionalidades do aplicativo
+  Através dessa funcionalidade é possível ter acesso aos banners da Estácio, como também
+é possível adicionar atalhos paras as funcionalidades mais acessadas pelo aluno no app.
+Juntamente com o acesso a home, é possível acessar a Carteirinha Digital do Aluno, o Manual
+do Aluno e também as outras funcionalidades do app.
 
-Contexto: Login
-  Dado que estou logado
+  Contexto: Login
+    Dado que estou logado
 
-@teste_manual
-Cenário: Validação dos banners
-  Dado que estou na tela inicial
-  E toquei no banner
-  Então devo ver um alerta de redirecionamento para uma página externa
+  @teste_manual
+  Cenário: Validação dos banners
+    Dado que estou na tela inicial
+    E toquei no banner
+    Então devo ver um alerta de redirecionamento para uma página externa
 
-Cenário: Vizualização do Manual do Aluno
-  Dado que estou na tela inicial
-  Quando navegar até a funcionalidade de Manual do Aluno
-  Então devo vizualizar o manual do aluno
+  Cenário: Vizualização do Manual do Aluno
+    Dado que estou na tela inicial
+    Quando navegar até a funcionalidade de Manual do Aluno
+    Então devo vizualizar o manual do aluno
 
-Cenário: Vizualização da Carteira Digital do Estudante
-  Dado que estou na tela inicial
-  Quando navegar até a funcionalidade de Carteirinha de Estudante
-  Então devo ver meus dados pessoais
+  Cenário: Vizualização da Carteira Digital do Estudante
+    Dado que estou na tela inicial
+    Quando navegar até a funcionalidade de Carteirinha de Estudante
+    Então devo ver meus dados pessoais
+
+  Cenário: Preenchimento de atalho com Manual do Aluno
+    Dado que estou na tela inicial
+    Quando tocar em uma das opções disponíveis para adicionar um atalho
+    E selecionar Manual do aluno
+    Então devo estar na tela inicial com um atalho para Manual do aluno
+
+  Cenário: Preenchimento de atalho com Notas de Provas
+    Dado que estou na tela inicial
+    Quando tocar em uma das opções disponíveis para adicionar um atalho
+    E selecionar Notas de provas
+    Então devo estar na tela inicial com um atalho para Notas de provas
+
+  Cenário: Preenchimento de atalho com Quadro de Horarios
+    Dado que estou na tela inicial
+    Quando tocar em uma das opções disponíveis para adicionar um atalho
+    E selecionar Quadro de horários
+    Então devo estar na tela inicial com um atalho para Quadro de horários
+
+  Cenário: Preenchimento de atalho com Requerimentos
+    Dado que estou na tela inicial
+    Quando tocar em uma das opções disponíveis para adicionar um atalho
+    E selecionar Requerimentos
+    Então devo estar na tela inicial com um atalho para Requerimentos
+
+  Cenário: Preenchimento de atalho com Atendimento Agendado
+    Dado que estou na tela inicial
+    Quando tocar em uma das opções disponíveis para adicionar um atalho
+    E selecionar Atendimento agendado
+    Então devo estar na tela inicial com um atalho para Atendimento agendado
+
+  Cenário: Preenchimento de atalho com Frequência
+    Dado que estou na tela inicial
+    Quando tocar em uma das opções disponíveis para adicionar um atalho
+    E selecionar Frequência
+    Então devo estar na tela inicial com um atalho para Frequência
+
+  Cenário: Preenchimento de atalho com Agendamento de prova
+    Dado que estou na tela inicial
+    Quando tocar em uma das opções disponíveis para adicionar um atalho
+    E selecionar Agendamento de prova
+    Então devo estar na tela inicial com um atalho para Agendamento de prova
+
+  Cenário: Preenchimento de atalho com Boletos
+    Dado que estou na tela inicial
+    Quando tocar em uma das opções disponíveis para adicionar um atalho
+    E selecionar Boletos
+    Então devo estar na tela inicial com um atalho para Boletos
+  
+  Cenário: Preenchimento de atalho com Histórico escolar
+    Dado que estou na tela inicial
+    Quando tocar em uma das opções disponíveis para adicionar um atalho
+    E selecionar Histórico escolar
+    Então devo estar na tela inicial com um atalho para Histórico escolar
